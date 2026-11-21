@@ -1,0 +1,52 @@
+{
+  "values": ["codex", "claude", "antigravity", "cursor", "kimi", "opencode"],
+  "providers": {
+    "codex": {
+      "displayName": "GPT / OpenAI Codex",
+      "pluginManifest": ".codex-plugin/plugin.json",
+      "marketplaceManifest": ".agents/plugins/marketplace.json"
+    },
+    "claude": {
+      "displayName": "Claude (Code & Cowork)",
+      "pluginManifest": ".claude-plugin/plugin.json",
+      "marketplaceManifest": ".claude-plugin/marketplace.json"
+    },
+    "antigravity": {
+      "displayName": "Google Antigravity",
+      "pluginManifest": ".antigravity-plugin/plugin.json",
+      "fallbackPluginManifest": "plugin.json",
+      "marketplaceManifest": ".agents/plugins.json",
+      "officialMarketplace": "antigravity-plugins-official",
+      "schemaUrl": "https://antigravity.google/schemas/v1/plugin.json",
+      "docsUrl": "https://antigravity.google/docs/build-plugins",
+      "marketplaceDocsUrl": "https://antigravity.google/docs/marketplace",
+      "cliValidate": "agy plugin validate ./plugins/<id>",
+      "cliInstallLocal": "agy plugin install ./plugins/<id>",
+      "cliInstallGithubSubdir": "agy plugin install https://github.com/Angel-SSJ/personal-marketplace/tree/main/plugins/<id>",
+      "components": [
+        "skills/<skill>/SKILL.md",
+        "mcp_config.json",
+        "agents/<agent>.md",
+        "rules/AGENTS.md",
+        "hooks.json",
+        "assets/logo.svg",
+        ".antigravity-plugin/README.md"
+      ]
+    },
+    "cursor": {
+      "displayName": "Cursor",
+      "pluginManifest": ".cursor-plugin/plugin.json",
+      "marketplaceManifest": ".cursor-plugin/marketplace.json"
+    },
+    "kimi": {
+      "displayName": "Kimi Code",
+      "pluginManifest": ".kimi-plugin/plugin.json",
+      "marketplaceManifest": ".kimi-plugin/marketplace.json"
+    },
+    "opencode": {
+      "displayName": "OpenCode",
+      "pluginManifest": ".opencode/plugins/marketplace.js",
+      "marketplaceManifest": "package.json"
+    }
+  }
+}

@@ -1,0 +1,66 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+permissions:
+  contents: write
+
+jobs:
+  publish-release:
+    name: Publish GitHub Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Verify tag matches package.json and manifests
+        env:
+          TAG_NAME: ${{ github.ref_name }}
+        run: |
+          TAG_VERSION="${TAG_NAME#v}"
+          PKG_VERSION="$(node -p "JSON.parse(require('node:fs').readFileSync('package.json','utf8')).version")"
+          if [ "$TAG_VERSION" != "$PKG_VERSION" ]; then
+            echo "Tag version ($TAG_VERSION) does not match package.json ($PKG_VERSION)"
+            exit 1
+          fi
+          pnpm run version:check
+
+      - name: Extract release notes from RELEASE-NOTES.md
+        env:
+          TAG_NAME: ${{ github.ref_name }}
+        run: |
+          node -e '
+            const fs = require("node:fs");
+            const tag = process.env.TAG_NAME;
+            const text = fs.readFileSync("RELEASE-NOTES.md", "utf8");
+            const heading = `## ${tag}`;
+            const start = text.indexOf(heading);
+            let body = `Release ${tag}`;
+            if (start !== -1) {
+              const rest = text.slice(start);
+              const nextIdx = rest.indexOf("\n## v", heading.length);
+              body = (nextIdx === -1 ? rest : rest.slice(0, nextIdx)).trim();
+            }
+            fs.writeFileSync("release-body.md", `${body}\n`, "utf8");
+          '
+
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG_NAME: ${{ github.ref_name }}
+        run: gh release create "$TAG_NAME" --title "$TAG_NAME" --notes-file release-body.md

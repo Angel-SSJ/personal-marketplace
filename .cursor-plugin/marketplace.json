@@ -1,0 +1,11 @@
+{
+  "name": "personal-marketplace",
+  "owner": {
+    "name": "Angel Ramirez",
+    "email": "angelgabriel.16ra@gmail.com"
+  },
+  "metadata": {
+    "description": "Personal multi-provider AI plugin marketplace for Cursor."
+  },
+  "plugins": []
+}

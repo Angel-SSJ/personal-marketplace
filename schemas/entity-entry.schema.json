@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "entity-entry.schema.json",
+  "title": "Entity Registration & Entry Point Schema (.toml / .yml)",
+  "type": "object",
+  "required": ["id", "name", "type", "entry"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$",
+      "description": "Unique kebab-case identifier for the entity."
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Human-readable display name."
+    },
+    "type": {
+      "enum": ["plugin", "skill", "agent", "rule", "hook", "workflow", "asset"],
+      "description": "Kind of entity registered by this entry file."
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+(-[0-9A-Za-z.-]+)?$"
+    },
+    "description": {
+      "type": "string"
+    },
+    "entry": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Relative path to the entity's primary instruction or script file."
+    },
+    "providers": {
+      "type": "array",
+      "items": {
+        "enum": ["codex", "claude", "antigravity", "cursor", "kimi", "opencode"]
+      },
+      "uniqueItems": true
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true
+    },
+    "assets": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "scripts": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    }
+  },
+  "additionalProperties": true
+}

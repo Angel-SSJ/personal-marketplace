@@ -1,0 +1,30 @@
+pre-commit:
+  parallel: true
+  commands:
+    biome:
+      glob: "*.{js,ts,json,jsonc,md,yml,yaml,html,svg}"
+      run: pnpm exec biome check --no-errors-on-unmatched --files-ignore-unknown=true {staged_files}
+    taplo:
+      glob: "*.toml"
+      run: pnpm exec taplo check {staged_files}
+    html-validate:
+      glob: "*.html"
+      run: pnpm exec html-validate {staged_files}
+    validate-data:
+      glob: "*.{json,toml,yml,yaml,md,svg}"
+      run: node scripts/validate.ts
+
+commit-msg:
+  commands:
+    commitlint:
+      run: pnpm exec commitlint --edit {1}
+
+pre-push:
+  parallel: true
+  commands:
+    typecheck:
+      run: pnpm run typecheck
+    test:
+      run: pnpm run test
+    version-check:
+      run: pnpm run version:check

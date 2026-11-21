@@ -1,0 +1,32 @@
+{
+  "sourceOfTruth": {
+    "file": "package.json",
+    "path": "version"
+  },
+  "targets": [
+    {
+      "file": "package.json",
+      "format": "json",
+      "path": "version"
+    },
+    {
+      "file": ".claude-plugin/marketplace.json",
+      "format": "json",
+      "path": "metadata.version"
+    }
+  ],
+  "syncPluginManifests": true,
+  "audit": {
+    "exclude": [
+      ".git",
+      "node_modules",
+      "dist",
+      "coverage",
+      "pnpm-lock.yaml",
+      "RELEASE-NOTES.md",
+      "CHANGELOG.md",
+      ".version-bump.json",
+      "tests"
+    ]
+  }
+}

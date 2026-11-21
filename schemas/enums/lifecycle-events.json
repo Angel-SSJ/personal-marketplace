@@ -1,0 +1,3 @@
+{
+  "values": ["SessionStart", "PreToolUse", "PostToolUse", "PreInvocation", "PostInvocation", "Stop"]
+}

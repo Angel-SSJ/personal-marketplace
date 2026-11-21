@@ -1,0 +1,13 @@
+exclude = ["node_modules/**", "dist/**", "coverage/**", "tmp/**", ".scratch/**"]
+
+[formatting]
+indent_string = "  "
+column_width = 100
+crlf = false
+reorder_keys = false
+align_entries = false
+trailing_newline = true
+
+[[rule]]
+include = ["plugins/**/*.toml", "entities/**/*.toml"]
+schema = { path = "./schemas/entity-entry.schema.json" }

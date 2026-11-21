@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "types": ["node"],
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "erasableSyntaxOnly": true,
+    "verbatimModuleSyntax": true,
+    "allowJs": true,
+    "checkJs": true,
+    "strict": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true
+  },
+  "include": [
+    "scripts/**/*.ts",
+    "scripts/**/*.js",
+    "tests/**/*.ts",
+    "tests/**/*.js",
+    "plugins/**/*.ts",
+    "plugins/**/*.js",
+    ".opencode/**/*.ts",
+    ".opencode/**/*.js",
+    "index.js",
+    "commitlint.config.js"
+  ],
+  "exclude": ["node_modules", "dist", "coverage"]
+}

@@ -1,0 +1,8 @@
+# Localhost and placeholder URLs
+^https?://localhost
+^https?://127\.0\.0\.1
+^https?://example\.com
+
+# JSON Schema meta-URIs that do not serve static GET endpoints
+^http://json-schema\.org/
+^https://anthropic\.com/claude-code/marketplace\.schema\.json$

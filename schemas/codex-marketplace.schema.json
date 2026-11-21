@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "codex-marketplace.schema.json",
+  "title": "OpenAI Codex Marketplace Manifest",
+  "type": "object",
+  "required": ["name", "plugins"],
+  "properties": {
+    "name": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "interface": {
+      "type": "object",
+      "properties": {
+        "displayName": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": true
+    },
+    "plugins": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "source"],
+        "properties": {
+          "name": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+          "source": {
+            "type": "object",
+            "required": ["source"],
+            "properties": {
+              "source": { "enum": ["local", "url"] },
+              "path": { "type": "string" },
+              "url": { "type": "string", "format": "uri" }
+            },
+            "additionalProperties": false
+          },
+          "policy": {
+            "type": "object",
+            "properties": {
+              "installation": { "enum": ["AVAILABLE", "INSTALLED_BY_DEFAULT"] },
+              "authentication": { "enum": ["ON_INSTALL", "NONE", "ON_USE"] }
+            },
+            "additionalProperties": true
+          },
+          "category": { "type": "string" }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

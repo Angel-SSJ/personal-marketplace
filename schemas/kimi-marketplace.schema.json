@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "kimi-marketplace.schema.json",
+  "title": "Kimi Code Marketplace Manifest (v2)",
+  "type": "object",
+  "required": ["version", "plugins"],
+  "properties": {
+    "version": { "const": "2" },
+    "plugins": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "displayName", "source"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+          "displayName": { "type": "string", "minLength": 1 },
+          "source": { "type": "string", "minLength": 1 },
+          "clients": {
+            "type": "array",
+            "items": { "enum": ["cli", "desktop"] }
+          },
+          "platforms": {
+            "type": "array",
+            "items": { "enum": ["macos", "windows", "linux", "cloud"] }
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

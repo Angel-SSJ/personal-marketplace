@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "antigravity-hooks.schema.json",
+  "title": "Antigravity Plugin Lifecycle Hooks (hooks.json)",
+  "type": "object",
+  "definitions": {
+    "commandHandler": {
+      "type": "object",
+      "required": ["command"],
+      "properties": {
+        "type": { "const": "command" },
+        "command": { "type": "string", "minLength": 1 },
+        "timeout": { "type": "integer", "minimum": 1 }
+      },
+      "additionalProperties": false
+    },
+    "matchedGroup": {
+      "type": "object",
+      "required": ["matcher", "hooks"],
+      "properties": {
+        "matcher": { "type": "string" },
+        "hooks": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/commandHandler" }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": {
+    "type": "object",
+    "properties": {
+      "enabled": { "type": "boolean" },
+      "SessionStart": {
+        "type": "array",
+        "items": { "$ref": "#/definitions/commandHandler" }
+      },
+      "PreInvocation": {
+        "type": "array",
+        "items": { "$ref": "#/definitions/commandHandler" }
+      },
+      "PostInvocation": {
+        "type": "array",
+        "items": { "$ref": "#/definitions/commandHandler" }
+      },
+      "Stop": {
+        "type": "array",
+        "items": { "$ref": "#/definitions/commandHandler" }
+      },
+      "PreToolUse": {
+        "type": "array",
+        "items": { "$ref": "#/definitions/matchedGroup" }
+      },
+      "PostToolUse": {
+        "type": "array",
+        "items": { "$ref": "#/definitions/matchedGroup" }
+      }
+    },
+    "additionalProperties": false
+  }
+}

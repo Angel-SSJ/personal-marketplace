@@ -1,0 +1,37 @@
+# Dependencies and package manager caches
+node_modules/
+.pnpm-store/
+coverage/
+*.tsbuildinfo
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Build outputs
+dist/
+
+# Environment and local overrides
+.env
+.env.*
+!.env.example
+*.local.*
+
+# Non-committed drafts and scratch workspaces
+docs/drafts/
+.scratch/
+tmp/
+temp/
+
+# OS metadata
+Thumbs.db
+desktop.ini
+.DS_Store
+ehthumbs.db
+
+# IDE / editor local state
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+*.swp
+*.swo

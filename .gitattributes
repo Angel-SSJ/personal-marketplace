@@ -1,0 +1,32 @@
+# Enforce LF across platforms (overrides Windows core.autocrlf)
+* text=auto eol=lf
+
+# Explicit text formats
+*.md text eol=lf
+*.json text eol=lf
+*.jsonc text eol=lf
+*.js text eol=lf
+*.ts text eol=lf
+*.toml text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.html text eol=lf
+*.svg text eol=lf
+*.sh text eol=lf
+.editorconfig text eol=lf
+.gitattributes text eol=lf
+.gitignore text eol=lf
+
+# Windows scripts
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Binary assets
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.ico binary
+*.woff2 binary
+*.zip binary
+*.tar.gz binary

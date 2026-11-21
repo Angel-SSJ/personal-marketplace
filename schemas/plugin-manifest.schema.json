@@ -1,0 +1,202 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "plugin-manifest.schema.json",
+  "title": "Per-Provider Native Plugin Manifest Definitions",
+  "definitions": {
+    "semver": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+(-[0-9A-Za-z.-]+)?$"
+    },
+    "authorObj": {
+      "type": "object",
+      "required": ["name"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "email": { "type": "string", "format": "email" },
+        "url": { "type": "string", "format": "uri" }
+      },
+      "additionalProperties": false
+    },
+    "claude": {
+      "type": "object",
+      "required": ["name", "version", "description"],
+      "properties": {
+        "name": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+        "version": { "$ref": "#/definitions/semver" },
+        "description": { "type": "string", "minLength": 1 },
+        "author": { "$ref": "#/definitions/authorObj" },
+        "homepage": { "type": "string", "format": "uri" },
+        "repository": { "type": "string", "format": "uri" },
+        "license": { "type": "string" },
+        "keywords": { "type": "array", "items": { "type": "string" } },
+        "skills": { "type": "string" },
+        "commands": { "type": "string" },
+        "agents": { "type": "string" },
+        "hooks": { "type": "string" },
+        "mcpServers": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "cursor": {
+      "type": "object",
+      "required": ["name", "version", "description"],
+      "properties": {
+        "name": { "type": "string", "pattern": "^[a-z0-9]([a-z0-9.-]*[a-z0-9])?$" },
+        "displayName": { "type": "string" },
+        "description": { "type": "string", "minLength": 1 },
+        "version": { "$ref": "#/definitions/semver" },
+        "publisher": { "type": "string" },
+        "author": {
+          "oneOf": [{ "type": "string" }, { "$ref": "#/definitions/authorObj" }]
+        },
+        "license": { "type": "string" },
+        "homepage": { "type": "string", "format": "uri" },
+        "repository": { "type": "string", "format": "uri" },
+        "logo": { "type": "string" },
+        "keywords": { "type": "array", "items": { "type": "string" } },
+        "category": { "type": "string" },
+        "minClientVersions": { "type": "object" },
+        "skills": { "type": "string" },
+        "hooks": { "type": "string" },
+        "rules": { "type": "string" },
+        "agents": { "type": "string" },
+        "commands": { "type": "string" },
+        "mcpServers": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "codex": {
+      "type": "object",
+      "required": ["name", "version", "description"],
+      "properties": {
+        "name": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+        "version": { "$ref": "#/definitions/semver" },
+        "description": { "type": "string", "minLength": 1 },
+        "author": { "$ref": "#/definitions/authorObj" },
+        "homepage": { "type": "string", "format": "uri" },
+        "repository": { "type": "string", "format": "uri" },
+        "license": { "type": "string" },
+        "keywords": { "type": "array", "items": { "type": "string" } },
+        "skills": { "type": "string" },
+        "hooks": { "oneOf": [{ "type": "object" }, { "type": "string" }] },
+        "mcpServers": { "oneOf": [{ "type": "object" }, { "type": "string" }] },
+        "interface": { "type": "object" }
+      },
+      "additionalProperties": true
+    },
+    "antigravity": {
+      "type": "object",
+      "required": ["name", "description"],
+      "properties": {
+        "$schema": {
+          "type": "string",
+          "format": "uri"
+        },
+        "name": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+        },
+        "displayName": { "type": "string", "minLength": 1 },
+        "display_name": { "type": "string", "minLength": 1 },
+        "description": { "type": "string", "minLength": 1 },
+        "version": { "$ref": "#/definitions/semver" },
+        "logo": {
+          "type": "string",
+          "anyOf": [
+            {
+              "pattern": "^(?![A-Za-z][A-Za-z0-9+.-]*:)(?!/)\\S.*\\.([Pp][Nn][Gg]|[Ss][Vv][Gg]|[Jj][Pp][Ee]?[Gg]|[Ww][Ee][Bb][Pp])$"
+            },
+            {
+              "pattern": "^https://([A-Za-z0-9-]+\\.)*(google\\.com|gstatic\\.com|googleusercontent\\.com)(:[0-9]+)?([/?#].*)?$"
+            }
+          ]
+        },
+        "suggestedPrompts": {
+          "type": "array",
+          "maxItems": 3,
+          "items": { "type": "string", "pattern": "\\S" }
+        },
+        "suggested_prompts": {
+          "type": "array",
+          "maxItems": 3,
+          "items": { "type": "string", "pattern": "\\S" }
+        },
+        "skills": {
+          "oneOf": [
+            { "type": "string", "pattern": "\\S" },
+            { "type": "array", "items": { "type": "string", "pattern": "\\S" } }
+          ]
+        },
+        "author": {
+          "oneOf": [
+            { "type": "string", "minLength": 1 },
+            {
+              "type": "object",
+              "required": ["name"],
+              "properties": {
+                "name": { "type": "string", "minLength": 1 },
+                "email": { "type": "string", "format": "email" },
+                "url": { "type": "string", "pattern": "^https://" }
+              },
+              "additionalProperties": false
+            }
+          ]
+        },
+        "homepage": { "type": "string", "pattern": "^https://" },
+        "repository": { "type": "string", "pattern": "^https://" },
+        "license": { "type": "string", "minLength": 1 },
+        "keywords": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "extensions": {
+          "type": "object",
+          "additionalProperties": { "type": "object" }
+        },
+        "disabled": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    },
+    "kimi": {
+      "type": "object",
+      "required": ["name", "version", "description"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]+(\\.[A-Za-z0-9_-]+)*(@[A-Za-z0-9_-]+)?$"
+        },
+        "version": { "$ref": "#/definitions/semver" },
+        "description": { "type": "string", "minLength": 1 },
+        "keywords": { "type": "array", "items": { "type": "string" } },
+        "author": {
+          "oneOf": [{ "type": "string" }, { "$ref": "#/definitions/authorObj" }]
+        },
+        "homepage": { "type": "string", "format": "uri" },
+        "license": { "type": "string" },
+        "interface": { "type": "object" },
+        "skills": {
+          "oneOf": [{ "type": "string" }, { "type": "array", "items": { "type": "string" } }]
+        },
+        "agents": {
+          "oneOf": [{ "type": "string" }, { "type": "array", "items": { "type": "string" } }]
+        },
+        "commands": {
+          "oneOf": [{ "type": "string" }, { "type": "array", "items": { "type": "string" } }]
+        },
+        "mcpServers": { "oneOf": [{ "type": "object" }, { "type": "string" }] },
+        "hooks": { "oneOf": [{ "type": "object" }, { "type": "string" }] },
+        "sessionStart": {
+          "type": "object",
+          "properties": {
+            "skill": { "type": "string", "minLength": 1 }
+          },
+          "additionalProperties": false
+        },
+        "skillInstructions": { "type": "string" },
+        "systemPrompt": { "type": "string" },
+        "systemPromptPath": { "type": "string" }
+      },
+      "additionalProperties": true
+    }
+  }
+}
