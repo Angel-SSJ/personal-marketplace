@@ -6,3 +6,7 @@
 # JSON Schema meta-URIs that do not serve static GET endpoints
 ^http://json-schema\.org/
 ^https://anthropic\.com/claude-code/marketplace\.schema\.json$
+
+# Authenticated Notion workspace pages and remote MCP endpoints
+^https://app\.notion\.com/
+^https://mcp\.notion\.com/
