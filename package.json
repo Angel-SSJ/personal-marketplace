@@ -6,6 +6,7 @@
     "name": "Angel Ramirez",
     "email": "angelgabriel.16ra@gmail.com"
   },
+  "license": "MIT",
   "private": true,
   "type": "module",
   "main": "./.opencode/plugins/marketplace.js",
