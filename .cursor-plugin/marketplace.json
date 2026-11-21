@@ -7,5 +7,12 @@
   "metadata": {
     "description": "Personal multi-provider AI plugin marketplace for Cursor."
   },
-  "plugins": []
+  "plugins": [
+    {
+      "name": "personal-management",
+      "source": "plugins/personal-management",
+      "description": "Personal productivity and knowledge management suite integrating GTD, PARA, CODE, Inbox/Intake processing, MoSCoW prioritization, task writing, file naming, and Notion + Google Drive workflows.",
+      "minClientVersions": {}
+    }
+  ]
 }
