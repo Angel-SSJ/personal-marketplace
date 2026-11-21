@@ -1,4 +1,12 @@
 {
   "version": "2",
-  "plugins": []
+  "plugins": [
+    {
+      "id": "personal-management",
+      "displayName": "Personal Management",
+      "source": "./plugins/personal-management",
+      "clients": ["cli", "desktop"],
+      "platforms": ["macos", "windows", "linux"]
+    }
+  ]
 }
