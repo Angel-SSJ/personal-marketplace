@@ -15,6 +15,6 @@ Discover and install personal plugins across all 6 supported AI providers.
 
 ## Available Plugins
 
-| ID           | Display Name | Category | Providers | Description                                         |
-| :----------- | :----------- | :------- | :-------- | :-------------------------------------------------- |
-| _(none yet)_ | —            | —        | —         | Run `pnpm run plugin:new` to add your first plugin. |
+| ID                    | Display Name        | Category       | Providers | Description                                                                                                                                                                                       |
+| :-------------------- | :------------------ | :------------- | :-------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `personal-management` | Personal Management | `productivity` | All 6     | Personal productivity and knowledge management suite integrating GTD, PARA, CODE, Inbox/Intake processing, MoSCoW prioritization, task writing, file naming, and Notion + Google Drive workflows. |
