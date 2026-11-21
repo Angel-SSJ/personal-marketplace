@@ -1,0 +1,37 @@
+{
+  "name": "personal-management",
+  "version": "0.1.0",
+  "description": "Personal productivity and knowledge management suite integrating GTD, PARA, CODE, Inbox/Intake processing, MoSCoW prioritization, task writing, file naming, and Notion + Google Drive workflows.",
+  "author": {
+    "name": "Angel Ramirez",
+    "email": "angelgabriel.16ra@gmail.com"
+  },
+  "homepage": "https://github.com/Angel-SSJ/personal-marketplace/tree/main/plugins/personal-management",
+  "repository": "https://github.com/Angel-SSJ/personal-marketplace",
+  "license": "MIT",
+  "keywords": [
+    "productivity",
+    "personal-management",
+    "gtd",
+    "para",
+    "code",
+    "inbox",
+    "moscow",
+    "prioritization",
+    "task-writing",
+    "file-naming",
+    "notion",
+    "google-drive",
+    "knowledge-management"
+  ],
+  "skills": "./skills/",
+  "hooks": {},
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Personal Management",
+    "shortDescription": "Personal productivity and knowledge management suite integrating GTD, PARA, CODE, Inbox/Intake processing, MoSCoW prioritization, task writing, file naming, and Notion + Google Drive workflows.",
+    "developerName": "Angel Ramirez",
+    "category": "productivity",
+    "logo": "assets/logo.svg"
+  }
+}

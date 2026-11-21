@@ -3,5 +3,18 @@
   "interface": {
     "displayName": "Personal Marketplace"
   },
-  "plugins": []
+  "plugins": [
+    {
+      "name": "personal-management",
+      "source": {
+        "source": "local",
+        "path": "./plugins/personal-management"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_USE"
+      },
+      "category": "productivity"
+    }
+  ]
 }
