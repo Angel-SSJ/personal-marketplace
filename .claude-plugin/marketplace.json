@@ -10,5 +10,19 @@
     "description": "Personal multi-provider AI plugin marketplace for Claude Code and Cowork.",
     "version": "0.1.0"
   },
-  "plugins": []
+  "plugins": [
+    {
+      "name": "personal-management",
+      "displayName": "Personal Management",
+      "description": "Personal productivity and knowledge management suite integrating GTD, PARA, CODE, Inbox/Intake processing, MoSCoW prioritization, task writing, file naming, and Notion + Google Drive workflows.",
+      "version": "0.1.0",
+      "category": "productivity",
+      "author": {
+        "name": "Angel Ramirez",
+        "email": "angelgabriel.16ra@gmail.com"
+      },
+      "strict": true,
+      "source": "./plugins/personal-management"
+    }
+  ]
 }
