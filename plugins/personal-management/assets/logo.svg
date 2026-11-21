@@ -1,0 +1,21 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 128 128"
+  width="128"
+  height="128"
+  role="img"
+  aria-label="Personal Management logo"
+>
+  <rect x="12" y="12" width="104" height="104" rx="24" fill="#111827" />
+  <text
+    x="64"
+    y="80"
+    text-anchor="middle"
+    font-family="system-ui, sans-serif"
+    font-size="56"
+    font-weight="700"
+    fill="#f9fafb"
+  >
+    P
+  </text>
+</svg>

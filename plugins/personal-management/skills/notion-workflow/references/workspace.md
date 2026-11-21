@@ -1,0 +1,13 @@
+# Workspace navigation and observed schema
+
+Read assets/workspace-map.json relative to this package root. It holds observation time, root identity, canonical database surfaces, linked dashboard surfaces, exact data source schemas and view IDs/configuration. The root is Personal Workflow. The seven source databases are Goals, Areas, Projects, Stages, Tasks, Inbox and Notes & References. Identify by verified IDs and collection URLs; titles alone can collide.
+
+A database is a surface for one or more data sources. A linked dashboard database presents existing source records with its own saved views. Map a view by ID plus containing surface and data source, never by label alone. Fetch each source before querying it, use schema-returned query column names, and follow pagination. Formula/rollup result URLs require supported evaluation access; their presence does not establish values. Formula code URLs and exposed schema are structural evidence; the snapshot does not claim to contain hidden formula bodies or unsupported button configuration.
+
+Current root sections include Goals, Projects, Inbox, Tasks, Databases and Notes & References. Source Stages is reachable through Databases. Preserve the actual layout, native gray icons and English names unless the user asks for presentation changes. Do not reintroduce removed sections automatically.
+
+Tasks link to Project, Stage, Area, Notes and References. Parent Task/Subtasks describes decomposition. Blocked by/Blocking describes dependency. Stages link to Project and Tasks and have reciprocal stage dependencies. Projects link to Area, Stages, Tasks and Notes with project dependencies. Inbox links to Project, Area, Tasks and Notes. Notes & References links to Project and Area. Areas exposes reciprocal project/task/note links. Check actual relation property targets and reciprocal property URLs in the live schema before edits. Do not set both sides independently when Notion synchronizes a reciprocal relation.
+
+Start Date, End Date, Due Date, Follow-up Date, Milestone Date and the generic Inbox/Notes Date have distinct meanings. Generic Date has no universal deadline equivalence. Progress is Number with percent formatting and observed presentation settings when exposed; manual progress must be explicitly supplied. Calculated Progress, Eligible Tasks and Completed Tasks are derived. Treat rollups, formulas and creation/edit timestamps as managed fields. Do not overwrite manual Progress with a calculated guess.
+
+Source and dashboard views can differ. Preserve both observed sets. Never claim that a source view automatically propagates into all linked surfaces. Detect duplicates by function, scope and configuration, not name alone.
