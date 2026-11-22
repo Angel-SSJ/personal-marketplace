@@ -48,15 +48,15 @@ jobs:
             const fs = require("node:fs");
             const tag = process.env.TAG_NAME;
             const text = fs.readFileSync("RELEASE-NOTES.md", "utf8");
-            const heading = `## ${tag}`;
+            const heading = "## " + tag;
             const start = text.indexOf(heading);
-            let body = `Release ${tag}`;
+            let body = "Release " + tag;
             if (start !== -1) {
               const rest = text.slice(start);
               const nextIdx = rest.indexOf("\n## v", heading.length);
               body = (nextIdx === -1 ? rest : rest.slice(0, nextIdx)).trim();
             }
-            fs.writeFileSync("release-body.md", `${body}\n`, "utf8");
+            fs.writeFileSync("release-body.md", body + "\n", "utf8");
           '
 
       - name: Create GitHub Release
