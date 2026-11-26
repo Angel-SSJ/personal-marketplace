@@ -13,6 +13,12 @@
       "source": "plugins/personal-management",
       "description": "Self-contained ten-skill personal productivity and knowledge management suite integrating GTD, PARA, CODE, Inbox/Intake processing, MoSCoW prioritization, task writing, global file/folder naming, Notion workflow, two-phase Notion initialization, and read-only cross-layer system integrity auditing.",
       "minClientVersions": {}
+    },
+    {
+      "name": "design-system",
+      "source": "plugins/design-system",
+      "description": "Self-contained five-skill design system engineering suite covering end-to-end W3C DTCG 2025.10 creation, cascade updates, perceptual OKLCH harmonies and palette philosophies, WCAG 2.2 AA/AAA + APCA dual-gate accessibility auditing, layer-by-layer structural auditing, and token-pure HTML component showcases.",
+      "minClientVersions": {}
     }
   ]
 }

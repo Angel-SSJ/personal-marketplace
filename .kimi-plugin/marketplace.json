@@ -7,6 +7,13 @@
       "source": "./plugins/personal-management",
       "clients": ["cli", "desktop"],
       "platforms": ["macos", "windows", "linux"]
+    },
+    {
+      "id": "design-system",
+      "displayName": "Design System",
+      "source": "./plugins/design-system",
+      "clients": ["cli", "desktop"],
+      "platforms": ["macos", "windows", "linux"]
     }
   ]
 }

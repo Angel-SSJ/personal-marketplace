@@ -23,6 +23,19 @@
       },
       "strict": true,
       "source": "./plugins/personal-management"
+    },
+    {
+      "name": "design-system",
+      "displayName": "Design System",
+      "description": "Self-contained five-skill design system engineering suite covering end-to-end W3C DTCG 2025.10 creation, cascade updates, perceptual OKLCH harmonies and palette philosophies, WCAG 2.2 AA/AAA + APCA dual-gate accessibility auditing, layer-by-layer structural auditing, and token-pure HTML component showcases.",
+      "version": "0.2.0",
+      "category": "design",
+      "author": {
+        "name": "Angel Ramirez",
+        "email": "angelgabriel.16ra@gmail.com"
+      },
+      "strict": true,
+      "source": "./plugins/design-system"
     }
   ]
 }
