@@ -1,0 +1,13 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 128 128"
+  width="128"
+  height="128"
+  role="img"
+  aria-label="Design System plugin logo"
+>
+  <rect x="12" y="12" width="104" height="104" rx="24" fill="#0f172a" />
+  <circle cx="46" cy="50" r="16" fill="#38bdf8" />
+  <circle cx="82" cy="50" r="16" fill="#a78bfa" />
+  <rect x="30" y="76" width="68" height="18" rx="9" fill="#f8fafc" />
+</svg>

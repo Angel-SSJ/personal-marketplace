@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0.0",
+  "algorithm": "APCA-W3 0.0.98G-4g",
+  "library_reference": "apca-w3 0.1.9 (beta)",
+  "constants": {
+    "mainTRC": 2.4,
+    "sRco": 0.2126729,
+    "sGco": 0.7151522,
+    "sBco": 0.072175,
+    "blkThrs": 0.022,
+    "blkClmp": 1.414,
+    "deltaYmin": 0.0005,
+    "normBG": 0.56,
+    "normTXT": 0.57,
+    "revBG": 0.65,
+    "revTXT": 0.62,
+    "scaleBoW": 1.14,
+    "scaleWoB": 1.14,
+    "loClip": 0.1,
+    "loBoWoffset": 0.027,
+    "loWoBoffset": 0.027
+  },
+  "dual_gate_thresholds": {
+    "WCAG 2.2 AA + APCA": {
+      "body": { "wcag_min": 4.5, "apca_min": 75.0, "apca_preferred": 90.0, "min_font_px": 14 },
+      "content": { "wcag_min": 4.5, "apca_min": 60.0, "apca_preferred": 75.0, "min_font_px": 14 },
+      "large": { "wcag_min": 3.0, "apca_min": 45.0, "apca_max_glare": 90.0, "min_font_px": 24 },
+      "ui": { "wcag_min": 3.0, "apca_min": 30.0 },
+      "focus": { "wcag_min": 3.0, "apca_min": 30.0, "min_perimeter_px": 2 },
+      "spot": { "wcag_min": 1.0, "apca_min": 30.0 },
+      "divider": { "wcag_min": 1.0, "apca_min": 15.0 },
+      "target_size_px": 24
+    },
+    "WCAG 2.2 AAA": {
+      "body": { "wcag_min": 7.0, "apca_min": 90.0, "apca_preferred": 90.0, "min_font_px": 16 },
+      "content": { "wcag_min": 7.0, "apca_min": 75.0, "apca_preferred": 90.0, "min_font_px": 16 },
+      "large": { "wcag_min": 4.5, "apca_min": 60.0, "apca_max_glare": 90.0, "min_font_px": 24 },
+      "ui": { "wcag_min": 3.0, "apca_min": 45.0 },
+      "focus": { "wcag_min": 3.0, "apca_min": 45.0, "min_perimeter_px": 2 },
+      "spot": { "wcag_min": 1.0, "apca_min": 30.0 },
+      "divider": { "wcag_min": 1.0, "apca_min": 15.0 },
+      "target_size_px": 44
+    }
+  },
+  "table_a_min_lc": {
+    "weights": [100, 200, 300, 400, 500, 600, 700, 800, 900],
+    "rows": {
+      "10": [null, null, null, null, null, null, null, null, null],
+      "12": [null, null, null, "spot", "spot", "spot", "spot", null, null],
+      "14": [null, null, "spot", 100, 100, 90, 75, null, null],
+      "15": [null, null, "spot", 100, 90, 75, 70, null, null],
+      "16": [null, null, "spot", 90, 75, 70, 60, 60, null],
+      "18": [null, "spot", 100, 75, 70, 60, 55, 55, 55],
+      "21": [null, "spot", 90, 70, 60, 55, 50, 50, 50],
+      "24": [null, "spot", 75, 60, 55, 50, 45, 45, 45],
+      "28": [null, 100, 70, 55, 50, 45, 43, 43, 43],
+      "32": [null, 90, 65, 50, 45, 43, 40, 40, 40],
+      "36": [null, 75, 60, 45, 43, 40, 38, 38, 38],
+      "48": [90, 60, 55, 43, 40, 38, 35, 35, 35],
+      "60": [75, 55, 50, 40, 38, 35, 33, 33, 33],
+      "72": [60, 50, 45, 38, 35, 33, 30, 30, 30],
+      "96": [50, 45, 40, 35, 33, 30, 25, 25, 25]
+    }
+  }
+}

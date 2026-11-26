@@ -1,0 +1,130 @@
+{
+  "schema_version": "1.0.0",
+  "dtcg_schema": "https://www.designtokens.org/schemas/2025.10/format.json",
+  "accepted_enums": {
+    "accessibilityLevel": ["WCAG 2.2 AA + APCA", "WCAG 2.2 AAA"],
+    "colorStandard": ["OKLCH", "HEX", "RGB"],
+    "colorHarmonyScheme": [
+      "Monochromatic",
+      "Analogous",
+      "Complementary",
+      "Split-Complementary",
+      "Triadic",
+      "Tetradic"
+    ],
+    "colorPalettePhilosophy": ["Tonal Palette", "Carbon (IBM)", "Radix Colors"]
+  },
+  "layers": [
+    {
+      "index": 1,
+      "slug": "identity-and-philosophy",
+      "title": "Identity and Philosophy",
+      "required": true,
+      "category": null,
+      "audit_file": "01-identity-and-philosophy"
+    },
+    {
+      "index": 2,
+      "slug": "color-palette",
+      "title": "Color Palette",
+      "required": true,
+      "category": "color",
+      "audit_file": "02-color-palette"
+    },
+    {
+      "index": 3,
+      "slug": "typography",
+      "title": "Typography",
+      "required": true,
+      "category": "typography",
+      "audit_file": "03-typography"
+    },
+    {
+      "index": 4,
+      "slug": "spacing-layout-zindex",
+      "title": "Spacing, Layout & Z-Index",
+      "required": true,
+      "category": "spacing",
+      "audit_file": "04-spacing-layout-zindex"
+    },
+    {
+      "index": 5,
+      "slug": "shape-radius-stroke",
+      "title": "Shape, Radius & Stroke",
+      "required": true,
+      "category": "shape",
+      "audit_file": "05-shape-radius-stroke"
+    },
+    {
+      "index": 6,
+      "slug": "elevation-and-shadows",
+      "title": "Elevation & Shadows",
+      "required": false,
+      "category": "elevation",
+      "audit_file": "06-elevation-and-shadows"
+    },
+    {
+      "index": 7,
+      "slug": "motion-and-animation",
+      "title": "Motion & Animation",
+      "required": false,
+      "category": "motion",
+      "audit_file": "07-motion-and-animation"
+    },
+    {
+      "index": 8,
+      "slug": "opacity-and-interaction-state",
+      "title": "Opacity & Interaction State",
+      "required": true,
+      "category": "opacity",
+      "audit_file": "08-opacity-and-interaction-state"
+    },
+    {
+      "index": 9,
+      "slug": "sizing",
+      "title": "Sizing",
+      "required": true,
+      "category": "sizing",
+      "audit_file": "09-sizing"
+    }
+  ],
+  "naming_patterns": {
+    "primitive": "^[a-z0-9]+-(color|typography|spacing|shape|elevation|motion|opacity|sizing)-[a-z0-9]+(-[a-z0-9]+)*$",
+    "semantic": "^[a-z0-9]+-(color|typography|spacing|shape|elevation|motion|opacity|sizing)-[a-z0-9]+-[a-z0-9]+(-[a-z0-9]+)*$",
+    "component": "^[a-z0-9]+-(color|typography|spacing|shape|elevation|motion|opacity|sizing)-[a-z0-9]+-[a-z0-9]+(-[a-z0-9]+)*$"
+  },
+  "rules": [
+    "D01",
+    "D02",
+    "D03",
+    "D04",
+    "D05",
+    "D06",
+    "D07",
+    "D08",
+    "D09",
+    "D10",
+    "D11",
+    "D12",
+    "D13",
+    "D14",
+    "D15",
+    "D16",
+    "D17",
+    "D18",
+    "D19",
+    "D20",
+    "D21",
+    "D22",
+    "D23",
+    "D24",
+    "D25",
+    "D26",
+    "D27",
+    "D28",
+    "D29",
+    "D30",
+    "D31",
+    "D32"
+  ]
+}
