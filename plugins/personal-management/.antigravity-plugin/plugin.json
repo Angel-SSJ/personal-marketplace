@@ -2,13 +2,13 @@
   "$schema": "https://antigravity.google/schemas/v1/plugin.json",
   "name": "personal-management",
   "displayName": "Personal Management",
-  "version": "0.1.0",
-  "description": "Personal productivity and knowledge management suite integrating GTD, PARA, CODE, Inbox/Intake processing, MoSCoW prioritization, task writing, file naming, and Notion + Google Drive workflows.",
+  "version": "0.2.0",
+  "description": "Self-contained ten-skill personal productivity and knowledge management suite integrating GTD, PARA, CODE, Inbox/Intake processing, MoSCoW prioritization, task writing, global file/folder naming, Notion workflow, two-phase Notion initialization, and read-only cross-layer system integrity auditing.",
   "logo": "assets/logo.svg",
   "suggestedPrompts": [
-    "Clarify my Notion Inbox items using GTD, PARA, and CODE workflows",
+    "Clarify my Notion Inbox items using GTD, PARA, CODE, and Drive file naming",
     "Prioritize my active project tasks with MoSCoW and refine their wording",
-    "Organize and name project files for Google Drive under the PARA storage architecture"
+    "Initialize my seven-database Notion workspace or run a read-only cross-layer integrity audit"
   ],
   "author": {
     "name": "Angel Ramirez",
@@ -29,6 +29,8 @@
     "task-writing",
     "file-naming",
     "notion",
+    "notion-initialization",
+    "system-integrity-audit",
     "google-drive",
     "knowledge-management"
   ]

@@ -1,6 +1,6 @@
 {
   "name": "personal-marketplace",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Personal multi-provider AI plugin marketplace supporting GPT/Codex, Claude (Code & Cowork), Antigravity, Cursor, Kimi Code, and OpenCode.",
   "author": {
     "name": "Angel Ramirez",

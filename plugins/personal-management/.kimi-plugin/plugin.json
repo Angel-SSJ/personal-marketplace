@@ -1,7 +1,7 @@
 {
   "name": "personal-management",
-  "version": "0.1.0",
-  "description": "Personal productivity and knowledge management suite integrating GTD, PARA, CODE, Inbox/Intake processing, MoSCoW prioritization, task writing, file naming, and Notion + Google Drive workflows.",
+  "version": "0.2.0",
+  "description": "Self-contained ten-skill personal productivity and knowledge management suite integrating GTD, PARA, CODE, Inbox/Intake processing, MoSCoW prioritization, task writing, global file/folder naming, Notion workflow, two-phase Notion initialization, and read-only cross-layer system integrity auditing.",
   "keywords": [
     "productivity",
     "personal-management",
@@ -14,6 +14,8 @@
     "task-writing",
     "file-naming",
     "notion",
+    "notion-initialization",
+    "system-integrity-audit",
     "google-drive",
     "knowledge-management"
   ],
@@ -27,7 +29,7 @@
   "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "Personal Management",
-    "shortDescription": "Personal productivity and knowledge management suite integrating GTD, PARA, CODE, Inbox/Intake processing, MoSCoW prioritization, task writing, file naming, and Notion + Google Drive workflows.",
+    "shortDescription": "Self-contained ten-skill personal productivity and knowledge management suite for Notion and Google Drive.",
     "developerName": "Angel Ramirez"
   }
 }
