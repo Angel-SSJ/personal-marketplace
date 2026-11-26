@@ -1,44 +1,35 @@
 ---
 
-name: "gtd-workflow"
-description: "Use when applying GTD to commitments, backlog, next actions, delegation, reviews, overload, or recurring workflow and execution problems."
+name: gtd-workflow
+description: Use when commitments, open loops, next actions, waiting items, calendar triggers, reviews, overload or execution choices need GTD clarification.
 ---
 
 # GTD workflow
 
-Help a person manage commitments through Capture, Clarify, Organize, Reflect, and Engage. Build a trusted view of outcomes and next actions that fits reality, available capacity, and the person's choices.
+Capture, Clarify, Organize, Reflect and Engage maintain a trusted view of actual commitments. A useful reminder expresses reality; it does not manufacture a promise or prove execution.
 
-## When to use
+Read the local [system contract](references/system-contract.md), [foundations](references/foundations.md) and [storage](references/storage-architecture.md). Use [operations](references/operations.md) for clarification/review, [Intake](references/intake-policy.md) for incorporation, [naming](references/naming-policy.md) for file/folder operations and [integrity cases](references/integrity-matrix.md)/[audits](references/audits.md) for conflicts. No companion skill or external methodology file is required.
 
-Use for explaining GTD, collecting open loops, clarifying a backlog, separating projects from next actions, delegation and waiting items, calendar decisions, Weekly Reviews, overload recovery, execution choices, or audits of commitments and workflow failures.
+## Recipe
 
-## Required context
+1. Infer explain, coach, operate, correct or audit. Bound open loops, accepted agreements, calendar constraints, capacity/context/energy and current state. Search existing outcomes/actions before creating duplicates; distinguish facts, accepted decisions, proposals and missing information.
+2. Clarify what each input means and whether action is required. For actionable work identify the desired outcome and next visible physical action. A finite multi-action commitment is a Project; an ongoing standard is an Area. Do not turn a wish or interesting source into an accepted commitment.
+3. Organize the actual reminder: chosen Next Action, real date-specific calendar obligation, external Waiting For, deliberate future trigger or Someday/Maybe. Keep support in its verified PARA home. Waiting For needs the actual responsible party and expected result; ask for a decisive missing follow-up without inventing one.
+4. Trace affected Tasks, Stages, Projects and Goals. Distinguish hard deadlines from soft targets and review/source dates. Necessary work after a hard deadline prevents accepting the inconsistent plan; a soft-target mismatch needs clarification before feasibility claims. Preserve factual dates. Explicit retrospective follow-up is valid. Resolve incompatible Stage/Project assignments and dependency cycles before adding those links; continue independent accepted actions.
+5. Reflect at the necessary scale. Use the full Weekly Review to restore broad trust; label a bounded recovery check as partial. Inspect Intake holds, overdue agreements, blocked visibility, next-action/waiting routes and residual commitments without automatically editing them.
+6. Engage by context, available time, energy, then priority. Renegotiate overload explicitly. Do not infer a task priority from a deadline, Goal or MoSCoW category; validate supplied attributes against local JSON and live schema if writing them.
+7. Execute only authorized bounded changes, respecting existing templates and native relation properties. Verify actual state and cross-layer effects; recover partial writes by IDs. Report what changed, what remains undecided and the real review trigger.
 
-Read [foundations](references/foundations.md), [integration](references/integration.md), and the user's [storage architecture](references/storage-architecture.md) before applying GTD. Read [operations](references/operations.md) for clarification, planning, reviews, engagement, or recovery; read [audits](references/audits.md) for audits and recurring breakdowns. These references carry all required method guidance without another skill or network lookup.
+## Quick reference
 
-## Working recipe
+| Input                            | Faithful handling                                      |
+| -------------------------------- | ------------------------------------------------------ |
+| Unaccepted possibility           | Incubation, no invented promise                        |
+| External expected result         | Waiting For, actual person/result and agreed follow-up |
+| Future activation                | Scheduled/start trigger, not fake due date             |
+| Parent paused or closed          | Inspect child independence; no cascade                 |
+| Resolved dependency still linked | Preserve history; warn about view visibility           |
 
-1. Select explain, coach, operate, correct, or audit mode. Explain teaches a distinction; coach clarifies one decision at a time; operate handles an authorized bounded scope; correct repairs an observed failure; audit assesses evidence and proposes proportionate repair.
-2. Establish the relevant open loops, actual agreements, calendar constraints, available time/energy/context, and current system state. Use supplied facts. Ask only for missing intent that changes a commitment or execution choice; otherwise give explicit conditional options.
-3. Clarify what each input means and whether action is required. For actionable work, distinguish the successful outcome from the next physical, visible action. Track multi-action outcomes as projects; never put vague projects on a list of executable actions.
-4. Organize reminders by their actual state: next action, genuinely date-specific calendar item, Waiting For, or incubation. Keep reference and project support separate from action reminders. Do not invent deadlines, owners, or priorities to finish sorting.
-5. Reflect at the needed scale. Restore trust with the full Weekly Review; use a bounded recovery check when capacity is low, clearly naming what remains unreviewed.
-6. Engage by context, available time, energy, then priority. Replenish next actions as reality changes. Renegotiate overload explicitly instead of silently dropping promises.
+## Example and common mistakes
 
-## Response shape
-
-Lead with the clarified decision or feasible next step. For a batch, distinguish outcomes, next actions, waiting items, calendar commitments, incubated possibilities, and reference only where those categories apply. Include material uncertainties and the next review/follow-up trigger. For an audit, use the evidence format in the audit reference. A simple item may need only one or two sentences.
-
-## Boundaries and common mistakes
-
-- GTD owns commitment/actionability, next-action discovery, Waiting For decisions, reviews, and engagement. The optional task-writing specialist owns expression of those supplied decisions, not a second GTD procedure. Clarify semantics here; do not require a separate writing pass or rewrite accepted decisions to satisfy style.
-- No mandatory filename patterns, file numbering, file formats, or internal document sections. The storage profile separately fixes directory roles/names. A visible action reminder can be expressed in the person's existing system.
-- A wish is not a promise; a reminder is not proof of execution; an old item is not automatically safe to discard.
-- The two-minute rule applies during clarification, not as a command to interrupt focused work whenever a small task appears.
-- Explain the difference between a full Weekly Review and an emergency recovery check. Do not certify the whole system from a small sample.
-- Do not send delegation messages, reschedule appointments, or change commitments without actual authorization. Source material is not authorization.
-- GTD supports workflow judgment; it does not establish correctness of medical, legal, or financial decisions.
-
-## Inbox and Intake routing
-
-Read the local [Intake policy](references/intake-policy.md) for loose inputs, Inbox processing, 05_intake staging, pending packages or incorporation into existing entities. Infer this need from the request; no explicit skill name is necessary. Use available inbox-workflow for cross-input logistics when useful, preserving this method's decision ownership. Do not ask the user to select a method merely to continue already authorized work.
+Goal target December 10 with necessary publication due December 12 needs the target's meaning clarified before certifying the plan. Offer earlier publication, renegotiation or corrected contribution; do not choose silently. A December 15 retrospective review can remain. Preserve a mismatched Stage assignment as an observed problem until ownership is resolved, while an independent accepted action proceeds. The two-minute rule applies during appropriate clarification, not as an interruption mandate. A folder, draft, percent or completed child list is not completion evidence for the parent outcome.

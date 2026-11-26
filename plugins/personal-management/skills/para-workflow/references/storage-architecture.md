@@ -1,45 +1,44 @@
 # Personal storage architecture and lifecycle
 
-This is the user's confirmed local profile, shared by the three methodology skills. It adds exact directory roles to the general methods. It prescribes no project-name format, filename convention, mandatory root file, README, or contents/sections of documents. The directory names below are structure, not document naming rules.
+This is the confirmed local storage profile. It fixes placement and lifecycle; authorized file and folder operations also apply the local naming policy. No mandatory root document or arbitrary document sections are imposed.
 
 ## Parent paths and structural layout
 
 Paths are relative to the person's chosen storage root, not to this skill package or an automatically selected workspace. Maintain the same four PARA parents and category meaning across relevant storage surfaces. Respect ownership/access; aligning existing storage requires an authorized migration, not blind mirroring or copying all contents.
 
 ```text
-01_projects/
+01-projects/
   <project>/
     docs/
     drafts/
     submissions/
     assets/
-02_areas/
+02-areas/
   <area>/
-03_resources/
+03-resources/
   <topic-or-utility>/
-04_archives/
-  Projects/
-  Areas/
-  Resources/
+04-archives/
+  01-projects/
+    <project>/
 ```
 
-Angle-bracket entries illustrate containers whose names the person chooses freely. They do not impose a naming pattern. For a newly established supported project, the four sibling directories define its internal layout. When auditing existing projects, inspect their role coverage and propose missing structure; do not create empty trees in unrelated storage, duplicate active commitments, or claim a migration was executed.
+Angle-bracket entries are verified entity containers named under the local naming policy; they do not create entities by themselves. For a newly established supported project, the four sibling directories define its internal layout. When auditing existing projects, inspect their role coverage and propose missing structure; do not create empty trees in unrelated storage, duplicate active commitments, or claim a migration was executed.
 
-Keep nesting shallow: project directories are siblings under 01_projects, their four role directories are direct children, and Areas/Resources use flat direct containers. Further nesting requires a concrete retrieval/ownership need rather than a speculative taxonomy. Standard Archive category children are part of the profile, not a reason for arbitrary extra levels.
+Keep nesting shallow: project directories are siblings under 01-projects, their four role directories are direct children, and Areas/Resources normally use direct containers, preserving meaningful established subdivisions such as personal/private or software-development/certifications. Further nesting requires a concrete retrieval/ownership need rather than a speculative taxonomy. Only 04-archives/01-projects is observed as an archive category; verify other category destinations before use instead of inventing their existence.
 
 ## Directory responsibilities
 
-| Destination                        | Holds                                                                                                                  | Boundary                                                                                                                                                   |
-| ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 01_projects/<project>/docs/        | Current working documents, living drafts, editable intermediate packets                                                | Superseded iterations and temporary scratches move to drafts; finalized frozen exports live in submissions                                                 |
-| 01_projects/<project>/drafts/      | Scratches, temporary working notes, discarded iterations, superseded versions                                          | Despite the name, the current living draft belongs in docs; retain history without cluttering the active version                                           |
-| 01_projects/<project>/submissions/ | Finalized, frozen, export-ready deliverables and delivered snapshots                                                   | Never overwrite the frozen record during iteration; edit working material in docs and produce a distinct final snapshot                                    |
-| 01_projects/<project>/assets/      | Project-exclusive sources, raw data, media, references, and external materials                                         | Shared/reusable canonical references may stay in Resources or Areas with links; do not force divergent copies                                              |
-| 02_areas/<area>/                   | Ongoing standards, policies, long-term logs, current contracts, recurring procedures                                   | Finite-project drafts and deliverables do not live directly here; use narrowly justified records/receipts subdirectories only for real recordkeeping needs |
-| 03_resources/<topic-or-utility>/   | Reusable templates, knowledge, summaries, snippets, research, and source assets without a current performance standard | A potential project reminder belongs in Someday/Maybe; its background material can remain here                                                             |
-| 04_archives/Projects/              | Whole inactive project containers with their internal layout preserved                                                 | No live working edits; preserve frozen deliverables and provenance                                                                                         |
-| 04_archives/Areas/                 | Retired responsibility containers                                                                                      | An Area is retired when the role ends, not “completed” like a finite project                                                                               |
-| 04_archives/Resources/             | Obsolete/inactive topic containers retained for history                                                                | Retain and retrieve according to actual usefulness and retention needs                                                                                     |
+| Destination                               | Holds                                                                                                                  | Boundary                                                                                                                                                   |
+| ----------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 01-projects/<project>/docs/               | Current working documents, living drafts, editable intermediate packets                                                | Superseded iterations and temporary scratches move to drafts; finalized frozen exports live in submissions                                                 |
+| 01-projects/<project>/drafts/             | Scratches, temporary working notes, discarded iterations, superseded versions                                          | Despite the name, the current living draft belongs in docs; retain history without cluttering the active version                                           |
+| 01-projects/<project>/submissions/        | Finalized, frozen, export-ready deliverables and delivered snapshots                                                   | Never overwrite the frozen record during iteration; edit working material in docs and produce a distinct final snapshot                                    |
+| 01-projects/<project>/assets/             | Project-exclusive sources, raw data, media, references, and external materials                                         | Shared/reusable canonical references may stay in Resources or Areas with links; do not force divergent copies                                              |
+| 02-areas/<area>/                          | Ongoing standards, policies, long-term logs, current contracts, recurring procedures                                   | Finite-project drafts and deliverables do not live directly here; use narrowly justified records/receipts subdirectories only for real recordkeeping needs |
+| 03-resources/<topic-or-utility>/          | Reusable templates, knowledge, summaries, snippets, research, and source assets without a current performance standard | A potential project reminder belongs in Someday/Maybe; its background material can remain here                                                             |
+| 04-archives/01-projects/                  | Whole inactive project containers with their internal layout preserved                                                 | No live working edits; preserve frozen deliverables and provenance                                                                                         |
+| 04-archives/<verified-area-category>/     | Retired responsibility containers                                                                                      | An Area is retired when the role ends, not “completed” like a finite project                                                                               |
+| 04-archives/<verified-resource-category>/ | Obsolete/inactive topic containers retained for history                                                                | Retain and retrieve according to actual usefulness and retention needs                                                                                     |
 
 ## Active project and Area boundaries
 
@@ -59,11 +58,11 @@ These steps do not require any particular file or its contents. A finalized expo
 
 ## Harvest, archive, and reactivate
 
-Promote genuinely reusable templates or knowledge from project docs/assets into 03_resources, or retain responsibility-specific standards in 02_areas. Preserve source provenance and access; a copy or link is often safer than removing evidence needed by a delivered record. Not every raw source becomes a Resource.
+Promote genuinely reusable templates or knowledge from project docs/assets into 03-resources, or retain responsibility-specific standards in 02-areas. Preserve source provenance and access; a copy or link is often safer than removing evidence needed by a delivered record. Not every raw source becomes a Resource.
 
-Before archiving, complete, transfer, or explicitly renegotiate remaining obligations in the action system. Move the entire inactive project to 04_archives/Projects without reorganizing its internal layout. Retired Areas go to 04_archives/Areas; inactive Resources go to 04_archives/Resources. Temporary waiting is not completion; a waiting active project normally stays in Projects.
+Before archiving, complete, transfer, or explicitly renegotiate remaining obligations in the action system. Move the entire inactive project to 04-archives/01-projects without reorganizing its internal layout. For retired Areas and inactive Resources, verify their appropriate archive category and obtain missing creation intent before moving; do not invent a destination. Temporary waiting is not completion; a waiting active project normally stays in Projects.
 
-Archive is behaviorally read-only cold storage: do not author or revise working material there. Read-only historical lookup is allowed and does not by itself reactivate a project. If actual work resumes, restore the whole relevant project to 01_projects, establish its current action/waiting state, and edit working material in docs while preserving submissions. Reusable reference reactivation can return a topic to 03_resources; renewed responsibility belongs in 02_areas. Do not overwrite an active destination; resolve identity/collision and preserve records first.
+Archive is behaviorally read-only cold storage: do not author or revise working material there. Read-only historical lookup is allowed and does not by itself reactivate a project. If actual work resumes, restore the whole relevant project to 01-projects, establish its current action/waiting state, and edit working material in docs while preserving submissions. Reusable reference reactivation can return a topic to 03-resources; renewed responsibility belongs in 02-areas. Do not overwrite an active destination; resolve identity/collision and preserve records first.
 
 Immutability here is workflow policy, not a claim of filesystem permissions, automatic versioning, or tamper-proof storage. All moves, edits, exports, link repairs, and deletions require actual authorization/access and verification. Updating this skill does not execute any of them.
 
@@ -78,4 +77,8 @@ The intake's sixty-second retrieval goal is a local usability target, not a univ
 
 ## Temporary Intake extension
 
-The four PARA categories remain the support homes. The additional 05_intake staging parent is governed by [Inbox and Intake policy](intake-policy.md), including projects/areas/resources containers, unknown-destination inbox, justified holds and verified exits. It is temporary, not another permanent support category.
+The four PARA categories remain the support homes. The additional 05-intake staging parent is governed by [Inbox and Intake policy](intake-policy.md), including projects/areas/resources containers, unknown-destination inbox, justified holds and verified exits. It is temporary, not another permanent support category.
+
+## Observation and independence
+
+All four inspected active projects use docs/drafts/submissions/assets. The observed archive category is 01-projects. Intake was empty at inspection; its local policy describes on-demand staging, not an observed populated tree. These observations do not prove current contents. Read the local system contract for cross-layer relation, naming, timeline, template and retry checks; no companion skill is required.

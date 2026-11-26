@@ -4650,5 +4650,7 @@
         }
       ]
     }
-  ]
+  ],
+  "snapshot_kind": "observed_installation_locator_only",
+  "portable_for_new_setup": false
 }

@@ -4,7 +4,7 @@
 
 Goals tracks a desired result with a success criterion and a chosen review horizon. Two-day, ten-week and other durations are valid; elapsed time does not determine entity type. A task expresses an action, a project organizes finite deliverable work, an Area maintains an ongoing standard, and a Goal records the desired result whose achievement is reviewed. This is the user's local operational adaptation, not a fixed GTD horizon rule.
 
-Use the live-verified source IDs and property schema in assets/workspace-map.json. The initial Goals collection is collection://41fa6b72-a529-8186-9a0a-000b39d4c045. Identify the database and linked dashboard separately. The snapshot preserves actual structural definitions, not goal records. No parent-goal hierarchy or separate metrics database is currently mapped.
+Use the live-verified source IDs and property schema, using `assets/workspace-map.json` only as an observed locator for the existing installation and `assets/notion-blueprint.json` as the portable symbolic contract. Identify the database and linked dashboard separately. The snapshot preserves actual structural definitions, not goal records. No parent-goal hierarchy or separate metrics database is currently mapped.
 
 ## Properties and meanings
 

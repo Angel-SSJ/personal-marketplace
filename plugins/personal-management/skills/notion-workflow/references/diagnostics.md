@@ -22,7 +22,7 @@ Current Next Actions uses an empty Blocked by relation rather than unresolved de
 | User asks only to organize records               | Do not change schema/filter/layout implicitly                                                   |
 | Method returns unsupported state                 | Ask equivalence; do not create option or repurpose generic Date                                 |
 | No access to current Notion                      | Explain map is a snapshot, offer conditional reasoning and leave live-dependent writes pending  |
-| User asks to sync map                            | Capture structural-only facts, validate and update this package/catalog, preserve peer skills   |
+| User asks to sync map                            | Capture structural-only facts, validate and update the local snapshot, preserve peer skills     |
 
 A schema check cannot simulate model behavior. Report actual executed checks and distinguish package validity, resolution, provider compatibility, installed state, activation and live outcomes. Do not certify all workspace records from a bounded sample.
 

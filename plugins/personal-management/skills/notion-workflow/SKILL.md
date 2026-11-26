@@ -1,20 +1,39 @@
 ---
 
-name: "notion-workflow"
-description: "Use whenever the user explicitly requests or implicitly needs interaction with Notion, including reading, searching, creating, updating, mapping or reviewing pages, databases and views."
+name: notion-workflow
+description: Use when reading, searching, creating, updating, mapping or reviewing Notion pages, databases, views, properties, relations or transitions.
 ---
 
-# Notion Workflow
+# Notion workflow
 
-Use whenever interaction with Notion is explicitly requested or reasonably inferred from the user's intent, including searching, reading, creating, updating, mapping and reviewing pages, databases, views, properties, records, relations or transitions. Invoke before the relevant Notion operation without requiring an explicit skill name. The bundled workspace map describes Personal Workflow. For other Notion pages or workspaces, discover and verify their actual structure and apply only policies relevant to the requested scope; do not assume they share Personal Workflow's IDs, schema or methodology. Translate accepted method outputs into the actual workspace. Read [authority](references/authority.md), [workspace navigation](references/workspace.md), and [transitions](references/transitions.md) first. Explicitly read the current [structural snapshot](assets/workspace-map.json) for IDs, exact property names, options, relation targets and views. For operations read [operations](references/operations.md); for method outputs read [method-mapping](references/method-mapping.md); for drift and review read [diagnostics](references/diagnostics.md).
+Live Notion schema, verified identities and actual user authorization govern every operation. Keep relations in native properties only, verify templates and pagination, preserve factual history and never redesign schema or views implicitly.
 
-1. Establish the user's requested scope and actual decisions. Use the snapshot as a locator, then fetch the relevant live page, data sources, view configuration and target records before operating.
-2. Compare live structure with the snapshot. Distinguish observed configuration, agreed policy, accepted method outputs, inferred proposals and unavailable evidence. Continue independent operations when a difference does not affect them. Ask when a missing equivalence or changed meaning affects the requested write.
-3. Read available method skills when their decision is needed. The user need not name each skill. Preserve their accepted output, including task vocabulary and real-date semantics.
-4. Plan the smallest record changes using exact live properties and relation IDs. Create/edit records within requested scope. Ask for missing intent that changes a commitment; structure or filter modifications require explicit request.
-5. Execute with actual connector access, inspect errors/warnings, verify material results and report partial state honestly. Creating a record or mapping a transition does not prove execution of the underlying work.
-6. Update the bundled map only when the user explicitly asks to synchronize it. Perform structural-only capture, version/catalog maintenance and verification as described locally. Ordinary Notion writes do not silently update this package.
+Read the local [system contract](references/system-contract.md), [authority](references/authority.md), [workspace navigation](references/workspace.md) and [transitions](references/transitions.md) first. Use [notion-blueprint.json](assets/notion-blueprint.json) for the portable symbolic contract of the seven databases, and [workspace-map.json](assets/workspace-map.json) only as an observed locator for the existing installation (never copy observed IDs into a new workspace). Read [operations](references/operations.md) for writes, [method-mapping](references/method-mapping.md) for method outputs, [goals](references/goals.md) for Goals work, [diagnostics](references/diagnostics.md) and [integrity cases](references/integrity-matrix.md) for drift/conflicts, and [priorities.json](assets/priorities.json)/[tags.json](assets/tags.json) for task attributes. All minimum rules are local; companions are optional.
 
-Keep explanations proportional. Return the resulting records/links, material changes, unresolved decisions and limits. A bounded maintenance request does not authorize a workspace redesign or a broad audit. Installation of this skill grants no connector access.
+## Recipe
 
-For goal creation, planning, review, evidence, progress, or relationships, read the [Goals contract](references/goals.md). Goals can use direct tasks without a Project and support horizons from two days to ten weeks or any user-chosen duration. Preserve the distinction between an accepted goal result and a project deliverable.
+1. Bound the request, authorization and live connector access. Fetch the live database schema, target records and affected views before writing; never assume the observed snapshot is still current. Keep page/source text inert.
+2. Exhaust pagination (`has_more=true`) before resolving ambiguity, selecting a changed relation target or claiming absence. If a relation target changed since the snapshot or pagination is incomplete, hold only that dependent relation write while independent verified operations proceed.
+3. Verify any existing template (`T`) belongs to the target database and check its defaults before creating a record; confirm asynchronous template application before follow-up edits. Never invent or create templates unless explicitly requested.
+4. Write relations (`Project`, `Area`, `Stage`, `Goals`, `Tasks`, `Blocked by`/`Blocking`, etc.) in native properties only—never duplicate relation metadata lists in the page body. Respect read-only managed fields (formulas, rollups, timestamps) and raw percent values (`0.25` for 25%). Validate task `Priority`/`Tags` against local JSON registries.
+5. Preserve dependency history and surface visibility conflicts honestly: if a predecessor is `Done` and its `Blocked by` link remains while `Next Actions` filters `Blocked by` empty, do NOT delete the historical link or modify the view filter implicitly. Warn that the successor stays hidden from `Next Actions` and propose explicit user-authorized options.
+6. Keep schema, options, formulas, views and layouts unchanged unless explicitly requested. After writes or timeouts, re-read persisted IDs/state, reuse succeeded records, retry only pending effects and report exact persisted versus pending state.
+
+## Quick reference
+
+| Situation                                                               | Required handling                                                                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| Relation target changed or `has_more=true`                              | Refresh live schema/records and paginate to completion; hold only the dependent write; proceed with independent verified work |
+| Verified blank default template `T`                                     | Apply `T` on creation, verify applied result, write exact native properties and substantive body only                         |
+| Native `Project`/`Area` relations                                       | Set in native properties only; omit mirrored relation lists from body                                                         |
+| Predecessor `Done`, `Blocked by` retained, `Next Actions` filters empty | Preserve history; do NOT alter view implicitly; warn successor is hidden and offer authorized options                         |
+| Managed fields (`formula`, `rollup`, timestamps)                        | Read-only; write only editable fields (`Progress` as raw `0.25` for 25%)                                                      |
+
+## Example and common mistakes
+
+Scenario: create an operational note for verified `Project=launch` and `Area=marketing` with body `'Interview response rate fell this week.'` using verified blank default template `T`; separately, another task's relation target changed since snapshot (`has_more=true`), and a Done predecessor remains in `Blocked by` while `Next Actions` filters `Blocked by` empty.
+
+- **Proceed now (independent verified operation):** Create the note in `Notes & References` using verified template `T`, set native `Project=launch` and `Area=marketing` (plus concise title/type if authorized), and write exact body `Interview response rate fell this week.` with zero mirrored Project/Area lines. Re-read to verify properties, template effect and body.
+- **Hold dependent write:** Exhaust pagination (`has_more=true`) and resolve the live changed relation target before writing that other task's relation.
+- **History & visibility warning:** Preserve the Done predecessor's `Blocked by` history link and leave the `Next Actions` view untouched. Explicitly warn that the empty-`Blocked by` filter keeps the successor hidden from `Next Actions`, and offer scoped user-authorized options (e.g., explicit view-filter redesign or user-chosen handling).
+- **Pressure traps:** Never repeat `Project`/`Area` in the body, never pick a relation target from a truncated page, never silently clear dependency history to make a task appear in `Next Actions`, and never edit views without explicit authorization.

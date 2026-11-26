@@ -1,24 +1,39 @@
 ---
 
-name: "file-naming"
-description: "Use when creating, updating, ingesting, re-ingesting, renaming, managing or auditing filenames for documents, media, data, scripts or source files from any origin."
+name: file-naming
+description: Use when files or folders need creation, naming, import, re-ingestion, renaming or naming audits across personal storage and connected platforms.
 ---
 
-# File naming
+# File and folder naming
 
-Use when creating, updating, importing, re-ingesting, renaming, managing or auditing filenames, regardless of origin. Apply the same policy to authored files, exports, downloads and external material. This skill governs filenames, not directory names, task titles, content structure or entity creation.
+Names represent verified identity and purpose; they do not create an entity or authorize a migration. This global naming policy applies regardless of the workflow that initiated a file/folder operation.
 
-Read [naming policy](references/naming-policy.md) and [operations and integration](references/operations.md) before acting. They are bundled and sufficient without companion skills or network access.
+Read the local [system contract](references/system-contract.md), [naming policy](references/naming-policy.md) and [operations](references/operations.md). Read [storage](references/storage-architecture.md) for placement and [integrity cases](references/integrity-matrix.md) for impacted relationships or conflicts. All required rules are local; another skill or source research document is unnecessary.
 
-## Working recipe
+## Recipe
 
-1. Establish the authorized files and operation. Inspect existing names, file roles, technical contracts, destination and available conversation context. Updating content does not authorize an unrelated mass rename; audit is read-only unless correction is requested.
-2. Classify each file by role: a technically constrained filename, freely named executable/source file, or ordinary support document/media/data file. Apply the corresponding policy, preserving extensions and file contents.
-3. For ordinary files infer the owning entity from current work and explicit context, then verify its actual identity and existence in the relevant accessible workspace or authoritative system. If uncertain, ask which entity owns it and verify the answer. A name supplied by the user is intent, not proof of existence. Never create an entity merely to satisfy naming.
-4. Build the ordinary final name as `[number-]<file-name>-<entity-name>.<extension>`. Executable/source filenames need no entity suffix; freely named ones use hyphens between words. Technical names follow their required contracts. Unknown-entity Inbox capture uses `[number-]<file-name>.<extension>` provisionally.
-5. Use numbering only on request or when continuing a clearly established requested series. Start a new series at `00`, increase upward, pad to at least two digits and permit `100` onward. Keep existing numbers stable.
-6. Before a rename check collisions, identity, links/imports and provenance; follow the operations reference. Execute only the authorized bounded changes, inspect results and report actual changes and remaining blockers. Re-ingestion must first find existing equivalents; it does not justify a second canonical copy.
+1. Bound the requested creation/rename/audit. Inspect role, original format, actual parent, owner identity, canonical slug, existing equivalents and technical/frozen exceptions. Existing conversation authorization remains valid. Audit alone does not authorize correction.
+2. Verify the owner in the relevant accessible system; matching names and user-supplied intent are not existence evidence. Access denied means unverified. Hold final owner-qualified naming when identity is unresolved; permit provisional unclarified capture without inventing a suffix or entity.
+3. Produce an idempotent name using the table. Preserve meaningful Unicode, true/compound extensions and technically constrained names. Native cloud documents use the compliant display stem, not a fabricated file extension.
+4. Check exact, case-insensitive and Unicode-normalized collisions, affected links/imports, path restrictions, provenance and frozen records before mutation. Do not invent `-copy`, timestamps, versions or a new owner to escape a collision. Ask the decisive question and continue unrelated work.
+5. Execute only the bounded authorized changes. Renaming an entity does not silently rename its files, folder, descendants or historical deliveries. Preserve bytes for a naming-only operation; distinguish native document identity from local pointer-file bytes.
+6. Verify destination name/parent, content preservation and necessary reference repairs. After timeout inspect IDs and state before retrying. Report partial results rather than claiming cross-layer synchronization.
 
-## Response shape
+## Quick reference
 
-For a simple creation, return the actual filename and any material unresolved association. For renaming or audit, give the relevant current → proposed/actual names, entity evidence, technical exceptions, collisions, pending questions and verification limits. Distinguish proposals from completed changes. Keep the response proportional.
+| Role                                      | Naming contract                                                                         |
+| ----------------------------------------- | --------------------------------------------------------------------------------------- |
+| Ordinary final file                       | `[number-]<file-name>-<verified-entity-slug>.<extension>`                               |
+| Unclarified capture                       | `[number-]<file-name>.<extension>` provisionally                                        |
+| Freely named folder                       | Canonical lowercase kebab-case entity/role/topic, no repeated entity suffix             |
+| Source/script                             | Free names use hyphens; no mandatory owner suffix; preserve import-required identifiers |
+| Fixed roots/roles/technical/frozen record | Preserve concrete contract; no cosmetic normalization                                   |
+| Optional selected numbering               | New series 00; next unused above maximum; 99 → 100, no gap filling                      |
+
+## Example
+
+Verified Product Launch owns `Market_Study.pdf` in its approved assets. A new supporting folder is `research-notes`; the file is `market-study-product-launch.pdf`. Keep `README.md` and a frozen `03_Final_Record.pdf` intact. If ownership access fails, `market-study.pdf` is provisional capture, not verified final naming.
+
+## Common mistakes and red flags
+
+Owner-first `product-launch-market-study.pdf` breaks the ordinary-file contract. Folders do not get ordinary-file suffixes. A technical exception needs a real contract, not merely legacy underscores. Neither numbering nor directory names choose priority, commitment, lifecycle or a Notion title. “The move succeeded” does not prove links were repaired. Apply the local pressure traps rather than bypass these checks under time pressure.

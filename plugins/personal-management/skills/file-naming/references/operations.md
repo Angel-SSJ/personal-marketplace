@@ -21,7 +21,7 @@
 | MoSCoW                   | Explicitly selected scope prioritization                          | Numbering is file order, never inferred MoSCoW classification                                                      |
 | Notion personal workflow | Verified live records, properties and relations                   | Database/page titles are not filenames; use verified records as identity evidence without changing their structure |
 
-These workflows do not impose filenames themselves. Their statements that they impose no naming convention remain true; this separate user-selected skill owns that convention. Their fixed directory names (including underscore-containing PARA/Intake parents) remain untouched because this policy concerns files. New entities still require their own authorization and owning workflow. No companion is required to use the bundled naming policy; available specialists support decisions outside naming. If a real policy conflict cannot be resolved from these boundaries, ask the user and keep the affected operation pending.
+Method specialists own meaning and placement; this local global policy owns names for every authorized file/folder operation. Fixed roots and role names follow the local storage profile. Folder names now belong to scope, with the same collision, technical-contract, provenance and verification protections. No companion is required. Naming never authorizes a new entity, parent migration or unrelated renames. Ask only when a consequential identity or intent is unresolved.
 
 ## Review scenarios
 
@@ -45,4 +45,4 @@ Use these as explicit expected outcomes for review, not a claim of runtime testi
 | Frozen historical delivery with underscores               | Preserve record exception; do not rewrite Archives                         |
 | `notes-terrivo.md` already compliant                      | No `notes-terrivo-terrivo.md`                                              |
 | Two names normalize to same destination                   | Block collision; no overwrite or automatic `-copy`                         |
-| Directory `01_projects/`                                  | Unchanged: directories are outside scope                                   |
+| Directory `01-projects/`                                  | Preserve the fixed root; freely named folders are in scope                 |

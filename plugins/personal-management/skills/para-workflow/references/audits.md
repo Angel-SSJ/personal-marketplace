@@ -2,7 +2,7 @@
 
 ## Purpose and scope
 
-An audit diagnoses an observed retrieval, classification, lifecycle, or action-boundary problem and checks this user's explicit storage profile. That profile is local policy, not a universal PARA template. The audit does not grade a person's neatness, project-name format, filename choices, root-file existence, or document sections/content.
+An audit diagnoses an observed retrieval, classification, lifecycle, or action-boundary problem and checks this user's explicit storage profile. That profile is local policy, not a universal PARA template. The audit does not grade arbitrary neatness, require a root file or impose document sections. Approved naming defects may be assessed only within the requested scope using the local naming policy.
 
 Choose a bounded scope from actual friction: one stalled project, recent incoming material, a changed responsibility, or a small representative sample. State what was inspected and what remains unknown. Do not extrapolate a sample into a claim that the whole system is clean.
 
@@ -27,7 +27,7 @@ Integrate checks into existing reviews. Escalate because of evidence of recurren
 | Are action reminders visible outside reference storage? | Trace a real obligation to an action/waiting/calendar reminder                                        | Capture the missing reminder                                                                                  |
 | Do surfaces refer to the same current outcome?          | Identity, status, owner, and links                                                                    | Align meaning and current state                                                                               |
 | Does maintenance earn its cost?                         | Repeated searches, missed work, and upkeep burden                                                     | Remove unnecessary maintenance or target one recurring friction                                               |
-| Does storage follow the confirmed profile?              | Parent paths, the project's four sibling role directories, actual work state, and archive destination | Propose a bounded role/destination correction without imposing file naming/content                            |
+| Does storage follow the confirmed profile?              | Parent paths, the project's four sibling role directories, actual work state, and archive destination | Propose a bounded role/destination correction using approved naming without inventing document contents       |
 | Are frozen records preserved?                           | A proposed write into submissions or Archives, or a replaced delivered snapshot                       | Resume editable work in docs, preserve the prior record, and reactivate archived work before editing          |
 | Is every active project container linked to work?       | A real Next Action or Waiting For, not just a future trigger                                          | Clarify a missing route forward or explicit nonactive state without inventing an action or dropping a promise |
 

@@ -12,7 +12,7 @@
 
 Nonactionable inputs become reference, Someday/Maybe, a genuine future reconsideration trigger (Tickler), or a discard proposal. An actionable finite multi-action outcome is a Project with a next action or real waiting relationship. Flexible executable actions go to Next Actions. External expected results go to Waiting For with responsible person, deliverable and follow-up. Real day/time obligations belong on the calendar. Do not invent dates, owners or acceptance of a suggested action. During clarification a genuinely quick, suitable authorized action may be done; Inbox processing must not become extended project execution.
 
-These are reminder meanings, normally represented as lists/states and appropriate calendar/reminder mechanisms. They are not automatically tags, filenames or folders in 05_intake. A project plus its next action and support are related outputs, not mutually exclusive bins. A date-specific trigger alone does not make a project active under the user's support profile.
+These are reminder meanings, normally represented as lists/states and appropriate calendar/reminder mechanisms. They are not automatically tags, filenames or folders in 05-intake. A project plus its next action and support are related outputs, not mutually exclusive bins. A date-specific trigger alone does not make a project active under the user's support profile.
 
 ## Minimum PARA and CODE routes
 

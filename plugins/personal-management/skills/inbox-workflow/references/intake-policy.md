@@ -2,19 +2,19 @@
 
 ## Scope and authority
 
-This is the user's local workflow policy, not a fifth PARA category or a universal methodological rule. Paths are relative to the user's chosen storage root. 05_intake is the target profile; do not rename or migrate any older intake path without a separate authorized operation. Infer the relevant method from the user's goal; a person need not name a skill. Method references alone do not install or execute companions. Read an available specialist when its decision is needed; do not ask permission merely to select the relevant skill. Ask for missing intent or approvals actually required below.
+This is the user's local workflow policy, not a fifth PARA category or a universal methodological rule. Paths are relative to the user's chosen storage root. 05-intake is the target profile; do not rename or migrate any older intake path without a separate authorized operation. Infer the relevant method from the user's goal; a person need not name a skill. Method references alone do not install or execute companions. Read an available specialist when its decision is needed; do not ask permission merely to select the relevant skill. Ask for missing intent or approvals actually required below.
 
 ## Structure
 
 ```text
-05_intake/
+05-intake/
   inbox/
   projects/<entity>/
   areas/<entity>/
   resources/<entity>/
 ```
 
-inbox holds inputs whose destination is unresolved. The other category containers hold only packages with a known intended destination and a concrete incorporation dependency. Names inside angle brackets are freely chosen, not a naming scheme. Several independent packages for the same entity may be grouped only as retrieval requires; distinguish their holds without mandatory nesting, filenames or metadata. Do not create empty trees as compliance work.
+inbox holds inputs whose destination is unresolved. The other category containers hold only packages with a known intended destination and a concrete incorporation dependency. Names inside angle brackets follow the local naming policy for verified entity folders; they do not create new entities. Several independent packages for the same entity may be grouped only as retrieval requires; distinguish their holds without mandatory nesting, filenames or metadata. Do not create empty trees as compliance work.
 
 ## Admission and retention tests
 
@@ -35,7 +35,7 @@ GTD owns actionability, outcomes, next actions, Waiting For, calendar/tickler an
 
 Search relevant existing Projects, Areas and Resources before proposing a new entity. Distinguish finite accepted outcomes, ongoing standards, and useful reference interests. Topic overlap alone does not make material project-exclusive. Prefer one useful canonical home and links for multiple relevant entities; do not silently create divergent copies or merge merely similar entities. Propose reuse or creation with evidence. New entity creation requires explicit confirmation; if the user's current instruction already explicitly authorizes that creation, do not ask again. This includes new named organizational containers, not incidental directories inside an already approved structure.
 
-For existing Projects use assets for project-exclusive source material, docs for current editable work, drafts for scratches/superseded iterations and submissions for frozen final snapshots. Area standards and persistent records stay with the Area; finite multi-action deliverables need a real Project. Resources hold useful knowledge without requiring an obligation. Do not enforce filenames or document contents.
+For existing Projects use assets for project-exclusive source material, docs for current editable work, drafts for scratches/superseded iterations and submissions for frozen final snapshots. Area standards and persistent records stay with the Area; finite multi-action deliverables need a real Project. Resources hold useful knowledge without requiring an obligation. Apply the local naming policy during authorized file/folder operations; do not impose arbitrary document contents.
 
 For an archived destination, distinguish read-only historical lookup, adding historical evidence, reusable reference extraction and actual renewed work. No automatic reactivation or live edits in Archives. Propose the appropriate destination/lifecycle decision; preserve incoming evidence pending it when necessary. Existing archive policy governs authorized reactivation. A historical association is not proof that a new project exists.
 

@@ -4,7 +4,7 @@ This contract is bundled in full so this skill works alone. Companion skills may
 
 ## Confirmed storage profile
 
-Read the local [storage architecture](storage-architecture.md) as the user's explicit implementation profile. It fixes 01_projects, 02_areas, 03_resources, 04_archives; project docs/drafts/submissions/assets roles; active action linkage; frozen records; and lifecycle/review flows. It overrides general directory flexibility without imposing project/file names, a required root file, or document contents. A future-trigger-only GTD project is not an active support container under this profile. Never fabricate a deadline or action to satisfy directory rules. Updating a skill does not authorize a storage migration.
+Read the local [storage architecture](storage-architecture.md) as the user's explicit implementation profile. It fixes 01-projects, 02-areas, 03-resources, 04-archives; project docs/drafts/submissions/assets roles; active action linkage; frozen records; and lifecycle/review flows. It overrides general directory flexibility while authorized file/folder operations follow the local naming policy. It imposes no required root file or arbitrary document contents. A future-trigger-only GTD project is not an active support container under this profile. Never fabricate a deadline or action to satisfy directory rules. Updating a skill does not authorize a storage migration.
 
 ## Responsibilities and common terms
 
@@ -59,4 +59,4 @@ For a committed reimbursement claim, GTD defines the outcome and current next ac
 
 ## Inbox coordination extension
 
-The local [Intake policy](intake-policy.md) defines 05_intake as temporary staging alongside the four PARA homes. inbox-workflow coordinates unclarified inputs and justified pending incorporation; GTD owns commitment semantics, PARA placement/lifecycle and CODE usefulness. Infer specialist use from intent and read available instructions when needed; optional informational relationships do not automatically load or invoke them. Preserve one decision owner. Someday/Maybe and other GTD states are lists/reminder meanings, not automatic tags.
+The local [Intake policy](intake-policy.md) defines 05-intake as temporary staging alongside the four PARA homes. inbox-workflow coordinates unclarified inputs and justified pending incorporation; GTD owns commitment semantics, PARA placement/lifecycle and CODE usefulness. Infer specialist use from intent and read available instructions when needed; optional informational relationships do not automatically load or invoke them. Preserve one decision owner. Someday/Maybe and other GTD states are lists/reminder meanings, not automatic tags.

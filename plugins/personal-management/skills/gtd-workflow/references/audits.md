@@ -30,7 +30,7 @@ These audit levels are local preventive policy. The full Weekly Review remains a
 
 Priority labels, action counts, and age alone do not prove a defect. A blocked project can be legitimate if its dependency and review condition are visible. Avoid inventing a fake next action to make every project row appear compliant.
 
-Distinguish GTD reminder validity from this user's active storage policy. A future-trigger-only project can be honestly tracked but does not qualify as an active 01_projects support container; that container needs Next Action or Waiting For. Surface the missing route or paused state without fabricating work or abandoning agreements. Check action/support links and archive transitions, not arbitrary file contents or project-name conventions.
+Distinguish GTD reminder validity from this user's active storage policy. A future-trigger-only project can be honestly tracked but does not qualify as an active 01-projects support container; that container needs Next Action or Waiting For. Surface the missing route or paused state without fabricating work or abandoning agreements. Check action/support links and archive transitions, not arbitrary file contents or project-name conventions.
 
 ## Findings and priorities
 

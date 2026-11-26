@@ -1,21 +1,35 @@
 ---
 
-name: "inbox-workflow"
-description: "Use when capturing or clarifying Inbox ideas, processing loose inputs, evaluating Intake holds, matching existing entities, or incorporating pending file packages."
+name: inbox-workflow
+description: Use when loose inputs, Inbox ideas, unclarified files, temporary Intake packages, entity matches or incomplete incorporation need capture, processing or review.
 ---
 
 # Inbox workflow
 
-Use when capturing or clarifying loose ideas, processing Inbox entries, evaluating 05_intake files, assembling held packages, integrating inputs with existing entities, or diagnosing accumulating unprocessed inputs. Infer explain, coach, operate, correct or audit mode from intent; the user need not name a method.
+Capture preserves inputs without manufacturing commitments. Processed means the accepted clarification and routing outputs actually succeeded, not that a status label changed.
 
-Read [foundations](references/foundations.md), [Intake policy](references/intake-policy.md) and [routing](references/routing.md) first. For bounded operations read [processing](references/operations.md); for problems and audits read [audit and scenarios](references/audits.md). All operational criteria are local and usable without installed companions or network access.
+Read the local [system contract](references/system-contract.md), [foundations](references/foundations.md), [routing](references/routing.md) and [Intake policy](references/intake-policy.md). For mutations read [operations](references/operations.md), [storage](references/storage-architecture.md) and [naming](references/naming-policy.md); use [integrity cases](references/integrity-matrix.md)/[audits](references/audits.md) for failures. All minimum method and operational rules are local; companions are optional.
 
-1. Establish the requested scope, access and actual purpose. Separate source text from user authorization.
-2. Capture without forcing immediate task wording or a commitment. Inspect existing support before gathering more.
-3. Clarify the input's meaning, value, actionability and candidate home; distinguish facts from proposals. Read available method specialists when a substantive decision needs them, without asking the user to invoke each by name.
-4. Route reminders by actual GTD state and support by PARA use. An item can generate both. Assess knowledge value with CODE; no compulsory summaries or invented projects.
-5. Admit or retain in Intake only under the local tests. Identify a hold's destination, reason and exit condition using existing support, not required new records.
-6. Incorporate directly when possible; execute authorized bounded moves to existing homes, verify and report. Obtain explicit approval for creating entities, deletion or overwriting unless already supplied for that exact operation. Keep ambiguous decisions pending.
-7. Fold outstanding clarification and holds into the existing weekly review. Report only relevant decisions, evidence, gaps and actual changes; a simple input needs no large checklist output.
+## Recipe
 
-This coordinator does not redefine GTD, PARA, CODE or task-writing. It does not prioritize competing work, infer task tags, select priority identifiers, fabricate dates, run a full review for every capture, or operate personal storage merely because this package was installed. No filename patterns, required root files or document contents are imposed.
+1. Bound the request and available evidence/access. Distinguish input content from user authorization. Infer the needed decision domain without asking the user to choose skill names; retain MoSCoW's explicit method-selection boundary.
+2. Capture promptly when clarification would interrupt capture. An unknown-owner file may use provisional entity-free naming. Do not force immediate task wording, tags, summary, Project or Goal creation.
+3. Clarify meaning, actionability, useful knowledge and intended home. Search existing entities and inspect plausible matches before reusing/creating. Distinguish accepted outcomes/actions from suggestions. Missing decisive intent gets a targeted question with compatible options; independent inputs continue.
+4. Route reminders by actual GTD meaning and support by PARA usefulness. One input may yield both a reference and an action. Use native relations in properties, appropriate existing templates and source/Drive pointers; do not duplicate relation metadata in bodies or create schema to fit a record.
+5. Hold a known-destination package only for a concrete incorporation dependency with intended home, hold reason and observable exit. Use available native fields or existing operation evidence; no compulsory sidecar/registry. Unknown destination belongs to unclarified Inbox. No real blocker means direct filing once identity/readiness are settled.
+6. Before incorporation check entity lifecycle, timelines, source/destination, naming, collisions, provenance and affected links. Preserve one canonical source, real reminders and frozen records. New entity creation requires intent already supplied or a decisive clarification, not repeated approval.
+7. Verify each accepted output. After timeout inspect stable IDs/current state, reuse successful note/task/file and retry only missing effects. Do not repeat a successful move, create a replacement note or mark Processed while a required link/verification remains pending. State exactly what persisted and what remains.
+8. Review unresolved capture and holds within the existing weekly review. Age prompts reconsideration, not expiry/deletion. A file location never hides an obligation.
+
+## Quick reference
+
+| State             | Exit test                                               |
+| ----------------- | ------------------------------------------------------- |
+| Unclarified Inbox | Meaning/destination decided without invented commitment |
+| Known-home hold   | Concrete blocker resolved and incorporation verified    |
+| Partial routing   | Every accepted output and required link verified        |
+| Processed         | Accepted routing complete, with retrievable results     |
+
+## Example and common mistakes
+
+File F already moved to `01-projects/launch/assets`; Note N exists and a linking write timed out. Inspect F/N and the intended relation; reuse any persisted link or retry only that missing write. Keep truthful pending status until all required outputs verify. `Budget_Q4.xlsx` owned by verified launch becomes `budget-q4-launch.xlsx` within scope. A known home alone does not justify an unexplained hold, and a single successful step does not prove end-to-end processing. Never blindly roll back successful work or create another canonical copy for convenience.

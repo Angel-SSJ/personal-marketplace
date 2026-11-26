@@ -8,9 +8,9 @@ The pipeline is iterative. Existing knowledge can go straight to Express; a draf
 
 ## Storage-aware knowledge flow
 
-Apply the local [storage architecture](storage-architecture.md). Work supporting a finite project uses its four sibling directories: project-exclusive raw capture/references in assets, current living drafts and editable intermediate packets in docs, scratches/superseded iterations in drafts, and frozen finalized outputs in submissions. The current draft does not go in drafts merely because it is unfinished. Keep canonical reusable context in 03_resources or responsibility standards in 02_areas with meaningful links where appropriate.
+Apply the local [storage architecture](storage-architecture.md). Work supporting a finite project uses its four sibling directories: project-exclusive raw capture/references in assets, current living drafts and editable intermediate packets in docs, scratches/superseded iterations in drafts, and frozen finalized outputs in submissions. The current draft does not go in drafts merely because it is unfinished. Keep canonical reusable context in 03-resources or responsibility standards in 02-areas with meaningful links where appropriate.
 
-On revision, preserve delivered submissions; change the editable work in docs, then produce a separate final snapshot. On project closure harvest genuinely reusable work into 03_resources while preserving provenance, check remaining commitments, and archive the whole inactive container intact in 04_archives/Projects. Do not edit original archives to reuse them: look up history read-only, reactivate real project work first, or bring useful reference back into active Resources. No root document, filename scheme, or internal note sections are required.
+On revision, preserve delivered submissions; change the editable work in docs, then produce a separate final snapshot. On project closure harvest genuinely reusable work into 03-resources while preserving provenance, check remaining commitments, and archive the whole inactive container intact in 04-archives/01-projects. Do not edit original archives to reuse them: look up history read-only, reactivate real project work first, or bring useful reference back into active Resources. No root document, filename scheme, or internal note sections are required.
 
 ## Capture and organization flow
 
