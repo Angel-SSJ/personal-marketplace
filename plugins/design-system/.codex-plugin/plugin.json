@@ -1,6 +1,6 @@
 {
   "name": "design-system",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Self-contained five-skill design system engineering suite covering end-to-end W3C DTCG 2025.10 creation, cascade updates, perceptual OKLCH harmonies and palette philosophies, WCAG 2.2 AA/AAA + APCA dual-gate accessibility auditing, layer-by-layer structural auditing, and token-pure HTML component showcases.",
   "author": {
     "name": "Angel Ramirez",

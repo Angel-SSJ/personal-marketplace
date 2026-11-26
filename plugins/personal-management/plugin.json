@@ -2,7 +2,7 @@
   "$schema": "https://agentplugins.org/schemas/v1/plugin.json",
   "name": "personal-management",
   "displayName": "Personal Management",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Self-contained ten-skill personal productivity and knowledge management suite integrating GTD, PARA, CODE, Inbox/Intake processing, MoSCoW prioritization, task writing, global file/folder naming, Notion workflow, two-phase Notion initialization, and read-only cross-layer system integrity auditing.",
   "author": {
     "name": "Angel Ramirez",

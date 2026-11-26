@@ -12,7 +12,7 @@ import tempfile
 from pathlib import Path
 
 EXPECTED_NAME = "design-system"
-EXPECTED_VERSION = "0.2.0"
+EXPECTED_VERSION = "0.3.0"
 EXPECTED_SKILLS = [
     "accessibility-audit",
     "component-design",

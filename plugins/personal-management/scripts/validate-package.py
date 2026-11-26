@@ -50,7 +50,7 @@ NOTION_SKILLS = [
     "system-integrity-audit",
 ]
 
-EXPECTED_VERSION = "0.2.0"
+EXPECTED_VERSION = "0.3.0"
 EXPECTED_NAME = "personal-management"
 EXPECTED_NOTION_MCP = "https://mcp.notion.com/mcp"
 

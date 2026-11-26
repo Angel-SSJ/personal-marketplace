@@ -1,5 +1,13 @@
 # Release Notes
 
+## v0.3.0 (2026-11-26)
+
+### Highlights
+
+- **Added `design-system` plugin (`plugins/design-system`):** Self-contained five-skill design system engineering suite (`design-system-create`, `design-system-update`, `design-system-audit`, `accessibility-audit`, `component-design`) covering W3C DTCG 2025.10 tokens, perceptual OKLCH harmonies, WCAG 2.2 AA/AAA + APCA dual-gate accessibility auditing, and token-pure HTML component showcases.
+- **Registered `design-system` across all marketplace catalogs:** Added entries in `.claude-plugin/marketplace.json`, `.cursor-plugin/marketplace.json`, `.kimi-plugin/marketplace.json`, `.agents/plugins/marketplace.json`, and `docs/CATALOG.md`.
+- **Lockstep version bump to `0.3.0`:** Synchronized `package.json`, `.claude-plugin/marketplace.json`, all `design-system` and `personal-management` manifests, and both package validators to `0.3.0`.
+
 ## v0.2.0 (2026-11-26)
 
 ### Highlights
