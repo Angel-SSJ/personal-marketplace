@@ -1,0 +1,4656 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-11-21T16:05:08.259Z",
+  "root": {
+    "id": "41ca6b72-a529-811d-8e63-d8b7186ee2c8",
+    "url": "https://app.notion.com/p/41ca6b72a529811d8e63d8b7186ee2c8?pvs=204",
+    "title": "Personal Workflow",
+    "full_width": true,
+    "icon": {
+      "type": "icon",
+      "icon": {
+        "name": "science",
+        "color": "gray"
+      }
+    },
+    "sections": ["Goals", "Projects", "Inbox", "Tasks", "Databases", "Notes & References"]
+  },
+  "surfaces": [
+    {
+      "url": "https://app.notion.com/p/41fa6b72a5298159b7acf6a52d2e7313",
+      "data_source_url": "collection://41fa6b72-a529-8186-9a0a-000b39d4c045",
+      "inline": true,
+      "title": "View of Goals",
+      "sources": [
+        {
+          "icon": "/icons/bullseye_gray.svg",
+          "name": "Goals",
+          "notAvailableInQuerySql": ["Days Remaining"],
+          "schema": {
+            "Area": {
+              "dataSourceUrl": "collection://41ca6b72-a529-814f-9519-000b9d0e1cca",
+              "description": "",
+              "name": "Area",
+              "propertyUrl": "collectionProperty://41ca6b72-a529-814f-9519-000b9d0e1cca/a1k_Sw",
+              "type": "relation"
+            },
+            "Created Time": {
+              "description": "",
+              "name": "Created Time",
+              "type": "created_time"
+            },
+            "Days Remaining": {
+              "codeUrl": "formulaCode://41fa6b72-a529-8186-9a0a-000b39d4c045/TWFBWg",
+              "description": "",
+              "name": "Days Remaining",
+              "type": "formula"
+            },
+            "Direct Tasks": {
+              "dataSourceUrl": "collection://41ca6b72-a529-810d-ae25-000b72e68901",
+              "description": "",
+              "name": "Direct Tasks",
+              "propertyUrl": "collectionProperty://41ca6b72-a529-810d-ae25-000b72e68901/blx6Ww",
+              "type": "relation"
+            },
+            "Evidence": {
+              "dataSourceUrl": "collection://41ca6b72-a529-81c2-9627-000b19956366",
+              "description": "",
+              "name": "Evidence",
+              "propertyUrl": "collectionProperty://41ca6b72-a529-81c2-9627-000b19956366/Ql9UaQ",
+              "type": "relation"
+            },
+            "Last Edited Time": {
+              "description": "",
+              "name": "Last Edited Time",
+              "type": "last_edited_time"
+            },
+            "Name": {
+              "description": "",
+              "name": "Name",
+              "type": "title"
+            },
+            "Progress": {
+              "description": "",
+              "name": "Progress",
+              "number_format": "percent",
+              "type": "number"
+            },
+            "Projects": {
+              "dataSourceUrl": "collection://41ca6b72-a529-81bb-bc1e-000b95d19d98",
+              "description": "",
+              "name": "Projects",
+              "propertyUrl": "collectionProperty://41ca6b72-a529-81bb-bc1e-000b95d19d98/entMbw",
+              "type": "relation"
+            },
+            "Review Date": {
+              "description": "",
+              "name": "Review Date",
+              "querySqlColumns": {
+                "columns": [
+                  {
+                    "name": "date:Review Date:start",
+                    "sqlType": "TEXT"
+                  },
+                  {
+                    "name": "date:Review Date:end",
+                    "sqlType": "TEXT"
+                  },
+                  {
+                    "name": "date:Review Date:is_datetime",
+                    "sqlType": "INTEGER"
+                  }
+                ],
+                "usage": "For connections.notion.querySql. Main schema name not queryable."
+              },
+              "type": "date"
+            },
+            "Start Date": {
+              "description": "",
+              "name": "Start Date",
+              "querySqlColumns": {
+                "columns": [
+                  {
+                    "name": "date:Start Date:start",
+                    "sqlType": "TEXT"
+                  },
+                  {
+                    "name": "date:Start Date:end",
+                    "sqlType": "TEXT"
+                  },
+                  {
+                    "name": "date:Start Date:is_datetime",
+                    "sqlType": "INTEGER"
+                  }
+                ],
+                "usage": "For connections.notion.querySql. Main schema name not queryable."
+              },
+              "type": "date"
+            },
+            "Status": {
+              "defaultOption": "Candidate",
+              "description": "",
+              "groups": {
+                "complete": [
+                  {
+                    "color": "green",
+                    "description": "",
+                    "name": "Achieved",
+                    "url": "collectionPropertyOption://41fa6b72-a529-8186-9a0a-000b39d4c045/c0Btag/NWViM2ZlZjEtODA3YS00NzAwLWE0YmUtZjJkZDM2MGEzZDBm"
+                  },
+                  {
+                    "color": "gray",
+                    "description": "",
+                    "name": "Dropped",
+                    "url": "collectionPropertyOption://41fa6b72-a529-8186-9a0a-000b39d4c045/c0Btag/MDdjMDRlNzEtMTBkZC00OTBlLWEzZDUtZTljNWNjYzRmMjAy"
+                  }
+                ],
+                "current": [],
+                "future": [],
+                "in_progress": [
+                  {
+                    "color": "blue",
+                    "description": "",
+                    "name": "Active",
+                    "url": "collectionPropertyOption://41fa6b72-a529-8186-9a0a-000b39d4c045/c0Btag/ZmY5NjZkNmItNTM3Zi00MTY0LWFlYTQtZjMzYzdhZmFhMTYz"
+                  },
+                  {
+                    "color": "yellow",
+                    "description": "",
+                    "name": "On hold",
+                    "url": "collectionPropertyOption://41fa6b72-a529-8186-9a0a-000b39d4c045/c0Btag/YTY5NDJlYWItZTM3Zi00MjVkLWJlNTItMGRmMzczNmY5ZmFk"
+                  }
+                ],
+                "to_do": [
+                  {
+                    "color": "gray",
+                    "description": "",
+                    "name": "Candidate",
+                    "url": "collectionPropertyOption://41fa6b72-a529-8186-9a0a-000b39d4c045/c0Btag/ZmQ3MmM3ZmYtNzY0Yi00YmU0LWI4MTMtZTFmYzk1MzE5NDZm"
+                  }
+                ]
+              },
+              "name": "Status",
+              "type": "status"
+            },
+            "Success Criteria": {
+              "description": "",
+              "name": "Success Criteria",
+              "type": "text"
+            },
+            "Target Date": {
+              "description": "",
+              "name": "Target Date",
+              "querySqlColumns": {
+                "columns": [
+                  {
+                    "name": "date:Target Date:start",
+                    "sqlType": "TEXT"
+                  },
+                  {
+                    "name": "date:Target Date:end",
+                    "sqlType": "TEXT"
+                  },
+                  {
+                    "name": "date:Target Date:is_datetime",
+                    "sqlType": "INTEGER"
+                  }
+                ],
+                "usage": "For connections.notion.querySql. Main schema name not queryable."
+              },
+              "type": "date"
+            }
+          },
+          "url": "collection://41fa6b72-a529-8186-9a0a-000b39d4c045"
+        }
+      ],
+      "views": [
+        {
+          "url": "view://41fa6b72-a529-81d2-8c77-000c864884ff",
+          "advancedFilter": {
+            "filters": [
+              {
+                "operator": "status_is",
+                "property": "Status",
+                "propertyType": "status",
+                "type": "property",
+                "value": {
+                  "type": "is_option",
+                  "value": "Active"
+                }
+              }
+            ],
+            "operator": "and",
+            "type": "group"
+          },
+          "dataSourceUrl": "{{collection://41fa6b72-a529-8186-9a0a-000b39d4c045}}",
+          "displayProperties": [
+            "Name",
+            "Progress",
+            "Target Date",
+            "Review Date",
+            "Projects",
+            "Direct Tasks"
+          ],
+          "icon": "icons/bullseye_gray",
+          "name": "Active Goals",
+          "sorts": [
+            {
+              "direction": "ascending",
+              "property": "Target Date"
+            }
+          ],
+          "type": "table"
+        }
+      ]
+    },
+    {
+      "url": "https://app.notion.com/p/41ca6b72a52981ccb6a3cac07d2e5fcc",
+      "data_source_url": "collection://41ca6b72-a529-81bb-bc1e-000b95d19d98",
+      "inline": true,
+      "title": "View of Projects and Stages",
+      "sources": [
+        {
+          "icon": "/icons/folder_gray.svg",
+          "name": "Projects",
+          "notAvailableInQuerySql": [
+            "Completed Tasks",
+            "Eligible Tasks",
+            "Calculated Progress",
+            "Days Remaining"
+          ],
+          "schema": {
+            "Area": {
+              "dataSourceUrl": "collection://41ca6b72-a529-814f-9519-000b9d0e1cca",
+              "description": "",
+              "name": "Area",
+              "propertyUrl": "collectionProperty://41ca6b72-a529-814f-9519-000b9d0e1cca/Zj1VRA",
+              "type": "relation"
+            },
+            "Blocked by": {
+              "dataSourceUrl": "collection://41ca6b72-a529-81bb-bc1e-000b95d19d98",
+              "description": "",
+              "name": "Blocked by",
+              "propertyUrl": "collectionProperty://41ca6b72-a529-81bb-bc1e-000b95d19d98/WkxQcw",
+              "type": "relation"
+            },
+            "Blocking": {
+              "dataSourceUrl": "collection://41ca6b72-a529-81bb-bc1e-000b95d19d98",
+              "description": "",
+              "name": "Blocking",
+              "propertyUrl": "collectionProperty://41ca6b72-a529-81bb-bc1e-000b95d19d98/O2ZrXg",
+              "type": "relation"
+            },
+            "Calculated Progress": {
+              "codeUrl": "formulaCode://41ca6b72-a529-81bb-bc1e-000b95d19d98/X19tWQ",
+              "description": "",
+              "name": "Calculated Progress",
+              "type": "formula"
+            },
+            "Completed Tasks": {
+              "aggregation": "sum",
+              "description": "",
+              "name": "Completed Tasks",
+              "relationPropertyUrl": "collectionProperty://41ca6b72-a529-81bb-bc1e-000b95d19d98/RHpfYQ",
+              "targetPropertyType": "formula",
+              "targetPropertyUrl": "collectionProperty://41ca6b72-a529-810d-ae25-000b72e68901/WXV7eQ",
+              "type": "rollup"
+            },
+            "Days Remaining": {
+              "codeUrl": "formulaCode://41ca6b72-a529-81bb-bc1e-000b95d19d98/c1RpeQ",
+              "description": "",
+              "name": "Days Remaining",
+              "type": "formula"
+            },
+            "Deliverable": {
+              "description": "",
+              "name": "Deliverable",
+              "type": "url"
+            },
+            "Drive": {
+              "description": "",
+              "name": "Drive",
+              "type": "url"
+            },
+            "Eligible Tasks": {
+              "aggregation": "sum",
+              "description": "",
+              "name": "Eligible Tasks",
+              "relationPropertyUrl": "collectionProperty://41ca6b72-a529-81bb-bc1e-000b95d19d98/RHpfYQ",
+              "targetPropertyType": "formula",
+              "targetPropertyUrl": "collectionProperty://41ca6b72-a529-810d-ae25-000b72e68901/Y35XTw",
+              "type": "rollup"
+            },
+            "End Date": {
+              "description": "",
+              "name": "End Date",
+              "querySqlColumns": {
+                "columns": [
+                  {
+                    "name": "date:End Date:start",
+                    "sqlType": "TEXT"
+                  },
+                  {
+                    "name": "date:End Date:end",
+                    "sqlType": "TEXT"
+                  },
+                  {
+                    "name": "date:End Date:is_datetime",
+                    "sqlType": "INTEGER"
+                  }
+                ],
+                "usage": "For connections.notion.querySql. Main schema name not queryable."
+              },
+              "type": "date"
+            },
+            "Goals": {
+              "dataSourceUrl": "collection://41fa6b72-a529-8186-9a0a-000b39d4c045",
+              "description": "",
+              "name": "Goals",
+              "propertyUrl": "collectionProperty://41fa6b72-a529-8186-9a0a-000b39d4c045/UDxufQ",
+              "type": "relation"
+            },
+            "Name": {
+              "description": "",
+              "name": "Name",
+              "type": "title"
+            },
+            "Notes": {
+              "dataSourceUrl": "collection://41ca6b72-a529-81c2-9627-000b19956366",
+              "description": "",
+              "name": "Notes",
+              "propertyUrl": "collectionProperty://41ca6b72-a529-81c2-9627-000b19956366/OnNHQg",
+              "type": "relation"
+            },
+            "Outcome": {
+              "description": "",
+              "name": "Outcome",
+              "type": "text"
+            },
+            "Progress": {
+              "description": "Editable progress. Enter a percentage, for example 25%. Calculated Progress reports completion of linked eligible tasks.",
+              "name": "Progress",
+              "number_format": "percent",
+              "show_as": {
+                "color": "green",
+                "maxValue": 1,
+                "showValue": true,
+                "type": "ring"
+              },
+              "type": "number"
+            },
+            "Stages": {
+              "dataSourceUrl": "collection://41ca6b72-a529-814d-a218-000b79ebc8a1",
+              "description": "",
+              "name": "Stages",
+              "propertyUrl": "collectionProperty://41ca6b72-a529-814d-a218-000b79ebc8a1/SlpHfA",
+              "type": "relation"
+            },
+            "Start Date": {
+              "description": "",
+              "name": "Start Date",
+              "querySqlColumns": {
+                "columns": [
+                  {
+                    "name": "date:Start Date:start",
+                    "sqlType": "TEXT"
+                  },
+                  {
+                    "name": "date:Start Date:end",
+                    "sqlType": "TEXT"
+                  },
+                  {
+                    "name": "date:Start Date:is_datetime",
+                    "sqlType": "INTEGER"
+                  }
+                ],
+                "usage": "For connections.notion.querySql. Main schema name not queryable."
+              },
+              "type": "date"
+            },
+            "Status": {
+              "description": "",
+              "name": "Status",
+              "options": [
+                {
+                  "color": "default",
+                  "description": "",
+                  "name": "Planned",
+                  "url": "collectionPropertyOption://41ca6b72-a529-81bb-bc1e-000b95d19d98/SU1gdA/MjFjM2E2YzUtN2NjZC00ZDY0LThlNGMtODAzNjJkODI0YTJh"
+                },
+                {
+                  "color": "blue",
+                  "description": "",
+                  "name": "Active",
+                  "url": "collectionPropertyOption://41ca6b72-a529-81bb-bc1e-000b95d19d98/SU1gdA/ZDI1YjU2ZDItNDZiNi00YmRkLTg5ODctZjA1MWIzZWZiM2Zh"
+                },
+                {
+                  "color": "yellow",
+                  "description": "",
+                  "name": "On hold",
+                  "url": "collectionPropertyOption://41ca6b72-a529-81bb-bc1e-000b95d19d98/SU1gdA/ZjRhMTQwOGQtNGU4OC00Yzg3LThhYjQtZGIyZGY2OTI1ZjQ0"
+                },
+                {
+                  "color": "green",
+                  "description": "",
+                  "name": "Done",
+                  "url": "collectionPropertyOption://41ca6b72-a529-81bb-bc1e-000b95d19d98/SU1gdA/OTM0YTIzN2YtYjdmNy00NWFmLWI2ODgtNjQzNzQ1Y2ExMTVj"
+                },
+                {
+                  "color": "red",
+                  "description": "",
+                  "name": "Cancelled",
+                  "url": "collectionPropertyOption://41ca6b72-a529-81bb-bc1e-000b95d19d98/SU1gdA/MmU2Y2U0ODMtNzgzMC00MzkyLWE4ZDAtNWEwZjBjNDMyNGUz"
+                }
+              ],
+              "type": "select"
+            },
+            "Tags": {
+              "description": "",
+              "name": "Tags",
+              "options": [],
+              "type": "multi_select"
+            },
+            "Tasks": {
+              "dataSourceUrl": "collection://41ca6b72-a529-810d-ae25-000b72e68901",
+              "description": "",
+              "name": "Tasks",
+              "propertyUrl": "collectionProperty://41ca6b72-a529-810d-ae25-000b72e68901/eHNeYg",
+              "type": "relation"
+            }
+          },
+          "url": "collection://41ca6b72-a529-81bb-bc1e-000b95d19d98"
+        },
+        {
+          "default_page_template": "https://app.notion.com/p/41ca6b72a52980dfb3ccc84e6b801375",
+          "icon": "/icons/map_gray.svg",
+          "name": "Stages",
+          "notAvailableInQuerySql": [
+            "Calculated Progress",
+            "Completed Tasks",
+            "Days Remaining",
+            "Eligible Tasks"
+          ],
+          "schema": {
+            "Blocked by": {
+              "dataSourceUrl": "collection://41ca6b72-a529-814d-a218-000b79ebc8a1",
+              "description": "",
+              "name": "Blocked by",
+              "propertyUrl": "collectionProperty://41ca6b72-a529-814d-a218-000b79ebc8a1/RU5Cag",
+              "type": "relation"
+            },
+            "Blocking": {
+              "dataSourceUrl": "collection://41ca6b72-a529-814d-a218-000b79ebc8a1",
+              "description": "",
+              "name": "Blocking",
+              "propertyUrl": "collectionProperty://41ca6b72-a529-814d-a218-000b79ebc8a1/Z0dfOw",
+              "type": "relation"
+            },
+            "Calculated Progress": {
+              "codeUrl": "formulaCode://41ca6b72-a529-814d-a218-000b79ebc8a1/PEtYVA",
+              "description": "",
+              "name": "Calculated Progress",
+              "type": "formula"
+            },
+            "Completed Tasks": {
+              "aggregation": "sum",
+              "description": "",
+              "name": "Completed Tasks",
+              "relationPropertyUrl": "collectionProperty://41ca6b72-a529-814d-a218-000b79ebc8a1/VElNZw",
+              "targetPropertyType": "formula",
+              "targetPropertyUrl": "collectionProperty://41ca6b72-a529-810d-ae25-000b72e68901/WXV7eQ",
+              "type": "rollup"
+            },
+            "Days Remaining": {
+              "codeUrl": "formulaCode://41ca6b72-a529-814d-a218-000b79ebc8a1/VUBqPA",
+              "description": "",
+              "name": "Days Remaining",
+              "type": "formula"
+            },
+            "Deliverable": {
+              "description": "",
+              "name": "Deliverable",
+              "type": "url"
+            },
+            "Eligible Tasks": {
+              "aggregation": "sum",
+              "description": "",
+              "name": "Eligible Tasks",
+              "relationPropertyUrl": "collectionProperty://41ca6b72-a529-814d-a218-000b79ebc8a1/VElNZw",
+              "targetPropertyType": "formula",
+              "targetPropertyUrl": "collectionProperty://41ca6b72-a529-810d-ae25-000b72e68901/Y35XTw",
+              "type": "rollup"
+            },
+            "End Date": {
+              "description": "",
+              "name": "End Date",
+              "querySqlColumns": {
+                "columns": [
+                  {
+                    "name": "date:End Date:start",
+                    "sqlType": "TEXT"
+                  },
+                  {
+                    "name": "date:End Date:end",
+                    "sqlType": "TEXT"
+                  },
+                  {
+                    "name": "date:End Date:is_datetime",
+                    "sqlType": "INTEGER"
+                  }
+                ],
+                "usage": "For connections.notion.querySql. Main schema name not queryable."
+              },
+              "type": "date"
+            },
+            "Milestone Criterion": {
+              "description": "",
+              "name": "Milestone Criterion",
+              "type": "text"
+            },
+            "Milestone Date": {
+              "description": "",
+              "name": "Milestone Date",
+              "querySqlColumns": {
+                "columns": [
+                  {
+                    "name": "date:Milestone Date:start",
+                    "sqlType": "TEXT"
+                  },
+                  {
+                    "name": "date:Milestone Date:end",
+                    "sqlType": "TEXT"
+                  },
+                  {
+                    "name": "date:Milestone Date:is_datetime",
+                    "sqlType": "INTEGER"
+                  }
+                ],
+                "usage": "For connections.notion.querySql. Main schema name not queryable."
+              },
+              "type": "date"
+            },
+            "Name": {
+              "description": "",
+              "name": "Name",
+              "type": "title"
+            },
+            "Progress": {
+              "description": "Editable progress. Enter a percentage, for example 25%. Calculated Progress reports completion of linked eligible tasks.",
+              "name": "Progress",
+              "number_format": "percent",
+              "show_as": {
+                "color": "green",
+                "maxValue": 1,
+                "showValue": true,
+                "type": "ring"
+              },
+              "type": "number"
+            },
+            "Project": {
+              "dataSourceUrl": "collection://41ca6b72-a529-81bb-bc1e-000b95d19d98",
+              "description": "",
+              "name": "Project",
+              "propertyUrl": "collectionProperty://41ca6b72-a529-81bb-bc1e-000b95d19d98/dFBobw",
+              "type": "relation"
+            },
+            "Start Date": {
+              "description": "",
+              "name": "Start Date",
+              "querySqlColumns": {
+                "columns": [
+                  {
+                    "name": "date:Start Date:start",
+                    "sqlType": "TEXT"
+                  },
+                  {
+                    "name": "date:Start Date:end",
+                    "sqlType": "TEXT"
+                  },
+                  {
+                    "name": "date:Start Date:is_datetime",
+                    "sqlType": "INTEGER"
+                  }
+                ],
+                "usage": "For connections.notion.querySql. Main schema name not queryable."
+              },
+              "type": "date"
+            },
+            "Status": {
+              "description": "",
+              "name": "Status",
+              "options": [
+                {
+                  "color": "default",
+                  "description": "",
+                  "name": "Planned",
+                  "url": "collectionPropertyOption://41ca6b72-a529-814d-a218-000b79ebc8a1/cHV5SQ/OWI5MmM3ZmMtZDk2Ny00NDYzLWJhZTctMjU1OWI1ZDViM2Jj"
+                },
+                {
+                  "color": "blue",
+                  "description": "",
+                  "name": "Active",
+                  "url": "collectionPropertyOption://41ca6b72-a529-814d-a218-000b79ebc8a1/cHV5SQ/Mzg2YTAzM2EtM2M2Zi00ZTI2LTg2ODMtNjEwOGFhZTNiNWUx"
+                },
+                {
+                  "color": "yellow",
+                  "description": "",
+                  "name": "On hold",
+                  "url": "collectionPropertyOption://41ca6b72-a529-814d-a218-000b79ebc8a1/cHV5SQ/MmI5Nzg2YzQtZjAzZS00Zjg5LTkwNTctNzVmYmI0ZjI3NzUx"
+                },
+                {
+                  "color": "green",
+                  "description": "",
+                  "name": "Done",
+                  "url": "collectionPropertyOption://41ca6b72-a529-814d-a218-000b79ebc8a1/cHV5SQ/ZGY4ZGNjYTYtNWE0YS00M2E2LTgwODMtZjU0ODQzMDk2MGJk"
+                },
+                {
+                  "color": "red",
+                  "description": "",
+                  "name": "Cancelled",
+                  "url": "collectionPropertyOption://41ca6b72-a529-814d-a218-000b79ebc8a1/cHV5SQ/OTExMzU5MDktMGM0YS00Njk2LTg4ZmItNjY3YzM5NWE4OTUy"
+                }
+              ],
+              "type": "select"
+            },
+            "Tags": {
+              "description": "",
+              "name": "Tags",
+              "options": [],
+              "type": "multi_select"
+            },
+            "Tasks": {
+              "dataSourceUrl": "collection://41ca6b72-a529-810d-ae25-000b72e68901",
+              "description": "",
+              "name": "Tasks",
+              "propertyUrl": "collectionProperty://41ca6b72-a529-810d-ae25-000b72e68901/bktLSw",
+              "type": "relation"
+            }
+          },
+          "url": "collection://41ca6b72-a529-814d-a218-000b79ebc8a1"
+        }
+      ],
+      "views": [
+        {
+          "url": "view://41ca6b72-a529-801f-843e-000c912d80d9",
+          "advancedFilter": {
+            "filters": [
+              {
+                "operator": "enum_is",
+                "property": "Status",
+                "propertyType": "select",
+                "type": "property",
+                "value": {
+                  "type": "exact",
+                  "value": "Active"
+                }
+              },
+              {
+                "operator": "enum_is",
+                "property": "Status",
+                "propertyType": "select",
+                "type": "property",
+                "value": {
+                  "type": "exact",
+                  "value": "On hold"
+                }
+              }
+            ],
+            "operator": "or",
+            "type": "group"
+          },
+          "dataSourceUrl": "{{collection://41ca6b72-a529-81bb-bc1e-000b95d19d98}}",
+          "displayProperties": ["Name", "Status", "Area", "Progress", "End Date", "Days Remaining"],
+          "icon": "icons/flash_gray",
+          "name": "On Projects",
+          "sorts": [
+            {
+              "direction": "ascending",
+              "property": "End Date"
+            }
+          ],
+          "type": "table"
+        },
+        {
+          "url": "view://41ca6b72-a529-8007-9487-000c7f162ef4",
+          "dataSourceUrl": "{{collection://41ca6b72-a529-814d-a218-000b79ebc8a1}}",
+          "displayProperties": ["Name", "Project", "Status", "Progress"],
+          "groupBy": {
+            "hideEmptyGroups": true,
+            "property": "Project",
+            "propertyType": "relation",
+            "sort": {
+              "type": "ascending"
+            }
+          },
+          "icon": "icons/timeline_gray",
+          "name": "Timelines",
+          "showTable": false,
+          "simpleFilters": [
+            {
+              "filter": {
+                "operator": "relation_contains",
+                "property": "Project",
+                "propertyType": "relation",
+                "type": "property",
+                "value": {
+                  "type": "exact"
+                }
+              },
+              "id": "6788ba41-c695-43d3-8652-565bae83b4a5"
+            }
+          ],
+          "timelineBy": "Start Date",
+          "timelineByEnd": "End Date",
+          "type": "timeline"
+        },
+        {
+          "url": "view://41ca6b72-a529-80de-8c7f-000cf31af655",
+          "advancedFilter": {
+            "filters": [
+              {
+                "operator": "enum_is",
+                "property": "Status",
+                "propertyType": "select",
+                "type": "property",
+                "value": {
+                  "type": "exact",
+                  "value": "Planned"
+                }
+              }
+            ],
+            "operator": "and",
+            "type": "group"
+          },
+          "dataSourceUrl": "{{collection://41ca6b72-a529-81bb-bc1e-000b95d19d98}}",
+          "displayProperties": ["Name", "Area", "Start Date", "End Date", "Blocked by"],
+          "icon": "icons/iterate_gray",
+          "name": "Upcoming Projects",
+          "sorts": [
+            {
+              "direction": "ascending",
+              "property": "Start Date"
+            }
+          ],
+          "type": "table"
+        },
+        {
+          "url": "view://41ca6b72-a529-8075-b07a-000c1b568447",
+          "advancedFilter": {
+            "filters": [
+              {
+                "operator": "enum_is_not",
+                "property": "Status",
+                "propertyType": "select",
+                "type": "property",
+                "value": {
+                  "type": "exact",
+                  "value": "Done"
+                }
+              },
+              {
+                "operator": "enum_is_not",
+                "property": "Status",
+                "propertyType": "select",
+                "type": "property",
+                "value": {
+                  "type": "exact",
+                  "value": "Cancelled"
+                }
+              }
+            ],
+            "operator": "and",
+            "type": "group"
+          },
+          "cardLayoutMode": "default",
+          "dataSourceUrl": "{{collection://41ca6b72-a529-81bb-bc1e-000b95d19d98}}",
+          "displayProperties": ["Name", "Status", "Progress", "End Date"],
+          "fullWidthProperties": [],
+          "groupBy": {
+            "hideEmptyGroups": true,
+            "property": "Area",
+            "propertyType": "relation",
+            "sort": {
+              "type": "ascending"
+            }
+          },
+          "icon": "icons/globe_gray",
+          "name": "By Areas",
+          "type": "board"
+        }
+      ]
+    },
+    {
+      "url": "https://app.notion.com/p/41ca6b72a529815aaf82efffaf484c09",
+      "data_source_url": "collection://41ca6b72-a529-813e-abf3-000b543bf11f",
+      "inline": true,
+      "title": "View of Inbox",
+      "sources": [
+        {
+          "icon": "/icons/inbox_gray.svg",
+          "name": "Inbox",
+          "notAvailableInQuerySql": ["Needs Clarification"],
+          "schema": {
+            "Area": {
+              "dataSourceUrl": "collection://41ca6b72-a529-814f-9519-000b9d0e1cca",
+              "description": "",
+              "name": "Area",
+              "type": "relation"
+            },
+            "Created Time": {
+              "description": "",
+              "name": "Created Time",
+              "type": "created_time"
+            },
+            "Date": {
+              "description": "",
+              "name": "Date",
+              "querySqlColumns": {
+                "columns": [
+                  {
+                    "name": "date:Date:start",
+                    "sqlType": "TEXT"
+                  },
+                  {
+                    "name": "date:Date:end",
+                    "sqlType": "TEXT"
+                  },
+                  {
+                    "name": "date:Date:is_datetime",
+                    "sqlType": "INTEGER"
+                  }
+                ],
+                "usage": "For connections.notion.querySql. Main schema name not queryable."
+              },
+              "type": "date"
+            },
+            "Decision": {
+              "description": "",
+              "name": "Decision",
+              "type": "text"
+            },
+            "Exit Condition": {
+              "description": "",
+              "name": "Exit Condition",
+              "type": "text"
+            },
+            "Files & Media": {
+              "description": "",
+              "name": "Files & Media",
+              "type": "file"
+            },
+            "Hold Reason": {
+              "description": "",
+              "name": "Hold Reason",
+              "type": "text"
+            },
+            "Intended Home": {
+              "description": "",
+              "name": "Intended Home",
+              "type": "text"
+            },
+            "Last Edited Time": {
+              "description": "",
+              "name": "Last Edited Time",
+              "type": "last_edited_time"
+            },
+            "Name": {
+              "description": "",
+              "name": "Name",
+              "type": "title"
+            },
+            "Needs Clarification": {
+              "codeUrl": "formulaCode://41ca6b72-a529-813e-abf3-000b543bf11f/Ynt0aA",
+              "description": "",
+              "name": "Needs Clarification",
+              "type": "formula"
+            },
+            "Notes": {
+              "dataSourceUrl": "collection://41ca6b72-a529-81c2-9627-000b19956366",
+              "description": "",
+              "name": "Notes",
+              "type": "relation"
+            },
+            "Priority": {
+              "description": "",
+              "name": "Priority",
+              "options": [
+                {
+                  "color": "red",
+                  "description": "",
+                  "name": "p1",
+                  "url": "collectionPropertyOption://41ca6b72-a529-813e-abf3-000b543bf11f/fFBHfA/OGMxZDRlOGMtNDIxNy00NTVhLWFlYzktODFmMjc4NWY0Y2U2"
+                },
+                {
+                  "color": "orange",
+                  "description": "",
+                  "name": "p2",
+                  "url": "collectionPropertyOption://41ca6b72-a529-813e-abf3-000b543bf11f/fFBHfA/YWNjNzY4YmUtOWU5ZS00NTYyLWIyMzctZTRiYzE4ZTM3Yzg2"
+                },
+                {
+                  "color": "yellow",
+                  "description": "",
+                  "name": "p3",
+                  "url": "collectionPropertyOption://41ca6b72-a529-813e-abf3-000b543bf11f/fFBHfA/YTMxYmVmNTQtZTlmMi00YzBmLTg5NDQtMTcyNDNiNWJmMzRj"
+                },
+                {
+                  "color": "gray",
+                  "description": "",
+                  "name": "p4",
+                  "url": "collectionPropertyOption://41ca6b72-a529-813e-abf3-000b543bf11f/fFBHfA/MmNiYWM2N2ItOGVkYS00N2U0LWJmNDgtMmMwYTZiMTQ2NTYx"
+                }
+              ],
+              "type": "select"
+            },
+            "Project": {
+              "dataSourceUrl": "collection://41ca6b72-a529-81bb-bc1e-000b95d19d98",
+              "description": "",
+              "name": "Project",
+              "type": "relation"
+            },
+            "Source": {
+              "description": "",
+              "name": "Source",
+              "type": "url"
+            },
+            "Status": {
+              "description": "",
+              "name": "Status",
+              "options": [
+                {
+                  "color": "yellow",
+                  "description": "",
+                  "name": "Inbox",
+                  "url": "collectionPropertyOption://41ca6b72-a529-813e-abf3-000b543bf11f/Zk59XQ/M2Y4YTQzNTktNWQ1MS00ZWQzLWJlODAtMTQzYTIyOTI0ZDZl"
+                },
+                {
+                  "color": "orange",
+                  "description": "",
+                  "name": "On hold",
+                  "url": "collectionPropertyOption://41ca6b72-a529-813e-abf3-000b543bf11f/Zk59XQ/ZWJmODM5ODUtZmYxYS00ODE5LWFkOTQtODQyOWVkOTIyZTQ3"
+                },
+                {
+                  "color": "green",
+                  "description": "",
+                  "name": "Processed",
+                  "url": "collectionPropertyOption://41ca6b72-a529-813e-abf3-000b543bf11f/Zk59XQ/Y2Y5YjFlMGEtYjNjMi00OWI5LTlkMzQtOTRkNzM4MzBhNzI2"
+                }
+              ],
+              "type": "select"
+            },
+            "Tags": {
+              "description": "",
+              "name": "Tags",
+              "options": [],
+              "type": "multi_select"
+            },
+            "Tasks": {
+              "dataSourceUrl": "collection://41ca6b72-a529-810d-ae25-000b72e68901",
+              "description": "",
+              "name": "Tasks",
+              "type": "relation"
+            },
+            "Type": {
+              "description": "",
+              "name": "Type",
+              "options": [
+                {
+                  "description": "",
+                  "name": "Idea",
+                  "url": "collectionPropertyOption://41ca6b72-a529-813e-abf3-000b543bf11f/VEBPdQ/MTFjMmMzNWUtZjg4ZS00ZTc4LWIwNzQtYjc0MTM3YmRkNmQy"
+                },
+                {
+                  "description": "",
+                  "name": "File",
+                  "url": "collectionPropertyOption://41ca6b72-a529-813e-abf3-000b543bf11f/VEBPdQ/MDI4MjAyOTYtODgzNi00ZDVjLTlhODEtNzUxMWMxOWRlZGNk"
+                },
+                {
+                  "description": "",
+                  "name": "Note",
+                  "url": "collectionPropertyOption://41ca6b72-a529-813e-abf3-000b543bf11f/VEBPdQ/MjVjMDcyZmQtZWU1NC00ZjViLTliMGUtNWM4MGExNTk2MmY5"
+                },
+                {
+                  "description": "",
+                  "name": "Package",
+                  "url": "collectionPropertyOption://41ca6b72-a529-813e-abf3-000b543bf11f/VEBPdQ/YmM2MjQ4OTQtYTY4ZC00MzkyLWI1MjYtMDI4ZWRlY2M3ZTNi"
+                },
+                {
+                  "description": "",
+                  "name": "Other",
+                  "url": "collectionPropertyOption://41ca6b72-a529-813e-abf3-000b543bf11f/VEBPdQ/Mjc2NThkNTMtOGE5Yi00YTQyLTk4ODktNDNiYjI4MzMzNjRh"
+                }
+              ],
+              "type": "select"
+            }
+          },
+          "url": "collection://41ca6b72-a529-813e-abf3-000b543bf11f"
+        }
+      ],
+      "views": [
+        {
+          "url": "view://41ca6b72-a529-81b7-aa01-000ce56135b8",
+          "advancedFilter": {
+            "filters": [
+              {
+                "operator": "enum_is",
+                "property": "Status",
+                "propertyType": "select",
+                "type": "property",
+                "value": {
+                  "type": "exact",
+                  "value": "Inbox"
+                }
+              },
+              {
+                "operator": "is_empty",
+                "property": "Status",
+                "propertyType": "select",
+                "type": "property"
+              }
+            ],
+            "operator": "or",
+            "type": "group"
+          },
+          "dataSourceUrl": "{{collection://41ca6b72-a529-813e-abf3-000b543bf11f}}",
+          "displayProperties": ["Name", "Type", "Created Time"],
+          "icon": "icons/shuffle_gray",
+          "name": "Clarify",
+          "type": "list"
+        },
+        {
+          "url": "view://41ca6b72-a529-807a-b1df-000c9370c172",
+          "advancedFilter": {
+            "filters": [
+              {
+                "operator": "enum_is",
+                "property": "Status",
+                "propertyType": "select",
+                "type": "property",
+                "value": {
+                  "type": "exact",
+                  "value": "On hold"
+                }
+              }
+            ],
+            "operator": "and",
+            "type": "group"
+          },
+          "dataSourceUrl": "{{collection://41ca6b72-a529-813e-abf3-000b543bf11f}}",
+          "displayProperties": ["Name", "Intended Home", "Hold Reason", "Exit Condition"],
+          "icon": "icons/package_gray",
+          "name": "Held Packages",
+          "type": "table"
+        }
+      ]
+    },
+    {
+      "url": "https://app.notion.com/p/41ca6b72a52981e282f9f8816ac60ca7",
+      "data_source_url": "collection://41ca6b72-a529-810d-ae25-000b72e68901",
+      "inline": true,
+      "title": "View of Tasks",
+      "sources": [
+        {
+          "default_page_template": "https://app.notion.com/p/41ea6b72a529804ab14fec90e49267c3",
+          "icon": "/icons/checkmark_gray.svg",
+          "name": "Tasks",
+          "notAvailableInQuerySql": [
+            "Is blocked",
+            "Is blocking",
+            "Done Count",
+            "Eligible Count",
+            "Available"
+          ],
+          "schema": {
+            "Area": {
+              "dataSourceUrl": "collection://41ca6b72-a529-814f-9519-000b9d0e1cca",
+              "description": "",
+              "name": "Area",
+              "propertyUrl": "collectionProperty://41ca6b72-a529-814f-9519-000b9d0e1cca/VjtqPQ",
+              "type": "relation"
+            },
+            "Available": {
+              "codeUrl": "formulaCode://41ca6b72-a529-810d-ae25-000b72e68901/bmNjOg",
+              "description": "",
+              "name": "Available",
+              "type": "formula"
+            },
+            "Blocked by": {
+              "dataSourceUrl": "collection://41ca6b72-a529-810d-ae25-000b72e68901",
+              "description": "",
+              "name": "Blocked by",
+              "propertyUrl": "collectionProperty://41ca6b72-a529-810d-ae25-000b72e68901/Q1FCVQ",
+              "type": "relation"
+            },
+            "Blocking": {
+              "dataSourceUrl": "collection://41ca6b72-a529-810d-ae25-000b72e68901",
+              "description": "",
+              "name": "Blocking",
+              "propertyUrl": "collectionProperty://41ca6b72-a529-810d-ae25-000b72e68901/a2B4Og",
+              "type": "relation"
+            },
+            "Context": {
+              "description": "",
+              "name": "Context",
+              "type": "text"
+            },
+            "Created Time": {
+              "description": "",
+              "name": "Created Time",
+              "type": "created_time"
+            },
+            "Description": {
+              "description": "",
+              "name": "Description",
+              "type": "text"
+            },
+            "Done Count": {
+              "codeUrl": "formulaCode://41ca6b72-a529-810d-ae25-000b72e68901/WXV7eQ",
+              "description": "",
+              "name": "Done Count",
+              "type": "formula"
+            },
+            "Drive": {
+              "description": "",
+              "name": "Drive",
+              "type": "url"
+            },
+            "Due Date": {
+              "description": "",
+              "name": "Due Date",
+              "querySqlColumns": {
+                "columns": [
+                  {
+                    "name": "date:Due Date:start",
+                    "sqlType": "TEXT"
+                  },
+                  {
+                    "name": "date:Due Date:end",
+                    "sqlType": "TEXT"
+                  },
+                  {
+                    "name": "date:Due Date:is_datetime",
+                    "sqlType": "INTEGER"
+                  }
+                ],
+                "usage": "For connections.notion.querySql. Main schema name not queryable."
+              },
+              "type": "date"
+            },
+            "Eligible Count": {
+              "codeUrl": "formulaCode://41ca6b72-a529-810d-ae25-000b72e68901/Y35XTw",
+              "description": "",
+              "name": "Eligible Count",
+              "type": "formula"
+            },
+            "Energy": {
+              "description": "",
+              "name": "Energy",
+              "options": [
+                {
+                  "color": "default",
+                  "description": "",
+                  "name": "Low",
+                  "url": "collectionPropertyOption://41ca6b72-a529-810d-ae25-000b72e68901/ZH1mUg/NmM5MDRhZDMtZTdmMy00ZTU2LWEwOGUtYmU3NDhiMjVmNTk2"
+                },
+                {
+                  "description": "",
+                  "name": "Medium",
+                  "url": "collectionPropertyOption://41ca6b72-a529-810d-ae25-000b72e68901/ZH1mUg/ZGUyYWI0YmMtYjhkNi00NzZlLTg2ZmYtNDczM2I2NTUzZWIw"
+                },
+                {
+                  "description": "",
+                  "name": "High",
+                  "url": "collectionPropertyOption://41ca6b72-a529-810d-ae25-000b72e68901/ZH1mUg/NjNjNTU4ZTMtOGQxZS00ZjdjLTk1NjQtZDI3ZDUxMjYyMGM4"
+                }
+              ],
+              "type": "select"
+            },
+            "Expected Result": {
+              "description": "",
+              "name": "Expected Result",
+              "type": "text"
+            },
+            "Files & Media": {
+              "description": "",
+              "name": "Files & Media",
+              "type": "file"
+            },
+            "Follow-up Date": {
+              "description": "",
+              "name": "Follow-up Date",
+              "querySqlColumns": {
+                "columns": [
+                  {
+                    "name": "date:Follow-up Date:start",
+                    "sqlType": "TEXT"
+                  },
+                  {
+                    "name": "date:Follow-up Date:end",
+                    "sqlType": "TEXT"
+                  },
+                  {
+                    "name": "date:Follow-up Date:is_datetime",
+                    "sqlType": "INTEGER"
+                  }
+                ],
+                "usage": "For connections.notion.querySql. Main schema name not queryable."
+              },
+              "type": "date"
+            },
+            "Goals": {
+              "dataSourceUrl": "collection://41fa6b72-a529-8186-9a0a-000b39d4c045",
+              "description": "",
+              "name": "Goals",
+              "propertyUrl": "collectionProperty://41fa6b72-a529-8186-9a0a-000b39d4c045/eFF1QA",
+              "type": "relation"
+            },
+            "Google Drive File": {
+              "dataSourceUrl": "collection://41da6b72-a529-80e6-a4f9-000b5cbe2ab5",
+              "description": "",
+              "name": "Google Drive File",
+              "propertyUrl": "collectionProperty://41da6b72-a529-80e6-a4f9-000b5cbe2ab5/RztGYw",
+              "type": "relation"
+            },
+            "Is blocked": {
+              "codeUrl": "formulaCode://41ca6b72-a529-810d-ae25-000b72e68901/QllKOg",
+              "description": "",
+              "name": "Is blocked",
+              "type": "formula"
+            },
+            "Is blocking": {
+              "codeUrl": "formulaCode://41ca6b72-a529-810d-ae25-000b72e68901/T2JcfQ",
+              "description": "",
+              "name": "Is blocking",
+              "type": "formula"
+            },
+            "Last Edited Time": {
+              "description": "",
+              "name": "Last Edited Time",
+              "type": "last_edited_time"
+            },
+            "Minutes": {
+              "description": "",
+              "name": "Minutes",
+              "type": "number"
+            },
+            "Name": {
+              "description": "",
+              "name": "Name",
+              "type": "title"
+            },
+            "Notes": {
+              "dataSourceUrl": "collection://41ca6b72-a529-81c2-9627-000b19956366",
+              "description": "",
+              "name": "Notes",
+              "type": "relation"
+            },
+            "Parent Task": {
+              "dataSourceUrl": "collection://41ca6b72-a529-810d-ae25-000b72e68901",
+              "description": "",
+              "name": "Parent Task",
+              "propertyUrl": "collectionProperty://41ca6b72-a529-810d-ae25-000b72e68901/QFpdRA",
+              "type": "relation"
+            },
+            "Priority": {
+              "description": "",
+              "name": "Priority",
+              "options": [
+                {
+                  "color": "red",
+                  "description": "",
+                  "name": "p1",
+                  "url": "collectionPropertyOption://41ca6b72-a529-810d-ae25-000b72e68901/YmtBcQ/ZmMxZWFiMTItNDNjYy00MTIxLWIyOTktOTVmZjRiY2ZjNTIz"
+                },
+                {
+                  "color": "orange",
+                  "description": "",
+                  "name": "p2",
+                  "url": "collectionPropertyOption://41ca6b72-a529-810d-ae25-000b72e68901/YmtBcQ/N2Q0Nzg1YWMtNTU1NS00OTI2LTg1MjQtM2Y0MDVmMTI3MTRh"
+                },
+                {
+                  "color": "yellow",
+                  "description": "",
+                  "name": "p3",
+                  "url": "collectionPropertyOption://41ca6b72-a529-810d-ae25-000b72e68901/YmtBcQ/YzViNmYyMjAtNThmNC00MzU0LWE3ZWYtMDMyMTliNDBhNGNi"
+                },
+                {
+                  "color": "gray",
+                  "description": "",
+                  "name": "p4",
+                  "url": "collectionPropertyOption://41ca6b72-a529-810d-ae25-000b72e68901/YmtBcQ/ODE0NDU0MWMtNjE0ZS00NGU2LWI0NGMtYTI0ZmE3ZjkyYTcw"
+                }
+              ],
+              "type": "select"
+            },
+            "Project": {
+              "dataSourceUrl": "collection://41ca6b72-a529-81bb-bc1e-000b95d19d98",
+              "description": "",
+              "name": "Project",
+              "propertyUrl": "collectionProperty://41ca6b72-a529-81bb-bc1e-000b95d19d98/RHpfYQ",
+              "type": "relation"
+            },
+            "References": {
+              "dataSourceUrl": "collection://41ca6b72-a529-81c2-9627-000b19956366",
+              "description": "",
+              "name": "References",
+              "type": "relation"
+            },
+            "Stage": {
+              "dataSourceUrl": "collection://41ca6b72-a529-814d-a218-000b79ebc8a1",
+              "description": "",
+              "name": "Stage",
+              "propertyUrl": "collectionProperty://41ca6b72-a529-814d-a218-000b79ebc8a1/VElNZw",
+              "type": "relation"
+            },
+            "Start Date": {
+              "description": "",
+              "name": "Start Date",
+              "querySqlColumns": {
+                "columns": [
+                  {
+                    "name": "date:Start Date:start",
+                    "sqlType": "TEXT"
+                  },
+                  {
+                    "name": "date:Start Date:end",
+                    "sqlType": "TEXT"
+                  },
+                  {
+                    "name": "date:Start Date:is_datetime",
+                    "sqlType": "INTEGER"
+                  }
+                ],
+                "usage": "For connections.notion.querySql. Main schema name not queryable."
+              },
+              "type": "date"
+            },
+            "Status": {
+              "description": "",
+              "name": "Status",
+              "options": [
+                {
+                  "color": "blue",
+                  "description": "",
+                  "name": "Next Action",
+                  "url": "collectionPropertyOption://41ca6b72-a529-810d-ae25-000b72e68901/a2N4dw/MTdiZDhkYzQtMTk5Ni00YmI5LTk1ZmYtOTUzZTM3OTZiNjBh"
+                },
+                {
+                  "color": "blue",
+                  "description": "",
+                  "name": "In progress",
+                  "url": "collectionPropertyOption://41ca6b72-a529-810d-ae25-000b72e68901/a2N4dw/MTg4NDAyNmUtZWY4Yy00NWI5LTkxNDgtODM1ZWU3MjdlMjQ4"
+                },
+                {
+                  "color": "yellow",
+                  "description": "",
+                  "name": "Waiting For",
+                  "url": "collectionPropertyOption://41ca6b72-a529-810d-ae25-000b72e68901/a2N4dw/MzM1YmVmMDUtMDAzYi00NmZkLTkyMzUtNDNiMDk3ZjE4Nzdj"
+                },
+                {
+                  "color": "default",
+                  "description": "",
+                  "name": "Someday/Maybe",
+                  "url": "collectionPropertyOption://41ca6b72-a529-810d-ae25-000b72e68901/a2N4dw/YWE0MDI5OTAtNzU3ZS00YjRmLWFjMjYtMTBmZmRjZjEyMDUx"
+                },
+                {
+                  "color": "purple",
+                  "description": "",
+                  "name": "Scheduled",
+                  "url": "collectionPropertyOption://41ca6b72-a529-810d-ae25-000b72e68901/a2N4dw/NTliMWJlMjctZDExYy00ZDdiLTkxNmQtZmE1YzE0YjZmMTlj"
+                },
+                {
+                  "color": "orange",
+                  "description": "",
+                  "name": "In review",
+                  "url": "collectionPropertyOption://41ca6b72-a529-810d-ae25-000b72e68901/a2N4dw/YTg4NjU2ZTctNzQyMS00N2VmLTkwNzctNjkzNmQ5MjU0NDgz"
+                },
+                {
+                  "color": "green",
+                  "description": "",
+                  "name": "Done",
+                  "url": "collectionPropertyOption://41ca6b72-a529-810d-ae25-000b72e68901/a2N4dw/YmQxYjUxZDUtMGU1ZC00M2Q2LThlNjItMTgzNWE0ZTE4NjQ0"
+                },
+                {
+                  "color": "red",
+                  "description": "",
+                  "name": "Cancelled",
+                  "url": "collectionPropertyOption://41ca6b72-a529-810d-ae25-000b72e68901/a2N4dw/M2RiNGI0YjctMzQ0My00YTYxLThlNWQtZWQxNzcwNWVmMmQ0"
+                }
+              ],
+              "type": "select"
+            },
+            "Subtasks": {
+              "dataSourceUrl": "collection://41ca6b72-a529-810d-ae25-000b72e68901",
+              "description": "",
+              "name": "Subtasks",
+              "propertyUrl": "collectionProperty://41ca6b72-a529-810d-ae25-000b72e68901/V0ZIXw",
+              "type": "relation"
+            },
+            "Tags": {
+              "description": "",
+              "name": "Tags",
+              "options": [],
+              "type": "multi_select"
+            },
+            "Waiting On": {
+              "description": "",
+              "name": "Waiting On",
+              "type": "text"
+            }
+          },
+          "url": "collection://41ca6b72-a529-810d-ae25-000b72e68901"
+        }
+      ],
+      "views": [
+        {
+          "url": "view://41ca6b72-a529-8129-bc89-000c7ba25a40",
+          "advancedFilter": {
+            "filters": [
+              {
+                "filters": [
+                  {
+                    "operator": "enum_is",
+                    "property": "Status",
+                    "propertyType": "select",
+                    "type": "property",
+                    "value": {
+                      "type": "exact",
+                      "value": "Next Action"
+                    }
+                  },
+                  {
+                    "operator": "enum_is",
+                    "property": "Status",
+                    "propertyType": "select",
+                    "type": "property",
+                    "value": {
+                      "type": "exact",
+                      "value": "In progress"
+                    }
+                  }
+                ],
+                "operator": "or",
+                "type": "group"
+              },
+              {
+                "operator": "is_empty",
+                "property": "Blocked by",
+                "propertyType": "relation",
+                "type": "property"
+              },
+              {
+                "operator": "is_empty",
+                "property": "Subtasks",
+                "propertyType": "relation",
+                "type": "property"
+              }
+            ],
+            "operator": "and",
+            "type": "group"
+          },
+          "dataSourceUrl": "{{collection://41ca6b72-a529-810d-ae25-000b72e68901}}",
+          "displayProperties": ["Name", "Priority", "Due Date"],
+          "icon": "icons/flash_gray",
+          "name": "Next Actions",
+          "simpleFilters": [
+            {
+              "filter": {
+                "operator": "relation_contains",
+                "property": "Project",
+                "propertyType": "relation",
+                "type": "property",
+                "value": {
+                  "type": "exact"
+                }
+              },
+              "id": "02fc98be-c694-4008-b0e3-cdf9b2bd92c2"
+            },
+            {
+              "filter": {
+                "operator": "string_contains",
+                "property": "Context",
+                "propertyType": "text",
+                "type": "property",
+                "value": {
+                  "type": "exact"
+                }
+              },
+              "id": "f58bc1d5-563d-41ad-89a6-b253ea0c1d17"
+            },
+            {
+              "filter": {
+                "operator": "enum_is",
+                "property": "Energy",
+                "propertyType": "select",
+                "type": "property",
+                "value": {
+                  "type": "exact"
+                }
+              },
+              "id": "8ab2b5d3-1701-422a-81ed-aba6b3bc374e"
+            },
+            {
+              "filter": {
+                "operator": "number_equals",
+                "property": "Minutes",
+                "propertyType": "number",
+                "type": "property",
+                "value": {
+                  "type": "exact"
+                }
+              },
+              "id": "ea506ea4-5dbd-4d3a-968c-5d6c74527818"
+            },
+            {
+              "filter": {
+                "operator": "relation_contains",
+                "property": "Area",
+                "propertyType": "relation",
+                "type": "property",
+                "value": {
+                  "type": "exact"
+                }
+              },
+              "id": "602006a6-8ce8-450b-9083-4badff97337c"
+            }
+          ],
+          "type": "list"
+        },
+        {
+          "url": "view://41ca6b72-a529-806b-91ea-000c7da41844",
+          "advancedFilter": {
+            "filters": [
+              {
+                "operator": "is_not_empty",
+                "property": "Blocking",
+                "propertyType": "relation",
+                "type": "property"
+              },
+              {
+                "operator": "enum_is_not",
+                "property": "Status",
+                "propertyType": "select",
+                "type": "property",
+                "value": {
+                  "type": "exact",
+                  "value": "Done"
+                }
+              },
+              {
+                "operator": "enum_is_not",
+                "property": "Status",
+                "propertyType": "select",
+                "type": "property",
+                "value": {
+                  "type": "exact",
+                  "value": "Cancelled"
+                }
+              }
+            ],
+            "operator": "and",
+            "type": "group"
+          },
+          "dataSourceUrl": "{{collection://41ca6b72-a529-810d-ae25-000b72e68901}}",
+          "displayProperties": ["Name", "Blocking", "Status", "Priority", "Due Date", "Project"],
+          "icon": "icons/wall_gray",
+          "name": "Blockers",
+          "sorts": [
+            {
+              "direction": "ascending",
+              "property": "Due Date"
+            }
+          ],
+          "type": "table"
+        },
+        {
+          "url": "view://41ca6b72-a529-8071-969a-000ceeadecd4",
+          "advancedFilter": {
+            "filters": [
+              {
+                "operator": "is_not_empty",
+                "property": "Blocked by",
+                "propertyType": "relation",
+                "type": "property"
+              },
+              {
+                "operator": "enum_is_not",
+                "property": "Status",
+                "propertyType": "select",
+                "type": "property",
+                "value": {
+                  "type": "exact",
+                  "value": "Done"
+                }
+              },
+              {
+                "operator": "enum_is_not",
+                "property": "Status",
+                "propertyType": "select",
+                "type": "property",
+                "value": {
+                  "type": "exact",
+                  "value": "Cancelled"
+                }
+              }
+            ],
+            "operator": "and",
+            "type": "group"
+          },
+          "dataSourceUrl": "{{collection://41ca6b72-a529-810d-ae25-000b72e68901}}",
+          "displayProperties": ["Name", "Blocked by", "Priority", "Due Date", "Project", "Stage"],
+          "icon": "icons/no_gray",
+          "name": "Blocked",
+          "type": "table"
+        },
+        {
+          "url": "view://41ca6b72-a529-800b-867b-000c24dc0ed5",
+          "advancedFilter": {
+            "filters": [
+              {
+                "operator": "enum_is",
+                "property": "Status",
+                "propertyType": "select",
+                "type": "property",
+                "value": {
+                  "type": "exact",
+                  "value": "Waiting For"
+                }
+              }
+            ],
+            "operator": "and",
+            "type": "group"
+          },
+          "dataSourceUrl": "{{collection://41ca6b72-a529-810d-ae25-000b72e68901}}",
+          "displayProperties": [
+            "Name",
+            "Waiting On",
+            "Expected Result",
+            "Follow-up Date",
+            "Project"
+          ],
+          "icon": "icons/clock_gray",
+          "name": "Waiting For",
+          "sorts": [
+            {
+              "direction": "ascending",
+              "property": "Follow-up Date"
+            }
+          ],
+          "type": "table"
+        },
+        {
+          "url": "view://41ca6b72-a529-80ef-97d9-000cb817b6d1",
+          "advancedFilter": {
+            "filters": [
+              {
+                "operator": "enum_is",
+                "property": "Status",
+                "propertyType": "select",
+                "type": "property",
+                "value": {
+                  "type": "exact",
+                  "value": "Someday/Maybe"
+                }
+              }
+            ],
+            "operator": "and",
+            "type": "group"
+          },
+          "dataSourceUrl": "{{collection://41ca6b72-a529-810d-ae25-000b72e68901}}",
+          "displayProperties": ["Name", "Project", "Area"],
+          "icon": "icons/light-bulb_gray",
+          "name": "Someday / Maybe",
+          "type": "list"
+        },
+        {
+          "url": "view://41ca6b72-a529-8058-bdce-000c510c278d",
+          "advancedFilter": {
+            "filters": [
+              {
+                "operator": "enum_is",
+                "property": "Status",
+                "propertyType": "select",
+                "type": "property",
+                "value": {
+                  "type": "exact",
+                  "value": "In review"
+                }
+              }
+            ],
+            "operator": "and",
+            "type": "group"
+          },
+          "dataSourceUrl": "{{collection://41ca6b72-a529-810d-ae25-000b72e68901}}",
+          "displayProperties": ["Name", "Project", "Stage", "Due Date", "Notes"],
+          "icon": "icons/search_gray",
+          "name": "In Review",
+          "sorts": [
+            {
+              "direction": "ascending",
+              "property": "Due Date"
+            }
+          ],
+          "type": "list"
+        },
+        {
+          "url": "view://41ca6b72-a529-800e-9625-000c2f9b1e27",
+          "advancedFilter": {
+            "filters": [
+              {
+                "operator": "enum_is",
+                "property": "Status",
+                "propertyType": "select",
+                "type": "property",
+                "value": {
+                  "type": "exact",
+                  "value": "Scheduled"
+                }
+              }
+            ],
+            "operator": "and",
+            "type": "group"
+          },
+          "dataSourceUrl": "{{collection://41ca6b72-a529-810d-ae25-000b72e68901}}",
+          "displayProperties": ["Name", "Start Date", "Due Date", "Project", "Priority"],
+          "icon": "icons/push-pin_gray",
+          "name": "Scheduled & Tickler",
+          "sorts": [
+            {
+              "direction": "ascending",
+              "property": "Start Date"
+            }
+          ],
+          "type": "table"
+        }
+      ]
+    },
+    {
+      "url": "https://app.notion.com/p/41fa6b72a529811f8edcd2677a4e3788",
+      "data_source_url": "collection://41fa6b72-a529-8186-9a0a-000b39d4c045",
+      "inline": false,
+      "title": "Goals",
+      "sources": [
+        {
+          "icon": "/icons/bullseye_gray.svg",
+          "name": "Goals",
+          "notAvailableInQuerySql": ["Days Remaining"],
+          "schema": {
+            "Area": {
+              "dataSourceUrl": "collection://41ca6b72-a529-814f-9519-000b9d0e1cca",
+              "description": "",
+              "name": "Area",
+              "propertyUrl": "collectionProperty://41ca6b72-a529-814f-9519-000b9d0e1cca/a1k_Sw",
+              "type": "relation"
+            },
+            "Created Time": {
+              "description": "",
+              "name": "Created Time",
+              "type": "created_time"
+            },
+            "Days Remaining": {
+              "codeUrl": "formulaCode://41fa6b72-a529-8186-9a0a-000b39d4c045/TWFBWg",
+              "description": "",
+              "name": "Days Remaining",
+              "type": "formula"
+            },
+            "Direct Tasks": {
+              "dataSourceUrl": "collection://41ca6b72-a529-810d-ae25-000b72e68901",
+              "description": "",
+              "name": "Direct Tasks",
+              "propertyUrl": "collectionProperty://41ca6b72-a529-810d-ae25-000b72e68901/blx6Ww",
+              "type": "relation"
+            },
+            "Evidence": {
+              "dataSourceUrl": "collection://41ca6b72-a529-81c2-9627-000b19956366",
+              "description": "",
+              "name": "Evidence",
+              "propertyUrl": "collectionProperty://41ca6b72-a529-81c2-9627-000b19956366/Ql9UaQ",
+              "type": "relation"
+            },
+            "Last Edited Time": {
+              "description": "",
+              "name": "Last Edited Time",
+              "type": "last_edited_time"
+            },
+            "Name": {
+              "description": "",
+              "name": "Name",
+              "type": "title"
+            },
+            "Progress": {
+              "description": "",
+              "name": "Progress",
+              "number_format": "percent",
+              "type": "number"
+            },
+            "Projects": {
+              "dataSourceUrl": "collection://41ca6b72-a529-81bb-bc1e-000b95d19d98",
+              "description": "",
+              "name": "Projects",
+              "propertyUrl": "collectionProperty://41ca6b72-a529-81bb-bc1e-000b95d19d98/entMbw",
+              "type": "relation"
+            },
+            "Review Date": {
+              "description": "",
+              "name": "Review Date",
+              "querySqlColumns": {
+                "columns": [
+                  {
+                    "name": "date:Review Date:start",
+                    "sqlType": "TEXT"
+                  },
+                  {
+                    "name": "date:Review Date:end",
+                    "sqlType": "TEXT"
+                  },
+                  {
+                    "name": "date:Review Date:is_datetime",
+                    "sqlType": "INTEGER"
+                  }
+                ],
+                "usage": "For connections.notion.querySql. Main schema name not queryable."
+              },
+              "type": "date"
+            },
+            "Start Date": {
+              "description": "",
+              "name": "Start Date",
+              "querySqlColumns": {
+                "columns": [
+                  {
+                    "name": "date:Start Date:start",
+                    "sqlType": "TEXT"
+                  },
+                  {
+                    "name": "date:Start Date:end",
+                    "sqlType": "TEXT"
+                  },
+                  {
+                    "name": "date:Start Date:is_datetime",
+                    "sqlType": "INTEGER"
+                  }
+                ],
+                "usage": "For connections.notion.querySql. Main schema name not queryable."
+              },
+              "type": "date"
+            },
+            "Status": {
+              "defaultOption": "Candidate",
+              "description": "",
+              "groups": {
+                "complete": [
+                  {
+                    "color": "green",
+                    "description": "",
+                    "name": "Achieved",
+                    "url": "collectionPropertyOption://41fa6b72-a529-8186-9a0a-000b39d4c045/c0Btag/NWViM2ZlZjEtODA3YS00NzAwLWE0YmUtZjJkZDM2MGEzZDBm"
+                  },
+                  {
+                    "color": "gray",
+                    "description": "",
+                    "name": "Dropped",
+                    "url": "collectionPropertyOption://41fa6b72-a529-8186-9a0a-000b39d4c045/c0Btag/MDdjMDRlNzEtMTBkZC00OTBlLWEzZDUtZTljNWNjYzRmMjAy"
+                  }
+                ],
+                "current": [],
+                "future": [],
+                "in_progress": [
+                  {
+                    "color": "blue",
+                    "description": "",
+                    "name": "Active",
+                    "url": "collectionPropertyOption://41fa6b72-a529-8186-9a0a-000b39d4c045/c0Btag/ZmY5NjZkNmItNTM3Zi00MTY0LWFlYTQtZjMzYzdhZmFhMTYz"
+                  },
+                  {
+                    "color": "yellow",
+                    "description": "",
+                    "name": "On hold",
+                    "url": "collectionPropertyOption://41fa6b72-a529-8186-9a0a-000b39d4c045/c0Btag/YTY5NDJlYWItZTM3Zi00MjVkLWJlNTItMGRmMzczNmY5ZmFk"
+                  }
+                ],
+                "to_do": [
+                  {
+                    "color": "gray",
+                    "description": "",
+                    "name": "Candidate",
+                    "url": "collectionPropertyOption://41fa6b72-a529-8186-9a0a-000b39d4c045/c0Btag/ZmQ3MmM3ZmYtNzY0Yi00YmU0LWI4MTMtZTFmYzk1MzE5NDZm"
+                  }
+                ]
+              },
+              "name": "Status",
+              "type": "status"
+            },
+            "Success Criteria": {
+              "description": "",
+              "name": "Success Criteria",
+              "type": "text"
+            },
+            "Target Date": {
+              "description": "",
+              "name": "Target Date",
+              "querySqlColumns": {
+                "columns": [
+                  {
+                    "name": "date:Target Date:start",
+                    "sqlType": "TEXT"
+                  },
+                  {
+                    "name": "date:Target Date:end",
+                    "sqlType": "TEXT"
+                  },
+                  {
+                    "name": "date:Target Date:is_datetime",
+                    "sqlType": "INTEGER"
+                  }
+                ],
+                "usage": "For connections.notion.querySql. Main schema name not queryable."
+              },
+              "type": "date"
+            }
+          },
+          "url": "collection://41fa6b72-a529-8186-9a0a-000b39d4c045"
+        }
+      ],
+      "views": [
+        {
+          "url": "view://41fa6b72-a529-81be-9fc3-000c2883d690",
+          "dataSourceUrl": "{{collection://41fa6b72-a529-8186-9a0a-000b39d4c045}}",
+          "displayProperties": [
+            "Name",
+            "Area",
+            "Created Time",
+            "Days Remaining",
+            "Direct Tasks",
+            "Evidence",
+            "Last Edited Time",
+            "Progress",
+            "Projects",
+            "Review Date",
+            "Start Date",
+            "Status",
+            "Success Criteria",
+            "Target Date"
+          ],
+          "icon": "icons/info-alternate_gray",
+          "name": "Full Details",
+          "type": "table"
+        },
+        {
+          "url": "view://41fa6b72-a529-81a8-a180-000cc6afeb23",
+          "advancedFilter": {
+            "filters": [
+              {
+                "operator": "status_is",
+                "property": "Status",
+                "propertyType": "status",
+                "type": "property",
+                "value": {
+                  "type": "is_option",
+                  "value": "Active"
+                }
+              }
+            ],
+            "operator": "and",
+            "type": "group"
+          },
+          "dataSourceUrl": "{{collection://41fa6b72-a529-8186-9a0a-000b39d4c045}}",
+          "displayProperties": [
+            "Name",
+            "Success Criteria",
+            "Progress",
+            "Target Date",
+            "Review Date",
+            "Projects",
+            "Direct Tasks"
+          ],
+          "icon": "icons/bullseye_gray",
+          "name": "Active Goals",
+          "sorts": [
+            {
+              "direction": "ascending",
+              "property": "Target Date"
+            }
+          ],
+          "type": "table"
+        },
+        {
+          "url": "view://41fa6b72-a529-81e1-83e4-000ca3406594",
+          "dataSourceUrl": "{{collection://41fa6b72-a529-8186-9a0a-000b39d4c045}}",
+          "displayProperties": ["Name", "Status", "Progress"],
+          "icon": "icons/timeline_gray",
+          "name": "Timeline",
+          "showTable": false,
+          "timelineBy": "Start Date",
+          "timelineByEnd": "Target Date",
+          "type": "timeline"
+        },
+        {
+          "url": "view://41fa6b72-a529-81b4-bda7-000cd6b36d16",
+          "advancedFilter": {
+            "filters": [
+              {
+                "operator": "status_is_not",
+                "property": "Status",
+                "propertyType": "status",
+                "type": "property",
+                "value": {
+                  "type": "is_option",
+                  "value": "Achieved"
+                }
+              },
+              {
+                "operator": "status_is_not",
+                "property": "Status",
+                "propertyType": "status",
+                "type": "property",
+                "value": {
+                  "type": "is_option",
+                  "value": "Dropped"
+                }
+              }
+            ],
+            "operator": "and",
+            "type": "group"
+          },
+          "cardLayoutMode": "default",
+          "dataSourceUrl": "{{collection://41fa6b72-a529-8186-9a0a-000b39d4c045}}",
+          "displayProperties": ["Name", "Status", "Progress", "Target Date"],
+          "fullWidthProperties": [],
+          "groupBy": {
+            "hideEmptyGroups": true,
+            "property": "Area",
+            "propertyType": "relation",
+            "sort": {
+              "type": "ascending"
+            }
+          },
+          "icon": "icons/globe_gray",
+          "name": "By Area",
+          "type": "board"
+        },
+        {
+          "url": "view://41fa6b72-a529-811e-ac11-000c84f62c77",
+          "advancedFilter": {
+            "filters": [
+              {
+                "operator": "status_is",
+                "property": "Status",
+                "propertyType": "status",
+                "type": "property",
+                "value": {
+                  "type": "is_option",
+                  "value": "Achieved"
+                }
+              },
+              {
+                "operator": "status_is",
+                "property": "Status",
+                "propertyType": "status",
+                "type": "property",
+                "value": {
+                  "type": "is_option",
+                  "value": "Dropped"
+                }
+              }
+            ],
+            "operator": "or",
+            "type": "group"
+          },
+          "dataSourceUrl": "{{collection://41fa6b72-a529-8186-9a0a-000b39d4c045}}",
+          "displayProperties": ["Name", "Status", "Success Criteria", "Evidence", "Target Date"],
+          "icon": "icons/package_gray",
+          "name": "Achieved & Dropped",
+          "type": "table"
+        },
+        {
+          "url": "view://41fa6b72-a529-8138-bcfb-000c8c10d043",
+          "advancedFilter": {
+            "filters": [
+              {
+                "operator": "status_is",
+                "property": "Status",
+                "propertyType": "status",
+                "type": "property",
+                "value": {
+                  "type": "is_option",
+                  "value": "Candidate"
+                }
+              }
+            ],
+            "operator": "and",
+            "type": "group"
+          },
+          "dataSourceUrl": "{{collection://41fa6b72-a529-8186-9a0a-000b39d4c045}}",
+          "displayProperties": ["Name", "Area", "Success Criteria"],
+          "icon": "icons/search_gray",
+          "name": "Candidates",
+          "type": "list"
+        },
+        {
+          "url": "view://41fa6b72-a529-8132-84c6-000ce0e8bb88",
+          "advancedFilter": {
+            "filters": [
+              {
+                "filters": [
+                  {
+                    "operator": "status_is",
+                    "property": "Status",
+                    "propertyType": "status",
+                    "type": "property",
+                    "value": {
+                      "type": "is_option",
+                      "value": "Active"
+                    }
+                  },
+                  {
+                    "operator": "status_is",
+                    "property": "Status",
+                    "propertyType": "status",
+                    "type": "property",
+                    "value": {
+                      "type": "is_option",
+                      "value": "On hold"
+                    }
+                  }
+                ],
+                "operator": "or",
+                "type": "group"
+              },
+              {
+                "filters": [
+                  {
+                    "operator": "date_is_on_or_before",
+                    "property": "Review Date",
+                    "propertyType": "date",
+                    "type": "property",
+                    "value": {
+                      "type": "relative",
+                      "value": "today"
+                    }
+                  },
+                  {
+                    "operator": "is_empty",
+                    "property": "Review Date",
+                    "propertyType": "date",
+                    "type": "property"
+                  }
+                ],
+                "operator": "or",
+                "type": "group"
+              }
+            ],
+            "operator": "and",
+            "type": "group"
+          },
+          "dataSourceUrl": "{{collection://41fa6b72-a529-8186-9a0a-000b39d4c045}}",
+          "displayProperties": ["Name", "Status", "Review Date", "Target Date", "Evidence"],
+          "icon": "icons/push-pin_gray",
+          "name": "Review Due",
+          "sorts": [
+            {
+              "direction": "ascending",
+              "property": "Review Date"
+            }
+          ],
+          "type": "table"
+        }
+      ]
+    },
+    {
+      "url": "https://app.notion.com/p/41ca6b72a52981088e51cea517812290",
+      "data_source_url": "collection://41ca6b72-a529-814f-9519-000b9d0e1cca",
+      "inline": false,
+      "title": "Areas",
+      "sources": [
+        {
+          "icon": "/icons/globe_gray.svg",
+          "name": "Areas",
+          "schema": {
+            "Archived": {
+              "description": "",
+              "name": "Archived",
+              "type": "checkbox"
+            },
+            "Drive": {
+              "description": "",
+              "name": "Drive",
+              "type": "url"
+            },
+            "Goals": {
+              "dataSourceUrl": "collection://41fa6b72-a529-8186-9a0a-000b39d4c045",
+              "description": "",
+              "name": "Goals",
+              "propertyUrl": "collectionProperty://41fa6b72-a529-8186-9a0a-000b39d4c045/RlltSA",
+              "type": "relation"
+            },
+            "Name": {
+              "description": "",
+              "name": "Name",
+              "type": "title"
+            },
+            "Notes": {
+              "dataSourceUrl": "collection://41ca6b72-a529-81c2-9627-000b19956366",
+              "description": "",
+              "name": "Notes",
+              "propertyUrl": "collectionProperty://41ca6b72-a529-81c2-9627-000b19956366/TFZfQQ",
+              "type": "relation"
+            },
+            "Projects": {
+              "dataSourceUrl": "collection://41ca6b72-a529-81bb-bc1e-000b95d19d98",
+              "description": "",
+              "name": "Projects",
+              "propertyUrl": "collectionProperty://41ca6b72-a529-81bb-bc1e-000b95d19d98/UzxyUQ",
+              "type": "relation"
+            },
+            "Standard": {
+              "description": "",
+              "name": "Standard",
+              "type": "text"
+            },
+            "Tasks": {
+              "dataSourceUrl": "collection://41ca6b72-a529-810d-ae25-000b72e68901",
+              "description": "",
+              "name": "Tasks",
+              "propertyUrl": "collectionProperty://41ca6b72-a529-810d-ae25-000b72e68901/O2BxbQ",
+              "type": "relation"
+            }
+          },
+          "url": "collection://41ca6b72-a529-814f-9519-000b9d0e1cca"
+        }
+      ],
+      "views": [
+        {
+          "url": "view://41ca6b72-a529-81b2-997f-000cdf660755",
+          "dataSourceUrl": "{{collection://41ca6b72-a529-814f-9519-000b9d0e1cca}}",
+          "displayProperties": [
+            "Name",
+            "Archived",
+            "Drive",
+            "Goals",
+            "Notes",
+            "Projects",
+            "Standard",
+            "Tasks"
+          ],
+          "icon": "icons/info-alternate_gray",
+          "name": "Full Details",
+          "type": "table"
+        }
+      ]
+    },
+    {
+      "url": "https://app.notion.com/p/41ca6b72a529816499dcd97bd1ce37fd",
+      "data_source_url": "collection://41ca6b72-a529-81c2-9627-000b19956366",
+      "inline": false,
+      "title": "Notes & References",
+      "sources": [
+        {
+          "icon": "/icons/bookmark_gray.svg",
+          "name": "Notes & References",
+          "schema": {
+            "Area": {
+              "dataSourceUrl": "collection://41ca6b72-a529-814f-9519-000b9d0e1cca",
+              "description": "",
+              "name": "Area",
+              "propertyUrl": "collectionProperty://41ca6b72-a529-814f-9519-000b9d0e1cca/b3M_cQ",
+              "type": "relation"
+            },
+            "Created Time": {
+              "description": "",
+              "name": "Created Time",
+              "type": "created_time"
+            },
+            "Date": {
+              "description": "",
+              "name": "Date",
+              "querySqlColumns": {
+                "columns": [
+                  {
+                    "name": "date:Date:start",
+                    "sqlType": "TEXT"
+                  },
+                  {
+                    "name": "date:Date:end",
+                    "sqlType": "TEXT"
+                  },
+                  {
+                    "name": "date:Date:is_datetime",
+                    "sqlType": "INTEGER"
+                  }
+                ],
+                "usage": "For connections.notion.querySql. Main schema name not queryable."
+              },
+              "type": "date"
+            },
+            "Drive": {
+              "description": "",
+              "name": "Drive",
+              "type": "url"
+            },
+            "Goals": {
+              "dataSourceUrl": "collection://41fa6b72-a529-8186-9a0a-000b39d4c045",
+              "description": "",
+              "name": "Goals",
+              "propertyUrl": "collectionProperty://41fa6b72-a529-8186-9a0a-000b39d4c045/Q31jPw",
+              "type": "relation"
+            },
+            "Last Edited Time": {
+              "description": "",
+              "name": "Last Edited Time",
+              "type": "last_edited_time"
+            },
+            "Name": {
+              "description": "",
+              "name": "Name",
+              "type": "title"
+            },
+            "Pinned": {
+              "description": "",
+              "name": "Pinned",
+              "type": "checkbox"
+            },
+            "Project": {
+              "dataSourceUrl": "collection://41ca6b72-a529-81bb-bc1e-000b95d19d98",
+              "description": "",
+              "name": "Project",
+              "propertyUrl": "collectionProperty://41ca6b72-a529-81bb-bc1e-000b95d19d98/UENiXA",
+              "type": "relation"
+            },
+            "Source": {
+              "description": "",
+              "name": "Source",
+              "type": "url"
+            },
+            "Status": {
+              "description": "",
+              "name": "Status",
+              "options": [
+                {
+                  "color": "yellow",
+                  "description": "",
+                  "name": "In review",
+                  "url": "collectionPropertyOption://41ca6b72-a529-81c2-9627-000b19956366/QV5RfA/MDQ3ZWNlM2QtNDk0My00Njg3LTliZmMtZDQwNGIzYWM0ZmIy"
+                },
+                {
+                  "color": "green",
+                  "description": "",
+                  "name": "Saved",
+                  "url": "collectionPropertyOption://41ca6b72-a529-81c2-9627-000b19956366/QV5RfA/ZjYxOTM3MDMtODE4OC00Mzg3LTliM2UtOGQxNzc2NWZkZWMz"
+                },
+                {
+                  "color": "default",
+                  "description": "",
+                  "name": "Archived",
+                  "url": "collectionPropertyOption://41ca6b72-a529-81c2-9627-000b19956366/QV5RfA/ODYwNDMzYjYtODIyMS00YjBhLThiY2EtMzRmN2E1NThlNTBj"
+                }
+              ],
+              "type": "select"
+            },
+            "Summary": {
+              "description": "",
+              "name": "Summary",
+              "type": "text"
+            },
+            "Tags": {
+              "description": "",
+              "name": "Tags",
+              "options": [],
+              "type": "multi_select"
+            },
+            "Type": {
+              "description": "",
+              "name": "Type",
+              "options": [
+                {
+                  "description": "",
+                  "name": "Idea",
+                  "url": "collectionPropertyOption://41ca6b72-a529-81c2-9627-000b19956366/fk1Ecg/MWE1MGFjZmItYjBhNi00OTYzLTlmMTItYzMwN2FlNjFhMjVi"
+                },
+                {
+                  "description": "",
+                  "name": "Meeting",
+                  "url": "collectionPropertyOption://41ca6b72-a529-81c2-9627-000b19956366/fk1Ecg/ZjM2NjIwOTUtZDNhMS00MTIzLTk2ZmEtZDA5MjM3NzgyYjRl"
+                },
+                {
+                  "description": "",
+                  "name": "Note",
+                  "url": "collectionPropertyOption://41ca6b72-a529-81c2-9627-000b19956366/fk1Ecg/M2QxZjAxMTYtYmRhOC00M2VkLTg0NWQtMzk2MTZjYzc4Mjdh"
+                },
+                {
+                  "description": "",
+                  "name": "Reference",
+                  "url": "collectionPropertyOption://41ca6b72-a529-81c2-9627-000b19956366/fk1Ecg/OTUyMWMzMGQtMTlhMi00YjYxLTlkYWQtYzQ4MzQ3NjM4ZWQ4"
+                },
+                {
+                  "description": "",
+                  "name": "Resource",
+                  "url": "collectionPropertyOption://41ca6b72-a529-81c2-9627-000b19956366/fk1Ecg/YjQ5MTc2YjMtODQ4My00MWY2LTg1ZjMtN2E3ZTA1ZDQxOTc0"
+                }
+              ],
+              "type": "select"
+            }
+          },
+          "url": "collection://41ca6b72-a529-81c2-9627-000b19956366"
+        }
+      ],
+      "views": [
+        {
+          "url": "view://41ca6b72-a529-8163-a6ba-000c48eea305",
+          "dataSourceUrl": "{{collection://41ca6b72-a529-81c2-9627-000b19956366}}",
+          "displayProperties": [
+            "Name",
+            "Area",
+            "Created Time",
+            "Date",
+            "Drive",
+            "Goals",
+            "Last Edited Time",
+            "Pinned",
+            "Project",
+            "Source",
+            "Status",
+            "Summary",
+            "Tags",
+            "Type"
+          ],
+          "icon": "icons/info-alternate_gray",
+          "name": "Full Details",
+          "type": "table"
+        },
+        {
+          "url": "view://41ca6b72-a529-813d-8c92-000ca3e463a4",
+          "advancedFilter": {
+            "filters": [
+              {
+                "operator": "enum_is",
+                "property": "Type",
+                "propertyType": "select",
+                "type": "property",
+                "value": {
+                  "type": "exact",
+                  "value": "Resource"
+                }
+              }
+            ],
+            "operator": "and",
+            "type": "group"
+          },
+          "dataSourceUrl": "{{collection://41ca6b72-a529-81c2-9627-000b19956366}}",
+          "displayProperties": ["Name", "Drive", "Summary"],
+          "icon": "icons/link_gray",
+          "name": "Resources",
+          "type": "list"
+        },
+        {
+          "url": "view://41ca6b72-a529-8112-9433-000c2cf99e8e",
+          "advancedFilter": {
+            "filters": [
+              {
+                "operator": "enum_is",
+                "property": "Status",
+                "propertyType": "select",
+                "type": "property",
+                "value": {
+                  "type": "exact",
+                  "value": "In review"
+                }
+              }
+            ],
+            "operator": "and",
+            "type": "group"
+          },
+          "dataSourceUrl": "{{collection://41ca6b72-a529-81c2-9627-000b19956366}}",
+          "displayProperties": ["Name", "Type", "Project", "Area", "Last Edited Time"],
+          "icon": "icons/search_gray",
+          "name": "On Review",
+          "sorts": [
+            {
+              "direction": "ascending",
+              "property": "Last Edited Time"
+            }
+          ],
+          "type": "list"
+        },
+        {
+          "url": "view://41ca6b72-a529-8168-8c58-000ca09e8292",
+          "advancedFilter": {
+            "filters": [
+              {
+                "operator": "enum_is",
+                "property": "Status",
+                "propertyType": "select",
+                "type": "property",
+                "value": {
+                  "type": "exact",
+                  "value": "Saved"
+                }
+              }
+            ],
+            "operator": "and",
+            "type": "group"
+          },
+          "dataSourceUrl": "{{collection://41ca6b72-a529-81c2-9627-000b19956366}}",
+          "displayProperties": ["Name", "Type", "Pinned", "Project"],
+          "icon": "icons/bookmark_gray",
+          "name": "Saved",
+          "sorts": [
+            {
+              "direction": "descending",
+              "property": "Pinned"
+            },
+            {
+              "direction": "descending",
+              "property": "Last Edited Time"
+            }
+          ],
+          "type": "list"
+        },
+        {
+          "url": "view://41ca6b72-a529-8127-a63c-000c73f4af91",
+          "advancedFilter": {
+            "filters": [
+              {
+                "operator": "enum_is",
+                "property": "Status",
+                "propertyType": "select",
+                "type": "property",
+                "value": {
+                  "type": "exact",
+                  "value": "Archived"
+                }
+              }
+            ],
+            "operator": "and",
+            "type": "group"
+          },
+          "dataSourceUrl": "{{collection://41ca6b72-a529-81c2-9627-000b19956366}}",
+          "displayProperties": ["Name", "Type", "Project", "Area", "Last Edited Time", "Drive"],
+          "icon": "icons/archive_gray",
+          "name": "Archived",
+          "sorts": [
+            {
+              "direction": "descending",
+              "property": "Last Edited Time"
+            }
+          ],
+          "type": "table"
+        }
+      ]
+    },
+    {
+      "url": "https://app.notion.com/p/41ca6b72a529816589b4e6161d356696",
+      "data_source_url": "collection://41ca6b72-a529-81bb-bc1e-000b95d19d98",
+      "inline": false,
+      "title": "Projects",
+      "sources": [
+        {
+          "icon": "/icons/folder_gray.svg",
+          "name": "Projects",
+          "notAvailableInQuerySql": [
+            "Completed Tasks",
+            "Eligible Tasks",
+            "Calculated Progress",
+            "Days Remaining"
+          ],
+          "schema": {
+            "Area": {
+              "dataSourceUrl": "collection://41ca6b72-a529-814f-9519-000b9d0e1cca",
+              "description": "",
+              "name": "Area",
+              "propertyUrl": "collectionProperty://41ca6b72-a529-814f-9519-000b9d0e1cca/Zj1VRA",
+              "type": "relation"
+            },
+            "Blocked by": {
+              "dataSourceUrl": "collection://41ca6b72-a529-81bb-bc1e-000b95d19d98",
+              "description": "",
+              "name": "Blocked by",
+              "propertyUrl": "collectionProperty://41ca6b72-a529-81bb-bc1e-000b95d19d98/WkxQcw",
+              "type": "relation"
+            },
+            "Blocking": {
+              "dataSourceUrl": "collection://41ca6b72-a529-81bb-bc1e-000b95d19d98",
+              "description": "",
+              "name": "Blocking",
+              "propertyUrl": "collectionProperty://41ca6b72-a529-81bb-bc1e-000b95d19d98/O2ZrXg",
+              "type": "relation"
+            },
+            "Calculated Progress": {
+              "codeUrl": "formulaCode://41ca6b72-a529-81bb-bc1e-000b95d19d98/X19tWQ",
+              "description": "",
+              "name": "Calculated Progress",
+              "type": "formula"
+            },
+            "Completed Tasks": {
+              "aggregation": "sum",
+              "description": "",
+              "name": "Completed Tasks",
+              "relationPropertyUrl": "collectionProperty://41ca6b72-a529-81bb-bc1e-000b95d19d98/RHpfYQ",
+              "targetPropertyType": "formula",
+              "targetPropertyUrl": "collectionProperty://41ca6b72-a529-810d-ae25-000b72e68901/WXV7eQ",
+              "type": "rollup"
+            },
+            "Days Remaining": {
+              "codeUrl": "formulaCode://41ca6b72-a529-81bb-bc1e-000b95d19d98/c1RpeQ",
+              "description": "",
+              "name": "Days Remaining",
+              "type": "formula"
+            },
+            "Deliverable": {
+              "description": "",
+              "name": "Deliverable",
+              "type": "url"
+            },
+            "Drive": {
+              "description": "",
+              "name": "Drive",
+              "type": "url"
+            },
+            "Eligible Tasks": {
+              "aggregation": "sum",
+              "description": "",
+              "name": "Eligible Tasks",
+              "relationPropertyUrl": "collectionProperty://41ca6b72-a529-81bb-bc1e-000b95d19d98/RHpfYQ",
+              "targetPropertyType": "formula",
+              "targetPropertyUrl": "collectionProperty://41ca6b72-a529-810d-ae25-000b72e68901/Y35XTw",
+              "type": "rollup"
+            },
+            "End Date": {
+              "description": "",
+              "name": "End Date",
+              "querySqlColumns": {
+                "columns": [
+                  {
+                    "name": "date:End Date:start",
+                    "sqlType": "TEXT"
+                  },
+                  {
+                    "name": "date:End Date:end",
+                    "sqlType": "TEXT"
+                  },
+                  {
+                    "name": "date:End Date:is_datetime",
+                    "sqlType": "INTEGER"
+                  }
+                ],
+                "usage": "For connections.notion.querySql. Main schema name not queryable."
+              },
+              "type": "date"
+            },
+            "Goals": {
+              "dataSourceUrl": "collection://41fa6b72-a529-8186-9a0a-000b39d4c045",
+              "description": "",
+              "name": "Goals",
+              "propertyUrl": "collectionProperty://41fa6b72-a529-8186-9a0a-000b39d4c045/UDxufQ",
+              "type": "relation"
+            },
+            "Name": {
+              "description": "",
+              "name": "Name",
+              "type": "title"
+            },
+            "Notes": {
+              "dataSourceUrl": "collection://41ca6b72-a529-81c2-9627-000b19956366",
+              "description": "",
+              "name": "Notes",
+              "propertyUrl": "collectionProperty://41ca6b72-a529-81c2-9627-000b19956366/OnNHQg",
+              "type": "relation"
+            },
+            "Outcome": {
+              "description": "",
+              "name": "Outcome",
+              "type": "text"
+            },
+            "Progress": {
+              "description": "Editable progress. Enter a percentage, for example 25%. Calculated Progress reports completion of linked eligible tasks.",
+              "name": "Progress",
+              "number_format": "percent",
+              "show_as": {
+                "color": "green",
+                "maxValue": 1,
+                "showValue": true,
+                "type": "ring"
+              },
+              "type": "number"
+            },
+            "Stages": {
+              "dataSourceUrl": "collection://41ca6b72-a529-814d-a218-000b79ebc8a1",
+              "description": "",
+              "name": "Stages",
+              "propertyUrl": "collectionProperty://41ca6b72-a529-814d-a218-000b79ebc8a1/SlpHfA",
+              "type": "relation"
+            },
+            "Start Date": {
+              "description": "",
+              "name": "Start Date",
+              "querySqlColumns": {
+                "columns": [
+                  {
+                    "name": "date:Start Date:start",
+                    "sqlType": "TEXT"
+                  },
+                  {
+                    "name": "date:Start Date:end",
+                    "sqlType": "TEXT"
+                  },
+                  {
+                    "name": "date:Start Date:is_datetime",
+                    "sqlType": "INTEGER"
+                  }
+                ],
+                "usage": "For connections.notion.querySql. Main schema name not queryable."
+              },
+              "type": "date"
+            },
+            "Status": {
+              "description": "",
+              "name": "Status",
+              "options": [
+                {
+                  "color": "default",
+                  "description": "",
+                  "name": "Planned",
+                  "url": "collectionPropertyOption://41ca6b72-a529-81bb-bc1e-000b95d19d98/SU1gdA/MjFjM2E2YzUtN2NjZC00ZDY0LThlNGMtODAzNjJkODI0YTJh"
+                },
+                {
+                  "color": "blue",
+                  "description": "",
+                  "name": "Active",
+                  "url": "collectionPropertyOption://41ca6b72-a529-81bb-bc1e-000b95d19d98/SU1gdA/ZDI1YjU2ZDItNDZiNi00YmRkLTg5ODctZjA1MWIzZWZiM2Zh"
+                },
+                {
+                  "color": "yellow",
+                  "description": "",
+                  "name": "On hold",
+                  "url": "collectionPropertyOption://41ca6b72-a529-81bb-bc1e-000b95d19d98/SU1gdA/ZjRhMTQwOGQtNGU4OC00Yzg3LThhYjQtZGIyZGY2OTI1ZjQ0"
+                },
+                {
+                  "color": "green",
+                  "description": "",
+                  "name": "Done",
+                  "url": "collectionPropertyOption://41ca6b72-a529-81bb-bc1e-000b95d19d98/SU1gdA/OTM0YTIzN2YtYjdmNy00NWFmLWI2ODgtNjQzNzQ1Y2ExMTVj"
+                },
+                {
+                  "color": "red",
+                  "description": "",
+                  "name": "Cancelled",
+                  "url": "collectionPropertyOption://41ca6b72-a529-81bb-bc1e-000b95d19d98/SU1gdA/MmU2Y2U0ODMtNzgzMC00MzkyLWE4ZDAtNWEwZjBjNDMyNGUz"
+                }
+              ],
+              "type": "select"
+            },
+            "Tags": {
+              "description": "",
+              "name": "Tags",
+              "options": [],
+              "type": "multi_select"
+            },
+            "Tasks": {
+              "dataSourceUrl": "collection://41ca6b72-a529-810d-ae25-000b72e68901",
+              "description": "",
+              "name": "Tasks",
+              "propertyUrl": "collectionProperty://41ca6b72-a529-810d-ae25-000b72e68901/eHNeYg",
+              "type": "relation"
+            }
+          },
+          "url": "collection://41ca6b72-a529-81bb-bc1e-000b95d19d98"
+        }
+      ],
+      "views": [
+        {
+          "url": "view://41ca6b72-a529-8160-891d-000c68fda24e",
+          "dataSourceUrl": "{{collection://41ca6b72-a529-81bb-bc1e-000b95d19d98}}",
+          "displayProperties": [
+            "Name",
+            "Area",
+            "Blocked by",
+            "Blocking",
+            "Calculated Progress",
+            "Completed Tasks",
+            "Days Remaining",
+            "Deliverable",
+            "Drive",
+            "Eligible Tasks",
+            "End Date",
+            "Goals",
+            "Notes",
+            "Outcome",
+            "Progress",
+            "Stages",
+            "Start Date",
+            "Status",
+            "Tags",
+            "Tasks"
+          ],
+          "icon": "icons/info-alternate_gray",
+          "name": "Full Details",
+          "type": "table"
+        },
+        {
+          "url": "view://41ca6b72-a529-814b-b428-000c0e53a076",
+          "advancedFilter": {
+            "filters": [
+              {
+                "operator": "enum_is",
+                "property": "Status",
+                "propertyType": "select",
+                "type": "property",
+                "value": {
+                  "type": "exact",
+                  "value": "Active"
+                }
+              },
+              {
+                "operator": "enum_is",
+                "property": "Status",
+                "propertyType": "select",
+                "type": "property",
+                "value": {
+                  "type": "exact",
+                  "value": "On hold"
+                }
+              }
+            ],
+            "operator": "or",
+            "type": "group"
+          },
+          "dataSourceUrl": "{{collection://41ca6b72-a529-81bb-bc1e-000b95d19d98}}",
+          "displayProperties": ["Name", "Status", "Area", "Progress", "End Date", "Days Remaining"],
+          "icon": "icons/flash_gray",
+          "name": "On Projects",
+          "sorts": [
+            {
+              "direction": "ascending",
+              "property": "End Date"
+            }
+          ],
+          "type": "table"
+        },
+        {
+          "url": "view://41ca6b72-a529-812c-a245-000c62cfb9db",
+          "advancedFilter": {
+            "filters": [
+              {
+                "operator": "enum_is",
+                "property": "Status",
+                "propertyType": "select",
+                "type": "property",
+                "value": {
+                  "type": "exact",
+                  "value": "Active"
+                }
+              }
+            ],
+            "operator": "and",
+            "type": "group"
+          },
+          "dataSourceUrl": "{{collection://41ca6b72-a529-81bb-bc1e-000b95d19d98}}",
+          "displayProperties": ["Name", "Outcome", "Tasks", "Blocked by", "Progress"],
+          "icon": "icons/search_gray",
+          "name": "Weekly Project Review",
+          "type": "table"
+        },
+        {
+          "url": "view://41ca6b72-a529-81e3-b06a-000cb90cf805",
+          "advancedFilter": {
+            "filters": [
+              {
+                "operator": "enum_is",
+                "property": "Status",
+                "propertyType": "select",
+                "type": "property",
+                "value": {
+                  "type": "exact",
+                  "value": "Planned"
+                }
+              }
+            ],
+            "operator": "and",
+            "type": "group"
+          },
+          "dataSourceUrl": "{{collection://41ca6b72-a529-81bb-bc1e-000b95d19d98}}",
+          "displayProperties": ["Name", "Area", "Start Date", "End Date", "Blocked by"],
+          "icon": "icons/iterate_gray",
+          "name": "Upcoming Projects",
+          "sorts": [
+            {
+              "direction": "ascending",
+              "property": "Start Date"
+            }
+          ],
+          "type": "table"
+        },
+        {
+          "url": "view://41ca6b72-a529-812b-8486-000cbe4c5f0f",
+          "advancedFilter": {
+            "filters": [
+              {
+                "operator": "enum_is_not",
+                "property": "Status",
+                "propertyType": "select",
+                "type": "property",
+                "value": {
+                  "type": "exact",
+                  "value": "Done"
+                }
+              },
+              {
+                "operator": "enum_is_not",
+                "property": "Status",
+                "propertyType": "select",
+                "type": "property",
+                "value": {
+                  "type": "exact",
+                  "value": "Cancelled"
+                }
+              }
+            ],
+            "operator": "and",
+            "type": "group"
+          },
+          "cardLayoutMode": "default",
+          "dataSourceUrl": "{{collection://41ca6b72-a529-81bb-bc1e-000b95d19d98}}",
+          "displayProperties": ["Name", "Status", "Progress", "End Date"],
+          "fullWidthProperties": [],
+          "groupBy": {
+            "hideEmptyGroups": true,
+            "property": "Area",
+            "propertyType": "relation",
+            "sort": {
+              "type": "ascending"
+            }
+          },
+          "icon": "icons/globe_gray",
+          "name": "By Areas",
+          "type": "board"
+        }
+      ]
+    },
+    {
+      "url": "https://app.notion.com/p/41ca6b72a52981c987f5e1ff4a042044",
+      "data_source_url": "collection://41ca6b72-a529-813e-abf3-000b543bf11f",
+      "inline": false,
+      "title": "Inbox",
+      "sources": [
+        {
+          "icon": "/icons/inbox_gray.svg",
+          "name": "Inbox",
+          "notAvailableInQuerySql": ["Needs Clarification"],
+          "schema": {
+            "Area": {
+              "dataSourceUrl": "collection://41ca6b72-a529-814f-9519-000b9d0e1cca",
+              "description": "",
+              "name": "Area",
+              "type": "relation"
+            },
+            "Created Time": {
+              "description": "",
+              "name": "Created Time",
+              "type": "created_time"
+            },
+            "Date": {
+              "description": "",
+              "name": "Date",
+              "querySqlColumns": {
+                "columns": [
+                  {
+                    "name": "date:Date:start",
+                    "sqlType": "TEXT"
+                  },
+                  {
+                    "name": "date:Date:end",
+                    "sqlType": "TEXT"
+                  },
+                  {
+                    "name": "date:Date:is_datetime",
+                    "sqlType": "INTEGER"
+                  }
+                ],
+                "usage": "For connections.notion.querySql. Main schema name not queryable."
+              },
+              "type": "date"
+            },
+            "Decision": {
+              "description": "",
+              "name": "Decision",
+              "type": "text"
+            },
+            "Exit Condition": {
+              "description": "",
+              "name": "Exit Condition",
+              "type": "text"
+            },
+            "Files & Media": {
+              "description": "",
+              "name": "Files & Media",
+              "type": "file"
+            },
+            "Hold Reason": {
+              "description": "",
+              "name": "Hold Reason",
+              "type": "text"
+            },
+            "Intended Home": {
+              "description": "",
+              "name": "Intended Home",
+              "type": "text"
+            },
+            "Last Edited Time": {
+              "description": "",
+              "name": "Last Edited Time",
+              "type": "last_edited_time"
+            },
+            "Name": {
+              "description": "",
+              "name": "Name",
+              "type": "title"
+            },
+            "Needs Clarification": {
+              "codeUrl": "formulaCode://41ca6b72-a529-813e-abf3-000b543bf11f/Ynt0aA",
+              "description": "",
+              "name": "Needs Clarification",
+              "type": "formula"
+            },
+            "Notes": {
+              "dataSourceUrl": "collection://41ca6b72-a529-81c2-9627-000b19956366",
+              "description": "",
+              "name": "Notes",
+              "type": "relation"
+            },
+            "Priority": {
+              "description": "",
+              "name": "Priority",
+              "options": [
+                {
+                  "color": "red",
+                  "description": "",
+                  "name": "p1",
+                  "url": "collectionPropertyOption://41ca6b72-a529-813e-abf3-000b543bf11f/fFBHfA/OGMxZDRlOGMtNDIxNy00NTVhLWFlYzktODFmMjc4NWY0Y2U2"
+                },
+                {
+                  "color": "orange",
+                  "description": "",
+                  "name": "p2",
+                  "url": "collectionPropertyOption://41ca6b72-a529-813e-abf3-000b543bf11f/fFBHfA/YWNjNzY4YmUtOWU5ZS00NTYyLWIyMzctZTRiYzE4ZTM3Yzg2"
+                },
+                {
+                  "color": "yellow",
+                  "description": "",
+                  "name": "p3",
+                  "url": "collectionPropertyOption://41ca6b72-a529-813e-abf3-000b543bf11f/fFBHfA/YTMxYmVmNTQtZTlmMi00YzBmLTg5NDQtMTcyNDNiNWJmMzRj"
+                },
+                {
+                  "color": "gray",
+                  "description": "",
+                  "name": "p4",
+                  "url": "collectionPropertyOption://41ca6b72-a529-813e-abf3-000b543bf11f/fFBHfA/MmNiYWM2N2ItOGVkYS00N2U0LWJmNDgtMmMwYTZiMTQ2NTYx"
+                }
+              ],
+              "type": "select"
+            },
+            "Project": {
+              "dataSourceUrl": "collection://41ca6b72-a529-81bb-bc1e-000b95d19d98",
+              "description": "",
+              "name": "Project",
+              "type": "relation"
+            },
+            "Source": {
+              "description": "",
+              "name": "Source",
+              "type": "url"
+            },
+            "Status": {
+              "description": "",
+              "name": "Status",
+              "options": [
+                {
+                  "color": "yellow",
+                  "description": "",
+                  "name": "Inbox",
+                  "url": "collectionPropertyOption://41ca6b72-a529-813e-abf3-000b543bf11f/Zk59XQ/M2Y4YTQzNTktNWQ1MS00ZWQzLWJlODAtMTQzYTIyOTI0ZDZl"
+                },
+                {
+                  "color": "orange",
+                  "description": "",
+                  "name": "On hold",
+                  "url": "collectionPropertyOption://41ca6b72-a529-813e-abf3-000b543bf11f/Zk59XQ/ZWJmODM5ODUtZmYxYS00ODE5LWFkOTQtODQyOWVkOTIyZTQ3"
+                },
+                {
+                  "color": "green",
+                  "description": "",
+                  "name": "Processed",
+                  "url": "collectionPropertyOption://41ca6b72-a529-813e-abf3-000b543bf11f/Zk59XQ/Y2Y5YjFlMGEtYjNjMi00OWI5LTlkMzQtOTRkNzM4MzBhNzI2"
+                }
+              ],
+              "type": "select"
+            },
+            "Tags": {
+              "description": "",
+              "name": "Tags",
+              "options": [],
+              "type": "multi_select"
+            },
+            "Tasks": {
+              "dataSourceUrl": "collection://41ca6b72-a529-810d-ae25-000b72e68901",
+              "description": "",
+              "name": "Tasks",
+              "type": "relation"
+            },
+            "Type": {
+              "description": "",
+              "name": "Type",
+              "options": [
+                {
+                  "description": "",
+                  "name": "Idea",
+                  "url": "collectionPropertyOption://41ca6b72-a529-813e-abf3-000b543bf11f/VEBPdQ/MTFjMmMzNWUtZjg4ZS00ZTc4LWIwNzQtYjc0MTM3YmRkNmQy"
+                },
+                {
+                  "description": "",
+                  "name": "File",
+                  "url": "collectionPropertyOption://41ca6b72-a529-813e-abf3-000b543bf11f/VEBPdQ/MDI4MjAyOTYtODgzNi00ZDVjLTlhODEtNzUxMWMxOWRlZGNk"
+                },
+                {
+                  "description": "",
+                  "name": "Note",
+                  "url": "collectionPropertyOption://41ca6b72-a529-813e-abf3-000b543bf11f/VEBPdQ/MjVjMDcyZmQtZWU1NC00ZjViLTliMGUtNWM4MGExNTk2MmY5"
+                },
+                {
+                  "description": "",
+                  "name": "Package",
+                  "url": "collectionPropertyOption://41ca6b72-a529-813e-abf3-000b543bf11f/VEBPdQ/YmM2MjQ4OTQtYTY4ZC00MzkyLWI1MjYtMDI4ZWRlY2M3ZTNi"
+                },
+                {
+                  "description": "",
+                  "name": "Other",
+                  "url": "collectionPropertyOption://41ca6b72-a529-813e-abf3-000b543bf11f/VEBPdQ/Mjc2NThkNTMtOGE5Yi00YTQyLTk4ODktNDNiYjI4MzMzNjRh"
+                }
+              ],
+              "type": "select"
+            }
+          },
+          "url": "collection://41ca6b72-a529-813e-abf3-000b543bf11f"
+        }
+      ],
+      "views": [
+        {
+          "url": "view://41ca6b72-a529-81e4-af16-000cac61ae78",
+          "dataSourceUrl": "{{collection://41ca6b72-a529-813e-abf3-000b543bf11f}}",
+          "displayProperties": [
+            "Name",
+            "Area",
+            "Created Time",
+            "Date",
+            "Decision",
+            "Exit Condition",
+            "Files & Media",
+            "Hold Reason",
+            "Intended Home",
+            "Last Edited Time",
+            "Needs Clarification",
+            "Notes",
+            "Priority",
+            "Project",
+            "Source",
+            "Status",
+            "Tags",
+            "Tasks",
+            "Type"
+          ],
+          "icon": "icons/info-alternate_gray",
+          "name": "Full Details",
+          "type": "table"
+        },
+        {
+          "url": "view://41ca6b72-a529-811c-acf8-000c381c0823",
+          "advancedFilter": {
+            "filters": [
+              {
+                "operator": "enum_is",
+                "property": "Status",
+                "propertyType": "select",
+                "type": "property",
+                "value": {
+                  "type": "exact",
+                  "value": "On hold"
+                }
+              }
+            ],
+            "operator": "and",
+            "type": "group"
+          },
+          "dataSourceUrl": "{{collection://41ca6b72-a529-813e-abf3-000b543bf11f}}",
+          "displayProperties": ["Name", "Intended Home", "Hold Reason", "Exit Condition"],
+          "icon": "icons/package_gray",
+          "name": "Held Packages",
+          "type": "table"
+        }
+      ]
+    },
+    {
+      "url": "https://app.notion.com/p/41ca6b72a529816dbed0f7e7db74f4fc",
+      "data_source_url": "collection://41ca6b72-a529-814d-a218-000b79ebc8a1",
+      "inline": false,
+      "title": "Stages",
+      "sources": [
+        {
+          "default_page_template": "https://app.notion.com/p/41ca6b72a52980dfb3ccc84e6b801375",
+          "icon": "/icons/map_gray.svg",
+          "name": "Stages",
+          "notAvailableInQuerySql": [
+            "Calculated Progress",
+            "Completed Tasks",
+            "Days Remaining",
+            "Eligible Tasks"
+          ],
+          "schema": {
+            "Blocked by": {
+              "dataSourceUrl": "collection://41ca6b72-a529-814d-a218-000b79ebc8a1",
+              "description": "",
+              "name": "Blocked by",
+              "propertyUrl": "collectionProperty://41ca6b72-a529-814d-a218-000b79ebc8a1/RU5Cag",
+              "type": "relation"
+            },
+            "Blocking": {
+              "dataSourceUrl": "collection://41ca6b72-a529-814d-a218-000b79ebc8a1",
+              "description": "",
+              "name": "Blocking",
+              "propertyUrl": "collectionProperty://41ca6b72-a529-814d-a218-000b79ebc8a1/Z0dfOw",
+              "type": "relation"
+            },
+            "Calculated Progress": {
+              "codeUrl": "formulaCode://41ca6b72-a529-814d-a218-000b79ebc8a1/PEtYVA",
+              "description": "",
+              "name": "Calculated Progress",
+              "type": "formula"
+            },
+            "Completed Tasks": {
+              "aggregation": "sum",
+              "description": "",
+              "name": "Completed Tasks",
+              "relationPropertyUrl": "collectionProperty://41ca6b72-a529-814d-a218-000b79ebc8a1/VElNZw",
+              "targetPropertyType": "formula",
+              "targetPropertyUrl": "collectionProperty://41ca6b72-a529-810d-ae25-000b72e68901/WXV7eQ",
+              "type": "rollup"
+            },
+            "Days Remaining": {
+              "codeUrl": "formulaCode://41ca6b72-a529-814d-a218-000b79ebc8a1/VUBqPA",
+              "description": "",
+              "name": "Days Remaining",
+              "type": "formula"
+            },
+            "Deliverable": {
+              "description": "",
+              "name": "Deliverable",
+              "type": "url"
+            },
+            "Eligible Tasks": {
+              "aggregation": "sum",
+              "description": "",
+              "name": "Eligible Tasks",
+              "relationPropertyUrl": "collectionProperty://41ca6b72-a529-814d-a218-000b79ebc8a1/VElNZw",
+              "targetPropertyType": "formula",
+              "targetPropertyUrl": "collectionProperty://41ca6b72-a529-810d-ae25-000b72e68901/Y35XTw",
+              "type": "rollup"
+            },
+            "End Date": {
+              "description": "",
+              "name": "End Date",
+              "querySqlColumns": {
+                "columns": [
+                  {
+                    "name": "date:End Date:start",
+                    "sqlType": "TEXT"
+                  },
+                  {
+                    "name": "date:End Date:end",
+                    "sqlType": "TEXT"
+                  },
+                  {
+                    "name": "date:End Date:is_datetime",
+                    "sqlType": "INTEGER"
+                  }
+                ],
+                "usage": "For connections.notion.querySql. Main schema name not queryable."
+              },
+              "type": "date"
+            },
+            "Milestone Criterion": {
+              "description": "",
+              "name": "Milestone Criterion",
+              "type": "text"
+            },
+            "Milestone Date": {
+              "description": "",
+              "name": "Milestone Date",
+              "querySqlColumns": {
+                "columns": [
+                  {
+                    "name": "date:Milestone Date:start",
+                    "sqlType": "TEXT"
+                  },
+                  {
+                    "name": "date:Milestone Date:end",
+                    "sqlType": "TEXT"
+                  },
+                  {
+                    "name": "date:Milestone Date:is_datetime",
+                    "sqlType": "INTEGER"
+                  }
+                ],
+                "usage": "For connections.notion.querySql. Main schema name not queryable."
+              },
+              "type": "date"
+            },
+            "Name": {
+              "description": "",
+              "name": "Name",
+              "type": "title"
+            },
+            "Progress": {
+              "description": "Editable progress. Enter a percentage, for example 25%. Calculated Progress reports completion of linked eligible tasks.",
+              "name": "Progress",
+              "number_format": "percent",
+              "show_as": {
+                "color": "green",
+                "maxValue": 1,
+                "showValue": true,
+                "type": "ring"
+              },
+              "type": "number"
+            },
+            "Project": {
+              "dataSourceUrl": "collection://41ca6b72-a529-81bb-bc1e-000b95d19d98",
+              "description": "",
+              "name": "Project",
+              "propertyUrl": "collectionProperty://41ca6b72-a529-81bb-bc1e-000b95d19d98/dFBobw",
+              "type": "relation"
+            },
+            "Start Date": {
+              "description": "",
+              "name": "Start Date",
+              "querySqlColumns": {
+                "columns": [
+                  {
+                    "name": "date:Start Date:start",
+                    "sqlType": "TEXT"
+                  },
+                  {
+                    "name": "date:Start Date:end",
+                    "sqlType": "TEXT"
+                  },
+                  {
+                    "name": "date:Start Date:is_datetime",
+                    "sqlType": "INTEGER"
+                  }
+                ],
+                "usage": "For connections.notion.querySql. Main schema name not queryable."
+              },
+              "type": "date"
+            },
+            "Status": {
+              "description": "",
+              "name": "Status",
+              "options": [
+                {
+                  "color": "default",
+                  "description": "",
+                  "name": "Planned",
+                  "url": "collectionPropertyOption://41ca6b72-a529-814d-a218-000b79ebc8a1/cHV5SQ/OWI5MmM3ZmMtZDk2Ny00NDYzLWJhZTctMjU1OWI1ZDViM2Jj"
+                },
+                {
+                  "color": "blue",
+                  "description": "",
+                  "name": "Active",
+                  "url": "collectionPropertyOption://41ca6b72-a529-814d-a218-000b79ebc8a1/cHV5SQ/Mzg2YTAzM2EtM2M2Zi00ZTI2LTg2ODMtNjEwOGFhZTNiNWUx"
+                },
+                {
+                  "color": "yellow",
+                  "description": "",
+                  "name": "On hold",
+                  "url": "collectionPropertyOption://41ca6b72-a529-814d-a218-000b79ebc8a1/cHV5SQ/MmI5Nzg2YzQtZjAzZS00Zjg5LTkwNTctNzVmYmI0ZjI3NzUx"
+                },
+                {
+                  "color": "green",
+                  "description": "",
+                  "name": "Done",
+                  "url": "collectionPropertyOption://41ca6b72-a529-814d-a218-000b79ebc8a1/cHV5SQ/ZGY4ZGNjYTYtNWE0YS00M2E2LTgwODMtZjU0ODQzMDk2MGJk"
+                },
+                {
+                  "color": "red",
+                  "description": "",
+                  "name": "Cancelled",
+                  "url": "collectionPropertyOption://41ca6b72-a529-814d-a218-000b79ebc8a1/cHV5SQ/OTExMzU5MDktMGM0YS00Njk2LTg4ZmItNjY3YzM5NWE4OTUy"
+                }
+              ],
+              "type": "select"
+            },
+            "Tags": {
+              "description": "",
+              "name": "Tags",
+              "options": [],
+              "type": "multi_select"
+            },
+            "Tasks": {
+              "dataSourceUrl": "collection://41ca6b72-a529-810d-ae25-000b72e68901",
+              "description": "",
+              "name": "Tasks",
+              "propertyUrl": "collectionProperty://41ca6b72-a529-810d-ae25-000b72e68901/bktLSw",
+              "type": "relation"
+            }
+          },
+          "url": "collection://41ca6b72-a529-814d-a218-000b79ebc8a1"
+        }
+      ],
+      "views": [
+        {
+          "url": "view://41ca6b72-a529-8129-8362-000c91e3f309",
+          "dataSourceUrl": "{{collection://41ca6b72-a529-814d-a218-000b79ebc8a1}}",
+          "defaultPageTemplate": "https://app.notion.com/p/41ca6b72a52980dfb3ccc84e6b801375",
+          "displayProperties": [
+            "Name",
+            "Project",
+            "Status",
+            "Tags",
+            "Progress",
+            "Calculated Progress",
+            "Start Date",
+            "End Date",
+            "Days Remaining",
+            "Milestone Date",
+            "Milestone Criterion",
+            "Deliverable",
+            "Blocked by",
+            "Blocking",
+            "Tasks",
+            "Eligible Tasks",
+            "Completed Tasks"
+          ],
+          "icon": "icons/info-alternate_gray",
+          "name": "Full Details",
+          "type": "table"
+        },
+        {
+          "url": "view://41ca6b72-a529-81cd-8647-000cdd723fd2",
+          "dataSourceUrl": "{{collection://41ca6b72-a529-814d-a218-000b79ebc8a1}}",
+          "displayProperties": ["Name", "Project", "Status", "Progress"],
+          "groupBy": {
+            "hideEmptyGroups": true,
+            "property": "Project",
+            "propertyType": "relation",
+            "sort": {
+              "type": "ascending"
+            }
+          },
+          "icon": "icons/timeline_gray",
+          "name": "Timelines",
+          "showTable": false,
+          "simpleFilters": [
+            {
+              "filter": {
+                "operator": "relation_contains",
+                "property": "Project",
+                "propertyType": "relation",
+                "type": "property",
+                "value": {
+                  "type": "exact"
+                }
+              },
+              "id": "6788ba41-c695-43d3-8652-565bae83b4a5"
+            }
+          ],
+          "timelineBy": "Start Date",
+          "timelineByEnd": "End Date",
+          "type": "timeline"
+        },
+        {
+          "url": "view://41ca6b72-a529-804a-bca9-000ce350f587",
+          "calendarBy": "Milestone Date",
+          "dataSourceUrl": "{{collection://41ca6b72-a529-814d-a218-000b79ebc8a1}}",
+          "displayProperties": ["Name", "Project", "Status"],
+          "icon": "icons/calendar_gray",
+          "name": "Calendar",
+          "type": "calendar"
+        },
+        {
+          "url": "view://41ca6b72-a529-8147-b0b0-000cc20f69cf",
+          "cardLayoutMode": "default",
+          "dataSourceUrl": "{{collection://41ca6b72-a529-814d-a218-000b79ebc8a1}}",
+          "displayProperties": ["Name", "Project", "Status", "Progress"],
+          "fullWidthProperties": [],
+          "groupBy": {
+            "hideEmptyGroups": true,
+            "property": "Tags",
+            "propertyType": "multi_select",
+            "sort": {
+              "type": "manual"
+            }
+          },
+          "icon": "icons/tag_gray",
+          "name": "By Tags",
+          "type": "board"
+        }
+      ]
+    },
+    {
+      "url": "https://app.notion.com/p/41ca6b72a529814d8f8dfc59777c55c1",
+      "data_source_url": "collection://41ca6b72-a529-810d-ae25-000b72e68901",
+      "inline": false,
+      "title": "Tasks",
+      "sources": [
+        {
+          "default_page_template": "https://app.notion.com/p/41ea6b72a529804ab14fec90e49267c3",
+          "icon": "/icons/checkmark_gray.svg",
+          "name": "Tasks",
+          "notAvailableInQuerySql": [
+            "Is blocked",
+            "Is blocking",
+            "Done Count",
+            "Eligible Count",
+            "Available"
+          ],
+          "schema": {
+            "Area": {
+              "dataSourceUrl": "collection://41ca6b72-a529-814f-9519-000b9d0e1cca",
+              "description": "",
+              "name": "Area",
+              "propertyUrl": "collectionProperty://41ca6b72-a529-814f-9519-000b9d0e1cca/VjtqPQ",
+              "type": "relation"
+            },
+            "Available": {
+              "codeUrl": "formulaCode://41ca6b72-a529-810d-ae25-000b72e68901/bmNjOg",
+              "description": "",
+              "name": "Available",
+              "type": "formula"
+            },
+            "Blocked by": {
+              "dataSourceUrl": "collection://41ca6b72-a529-810d-ae25-000b72e68901",
+              "description": "",
+              "name": "Blocked by",
+              "propertyUrl": "collectionProperty://41ca6b72-a529-810d-ae25-000b72e68901/Q1FCVQ",
+              "type": "relation"
+            },
+            "Blocking": {
+              "dataSourceUrl": "collection://41ca6b72-a529-810d-ae25-000b72e68901",
+              "description": "",
+              "name": "Blocking",
+              "propertyUrl": "collectionProperty://41ca6b72-a529-810d-ae25-000b72e68901/a2B4Og",
+              "type": "relation"
+            },
+            "Context": {
+              "description": "",
+              "name": "Context",
+              "type": "text"
+            },
+            "Created Time": {
+              "description": "",
+              "name": "Created Time",
+              "type": "created_time"
+            },
+            "Description": {
+              "description": "",
+              "name": "Description",
+              "type": "text"
+            },
+            "Done Count": {
+              "codeUrl": "formulaCode://41ca6b72-a529-810d-ae25-000b72e68901/WXV7eQ",
+              "description": "",
+              "name": "Done Count",
+              "type": "formula"
+            },
+            "Drive": {
+              "description": "",
+              "name": "Drive",
+              "type": "url"
+            },
+            "Due Date": {
+              "description": "",
+              "name": "Due Date",
+              "querySqlColumns": {
+                "columns": [
+                  {
+                    "name": "date:Due Date:start",
+                    "sqlType": "TEXT"
+                  },
+                  {
+                    "name": "date:Due Date:end",
+                    "sqlType": "TEXT"
+                  },
+                  {
+                    "name": "date:Due Date:is_datetime",
+                    "sqlType": "INTEGER"
+                  }
+                ],
+                "usage": "For connections.notion.querySql. Main schema name not queryable."
+              },
+              "type": "date"
+            },
+            "Eligible Count": {
+              "codeUrl": "formulaCode://41ca6b72-a529-810d-ae25-000b72e68901/Y35XTw",
+              "description": "",
+              "name": "Eligible Count",
+              "type": "formula"
+            },
+            "Energy": {
+              "description": "",
+              "name": "Energy",
+              "options": [
+                {
+                  "color": "default",
+                  "description": "",
+                  "name": "Low",
+                  "url": "collectionPropertyOption://41ca6b72-a529-810d-ae25-000b72e68901/ZH1mUg/NmM5MDRhZDMtZTdmMy00ZTU2LWEwOGUtYmU3NDhiMjVmNTk2"
+                },
+                {
+                  "description": "",
+                  "name": "Medium",
+                  "url": "collectionPropertyOption://41ca6b72-a529-810d-ae25-000b72e68901/ZH1mUg/ZGUyYWI0YmMtYjhkNi00NzZlLTg2ZmYtNDczM2I2NTUzZWIw"
+                },
+                {
+                  "description": "",
+                  "name": "High",
+                  "url": "collectionPropertyOption://41ca6b72-a529-810d-ae25-000b72e68901/ZH1mUg/NjNjNTU4ZTMtOGQxZS00ZjdjLTk1NjQtZDI3ZDUxMjYyMGM4"
+                }
+              ],
+              "type": "select"
+            },
+            "Expected Result": {
+              "description": "",
+              "name": "Expected Result",
+              "type": "text"
+            },
+            "Files & Media": {
+              "description": "",
+              "name": "Files & Media",
+              "type": "file"
+            },
+            "Follow-up Date": {
+              "description": "",
+              "name": "Follow-up Date",
+              "querySqlColumns": {
+                "columns": [
+                  {
+                    "name": "date:Follow-up Date:start",
+                    "sqlType": "TEXT"
+                  },
+                  {
+                    "name": "date:Follow-up Date:end",
+                    "sqlType": "TEXT"
+                  },
+                  {
+                    "name": "date:Follow-up Date:is_datetime",
+                    "sqlType": "INTEGER"
+                  }
+                ],
+                "usage": "For connections.notion.querySql. Main schema name not queryable."
+              },
+              "type": "date"
+            },
+            "Goals": {
+              "dataSourceUrl": "collection://41fa6b72-a529-8186-9a0a-000b39d4c045",
+              "description": "",
+              "name": "Goals",
+              "propertyUrl": "collectionProperty://41fa6b72-a529-8186-9a0a-000b39d4c045/eFF1QA",
+              "type": "relation"
+            },
+            "Google Drive File": {
+              "dataSourceUrl": "collection://41da6b72-a529-80e6-a4f9-000b5cbe2ab5",
+              "description": "",
+              "name": "Google Drive File",
+              "propertyUrl": "collectionProperty://41da6b72-a529-80e6-a4f9-000b5cbe2ab5/RztGYw",
+              "type": "relation"
+            },
+            "Is blocked": {
+              "codeUrl": "formulaCode://41ca6b72-a529-810d-ae25-000b72e68901/QllKOg",
+              "description": "",
+              "name": "Is blocked",
+              "type": "formula"
+            },
+            "Is blocking": {
+              "codeUrl": "formulaCode://41ca6b72-a529-810d-ae25-000b72e68901/T2JcfQ",
+              "description": "",
+              "name": "Is blocking",
+              "type": "formula"
+            },
+            "Last Edited Time": {
+              "description": "",
+              "name": "Last Edited Time",
+              "type": "last_edited_time"
+            },
+            "Minutes": {
+              "description": "",
+              "name": "Minutes",
+              "type": "number"
+            },
+            "Name": {
+              "description": "",
+              "name": "Name",
+              "type": "title"
+            },
+            "Notes": {
+              "dataSourceUrl": "collection://41ca6b72-a529-81c2-9627-000b19956366",
+              "description": "",
+              "name": "Notes",
+              "type": "relation"
+            },
+            "Parent Task": {
+              "dataSourceUrl": "collection://41ca6b72-a529-810d-ae25-000b72e68901",
+              "description": "",
+              "name": "Parent Task",
+              "propertyUrl": "collectionProperty://41ca6b72-a529-810d-ae25-000b72e68901/QFpdRA",
+              "type": "relation"
+            },
+            "Priority": {
+              "description": "",
+              "name": "Priority",
+              "options": [
+                {
+                  "color": "red",
+                  "description": "",
+                  "name": "p1",
+                  "url": "collectionPropertyOption://41ca6b72-a529-810d-ae25-000b72e68901/YmtBcQ/ZmMxZWFiMTItNDNjYy00MTIxLWIyOTktOTVmZjRiY2ZjNTIz"
+                },
+                {
+                  "color": "orange",
+                  "description": "",
+                  "name": "p2",
+                  "url": "collectionPropertyOption://41ca6b72-a529-810d-ae25-000b72e68901/YmtBcQ/N2Q0Nzg1YWMtNTU1NS00OTI2LTg1MjQtM2Y0MDVmMTI3MTRh"
+                },
+                {
+                  "color": "yellow",
+                  "description": "",
+                  "name": "p3",
+                  "url": "collectionPropertyOption://41ca6b72-a529-810d-ae25-000b72e68901/YmtBcQ/YzViNmYyMjAtNThmNC00MzU0LWE3ZWYtMDMyMTliNDBhNGNi"
+                },
+                {
+                  "color": "gray",
+                  "description": "",
+                  "name": "p4",
+                  "url": "collectionPropertyOption://41ca6b72-a529-810d-ae25-000b72e68901/YmtBcQ/ODE0NDU0MWMtNjE0ZS00NGU2LWI0NGMtYTI0ZmE3ZjkyYTcw"
+                }
+              ],
+              "type": "select"
+            },
+            "Project": {
+              "dataSourceUrl": "collection://41ca6b72-a529-81bb-bc1e-000b95d19d98",
+              "description": "",
+              "name": "Project",
+              "propertyUrl": "collectionProperty://41ca6b72-a529-81bb-bc1e-000b95d19d98/RHpfYQ",
+              "type": "relation"
+            },
+            "References": {
+              "dataSourceUrl": "collection://41ca6b72-a529-81c2-9627-000b19956366",
+              "description": "",
+              "name": "References",
+              "type": "relation"
+            },
+            "Stage": {
+              "dataSourceUrl": "collection://41ca6b72-a529-814d-a218-000b79ebc8a1",
+              "description": "",
+              "name": "Stage",
+              "propertyUrl": "collectionProperty://41ca6b72-a529-814d-a218-000b79ebc8a1/VElNZw",
+              "type": "relation"
+            },
+            "Start Date": {
+              "description": "",
+              "name": "Start Date",
+              "querySqlColumns": {
+                "columns": [
+                  {
+                    "name": "date:Start Date:start",
+                    "sqlType": "TEXT"
+                  },
+                  {
+                    "name": "date:Start Date:end",
+                    "sqlType": "TEXT"
+                  },
+                  {
+                    "name": "date:Start Date:is_datetime",
+                    "sqlType": "INTEGER"
+                  }
+                ],
+                "usage": "For connections.notion.querySql. Main schema name not queryable."
+              },
+              "type": "date"
+            },
+            "Status": {
+              "description": "",
+              "name": "Status",
+              "options": [
+                {
+                  "color": "blue",
+                  "description": "",
+                  "name": "Next Action",
+                  "url": "collectionPropertyOption://41ca6b72-a529-810d-ae25-000b72e68901/a2N4dw/MTdiZDhkYzQtMTk5Ni00YmI5LTk1ZmYtOTUzZTM3OTZiNjBh"
+                },
+                {
+                  "color": "blue",
+                  "description": "",
+                  "name": "In progress",
+                  "url": "collectionPropertyOption://41ca6b72-a529-810d-ae25-000b72e68901/a2N4dw/MTg4NDAyNmUtZWY4Yy00NWI5LTkxNDgtODM1ZWU3MjdlMjQ4"
+                },
+                {
+                  "color": "yellow",
+                  "description": "",
+                  "name": "Waiting For",
+                  "url": "collectionPropertyOption://41ca6b72-a529-810d-ae25-000b72e68901/a2N4dw/MzM1YmVmMDUtMDAzYi00NmZkLTkyMzUtNDNiMDk3ZjE4Nzdj"
+                },
+                {
+                  "color": "default",
+                  "description": "",
+                  "name": "Someday/Maybe",
+                  "url": "collectionPropertyOption://41ca6b72-a529-810d-ae25-000b72e68901/a2N4dw/YWE0MDI5OTAtNzU3ZS00YjRmLWFjMjYtMTBmZmRjZjEyMDUx"
+                },
+                {
+                  "color": "purple",
+                  "description": "",
+                  "name": "Scheduled",
+                  "url": "collectionPropertyOption://41ca6b72-a529-810d-ae25-000b72e68901/a2N4dw/NTliMWJlMjctZDExYy00ZDdiLTkxNmQtZmE1YzE0YjZmMTlj"
+                },
+                {
+                  "color": "orange",
+                  "description": "",
+                  "name": "In review",
+                  "url": "collectionPropertyOption://41ca6b72-a529-810d-ae25-000b72e68901/a2N4dw/YTg4NjU2ZTctNzQyMS00N2VmLTkwNzctNjkzNmQ5MjU0NDgz"
+                },
+                {
+                  "color": "green",
+                  "description": "",
+                  "name": "Done",
+                  "url": "collectionPropertyOption://41ca6b72-a529-810d-ae25-000b72e68901/a2N4dw/YmQxYjUxZDUtMGU1ZC00M2Q2LThlNjItMTgzNWE0ZTE4NjQ0"
+                },
+                {
+                  "color": "red",
+                  "description": "",
+                  "name": "Cancelled",
+                  "url": "collectionPropertyOption://41ca6b72-a529-810d-ae25-000b72e68901/a2N4dw/M2RiNGI0YjctMzQ0My00YTYxLThlNWQtZWQxNzcwNWVmMmQ0"
+                }
+              ],
+              "type": "select"
+            },
+            "Subtasks": {
+              "dataSourceUrl": "collection://41ca6b72-a529-810d-ae25-000b72e68901",
+              "description": "",
+              "name": "Subtasks",
+              "propertyUrl": "collectionProperty://41ca6b72-a529-810d-ae25-000b72e68901/V0ZIXw",
+              "type": "relation"
+            },
+            "Tags": {
+              "description": "",
+              "name": "Tags",
+              "options": [],
+              "type": "multi_select"
+            },
+            "Waiting On": {
+              "description": "",
+              "name": "Waiting On",
+              "type": "text"
+            }
+          },
+          "url": "collection://41ca6b72-a529-810d-ae25-000b72e68901"
+        }
+      ],
+      "views": [
+        {
+          "url": "view://41ca6b72-a529-8154-b03c-000c624cab33",
+          "columnWidths": {
+            "Area": 200,
+            "Available": 200,
+            "Blocked by": 200,
+            "Blocking": 200,
+            "Context": 200,
+            "Created Time": 200,
+            "Description": 200,
+            "Done Count": 200,
+            "Drive": 200,
+            "Due Date": 200,
+            "Eligible Count": 200,
+            "Energy": 200,
+            "Expected Result": 200,
+            "Files & Media": 200,
+            "Follow-up Date": 200,
+            "Google Drive File": 200,
+            "Is blocked": 200,
+            "Is blocking": 200,
+            "Last Edited Time": 200,
+            "Minutes": 200,
+            "Name": 280,
+            "Notes": 200,
+            "Parent Task": 200,
+            "Priority": 200,
+            "Project": 200,
+            "References": 200,
+            "Stage": 200,
+            "Start Date": 200,
+            "Status": 200,
+            "Subtasks": 200,
+            "Tags": 200,
+            "Waiting On": 200
+          },
+          "dataSourceUrl": "{{collection://41ca6b72-a529-810d-ae25-000b72e68901}}",
+          "defaultPageTemplate": "https://app.notion.com/p/41ea6b72a529804ab14fec90e49267c3",
+          "displayProperties": [
+            "Name",
+            "Status",
+            "Area",
+            "Available",
+            "Blocked by",
+            "Blocking",
+            "Context",
+            "Created Time",
+            "Description",
+            "Done Count",
+            "Drive",
+            "Due Date",
+            "Eligible Count",
+            "Energy",
+            "Expected Result",
+            "Files & Media",
+            "Follow-up Date",
+            "Google Drive File",
+            "Is blocked",
+            "Is blocking",
+            "Last Edited Time",
+            "Minutes",
+            "Notes",
+            "Parent Task",
+            "Priority",
+            "Project",
+            "References",
+            "Stage",
+            "Start Date",
+            "Subtasks",
+            "Tags",
+            "Waiting On",
+            "Goals"
+          ],
+          "icon": "icons/info-alternate_gray",
+          "name": "Full Details",
+          "simpleFilters": [
+            {
+              "filter": {
+                "operator": "relation_contains",
+                "property": "Area",
+                "propertyType": "relation",
+                "type": "property",
+                "value": {
+                  "type": "exact"
+                }
+              },
+              "id": "52c593c2-03ac-4a0e-8fdc-86573ff60d75"
+            },
+            {
+              "filter": {
+                "operator": "every",
+                "property": "Available",
+                "propertyType": "formula",
+                "resultFilter": {
+                  "operator": "checkbox_is",
+                  "property": "Available",
+                  "propertyType": "checkbox",
+                  "type": "property",
+                  "value": {
+                    "type": "exact"
+                  }
+                },
+                "type": "property"
+              },
+              "id": "5de65c45-9070-47db-aa08-08acb8c47d2a"
+            },
+            {
+              "filter": {
+                "operator": "enum_is",
+                "property": "Status",
+                "propertyType": "select",
+                "type": "property",
+                "value": {
+                  "type": "exact"
+                }
+              },
+              "id": "a919e6fa-5385-417c-913c-124c1f20a562"
+            },
+            {
+              "filter": {
+                "operator": "enum_is",
+                "property": "Priority",
+                "propertyType": "select",
+                "type": "property",
+                "value": {
+                  "type": "exact"
+                }
+              },
+              "id": "1c574fd5-cbb8-40eb-8268-a132e4d0d714"
+            },
+            {
+              "filter": {
+                "operator": "string_contains",
+                "property": "Waiting On",
+                "propertyType": "text",
+                "type": "property",
+                "value": {
+                  "type": "exact"
+                }
+              },
+              "id": "cc151c66-26ac-451d-bf29-5262f57ab08e"
+            },
+            {
+              "filter": {
+                "operator": "enum_contains",
+                "property": "Tags",
+                "propertyType": "multi_select",
+                "type": "property",
+                "value": {
+                  "type": "exact"
+                }
+              },
+              "id": "e78eaaed-f0d4-4663-9f80-20ea1fbf1a50"
+            },
+            {
+              "filter": {
+                "operator": "relation_contains",
+                "property": "Project",
+                "propertyType": "relation",
+                "type": "property",
+                "value": {
+                  "type": "exact"
+                }
+              },
+              "id": "9a682334-51f5-4df8-8357-6fb447889743"
+            },
+            {
+              "filter": {
+                "operator": "every",
+                "property": "Is blocked",
+                "propertyType": "formula",
+                "resultFilter": {
+                  "operator": "checkbox_is",
+                  "property": "Is blocked",
+                  "propertyType": "checkbox",
+                  "type": "property",
+                  "value": {
+                    "type": "exact"
+                  }
+                },
+                "type": "property"
+              },
+              "id": "a6e97bf5-4b22-4789-994b-3b229ac2f0f1"
+            },
+            {
+              "filter": {
+                "operator": "every",
+                "property": "Is blocking",
+                "propertyType": "formula",
+                "resultFilter": {
+                  "operator": "checkbox_is",
+                  "property": "Is blocking",
+                  "propertyType": "checkbox",
+                  "type": "property",
+                  "value": {
+                    "type": "exact"
+                  }
+                },
+                "type": "property"
+              },
+              "id": "0bbabf3c-e9f8-432b-bcc7-d063a15f598a"
+            }
+          ],
+          "sorts": [
+            {
+              "direction": "ascending",
+              "property": "Status"
+            }
+          ],
+          "type": "table"
+        },
+        {
+          "url": "view://41ca6b72-a529-80db-8c09-000c9708f156",
+          "advancedFilter": {
+            "filters": [
+              {
+                "filters": [
+                  {
+                    "operator": "enum_is",
+                    "property": "Status",
+                    "propertyType": "select",
+                    "type": "property",
+                    "value": {
+                      "type": "exact",
+                      "value": "Next Action"
+                    }
+                  },
+                  {
+                    "operator": "enum_is",
+                    "property": "Status",
+                    "propertyType": "select",
+                    "type": "property",
+                    "value": {
+                      "type": "exact",
+                      "value": "In progress"
+                    }
+                  }
+                ],
+                "operator": "or",
+                "type": "group"
+              },
+              {
+                "operator": "is_empty",
+                "property": "Blocked by",
+                "propertyType": "relation",
+                "type": "property"
+              },
+              {
+                "operator": "is_empty",
+                "property": "Subtasks",
+                "propertyType": "relation",
+                "type": "property"
+              }
+            ],
+            "operator": "and",
+            "type": "group"
+          },
+          "dataSourceUrl": "{{collection://41ca6b72-a529-810d-ae25-000b72e68901}}",
+          "displayProperties": ["Name", "Priority", "Due Date", "Google Drive File"],
+          "icon": "icons/flash_gray",
+          "name": "Next Actions",
+          "simpleFilters": [
+            {
+              "filter": {
+                "operator": "string_contains",
+                "property": "Context",
+                "propertyType": "text",
+                "type": "property",
+                "value": {
+                  "type": "exact"
+                }
+              },
+              "id": "c776272d-18de-4b25-a57f-99207cc54d0f"
+            },
+            {
+              "filter": {
+                "operator": "enum_is",
+                "property": "Energy",
+                "propertyType": "select",
+                "type": "property",
+                "value": {
+                  "type": "exact"
+                }
+              },
+              "id": "541f3459-c35d-41d1-9364-30c7db2ea25d"
+            },
+            {
+              "filter": {
+                "operator": "number_equals",
+                "property": "Minutes",
+                "propertyType": "number",
+                "type": "property",
+                "value": {
+                  "type": "exact"
+                }
+              },
+              "id": "043b2028-7458-43f5-a118-7705b1402ac8"
+            }
+          ],
+          "type": "list"
+        },
+        {
+          "url": "view://41ca6b72-a529-81d1-b911-000ca2e73f97",
+          "advancedFilter": {
+            "filters": [
+              {
+                "operator": "enum_is",
+                "property": "Status",
+                "propertyType": "select",
+                "type": "property",
+                "value": {
+                  "type": "exact",
+                  "value": "Waiting For"
+                }
+              }
+            ],
+            "operator": "and",
+            "type": "group"
+          },
+          "dataSourceUrl": "{{collection://41ca6b72-a529-810d-ae25-000b72e68901}}",
+          "displayProperties": [
+            "Name",
+            "Waiting On",
+            "Expected Result",
+            "Follow-up Date",
+            "Project"
+          ],
+          "icon": "icons/clock_gray",
+          "name": "Waiting For",
+          "sorts": [
+            {
+              "direction": "ascending",
+              "property": "Follow-up Date"
+            }
+          ],
+          "type": "table"
+        },
+        {
+          "url": "view://41ca6b72-a529-8110-990b-000ca881344c",
+          "advancedFilter": {
+            "filters": [
+              {
+                "operator": "enum_is",
+                "property": "Status",
+                "propertyType": "select",
+                "type": "property",
+                "value": {
+                  "type": "exact",
+                  "value": "Someday/Maybe"
+                }
+              }
+            ],
+            "operator": "and",
+            "type": "group"
+          },
+          "dataSourceUrl": "{{collection://41ca6b72-a529-810d-ae25-000b72e68901}}",
+          "displayProperties": ["Name", "Project", "Area"],
+          "icon": "icons/light-bulb_gray",
+          "name": "Someday / Maybe",
+          "type": "list"
+        },
+        {
+          "url": "view://41ca6b72-a529-8176-af90-000cf0f140b3",
+          "advancedFilter": {
+            "filters": [
+              {
+                "operator": "is_not_empty",
+                "property": "Blocked by",
+                "propertyType": "relation",
+                "type": "property"
+              },
+              {
+                "operator": "enum_is_not",
+                "property": "Status",
+                "propertyType": "select",
+                "type": "property",
+                "value": {
+                  "type": "exact",
+                  "value": "Done"
+                }
+              },
+              {
+                "operator": "enum_is_not",
+                "property": "Status",
+                "propertyType": "select",
+                "type": "property",
+                "value": {
+                  "type": "exact",
+                  "value": "Cancelled"
+                }
+              }
+            ],
+            "operator": "and",
+            "type": "group"
+          },
+          "dataSourceUrl": "{{collection://41ca6b72-a529-810d-ae25-000b72e68901}}",
+          "displayProperties": ["Name", "Blocked by", "Priority", "Due Date", "Project", "Stage"],
+          "icon": "icons/no_gray",
+          "name": "Blocked",
+          "type": "table"
+        },
+        {
+          "url": "view://41ca6b72-a529-816a-a196-000c6aa9cbb0",
+          "advancedFilter": {
+            "filters": [
+              {
+                "operator": "enum_is",
+                "property": "Status",
+                "propertyType": "select",
+                "type": "property",
+                "value": {
+                  "type": "exact",
+                  "value": "In review"
+                }
+              }
+            ],
+            "operator": "and",
+            "type": "group"
+          },
+          "dataSourceUrl": "{{collection://41ca6b72-a529-810d-ae25-000b72e68901}}",
+          "displayProperties": ["Name", "Project", "Stage", "Due Date", "Notes"],
+          "icon": "icons/search_gray",
+          "name": "In Review",
+          "sorts": [
+            {
+              "direction": "ascending",
+              "property": "Due Date"
+            }
+          ],
+          "type": "list"
+        },
+        {
+          "url": "view://41ca6b72-a529-81f9-bc85-000ca01c95b7",
+          "advancedFilter": {
+            "filters": [
+              {
+                "operator": "enum_is",
+                "property": "Status",
+                "propertyType": "select",
+                "type": "property",
+                "value": {
+                  "type": "exact",
+                  "value": "Scheduled"
+                }
+              }
+            ],
+            "operator": "and",
+            "type": "group"
+          },
+          "dataSourceUrl": "{{collection://41ca6b72-a529-810d-ae25-000b72e68901}}",
+          "displayProperties": ["Name", "Start Date", "Due Date", "Project", "Priority"],
+          "icon": "icons/push-pin_gray",
+          "name": "Scheduled & Tickler",
+          "sorts": [
+            {
+              "direction": "ascending",
+              "property": "Start Date"
+            }
+          ],
+          "type": "table"
+        },
+        {
+          "url": "view://41ca6b72-a529-81d4-af0c-000c1db4da3a",
+          "advancedFilter": {
+            "filters": [
+              {
+                "operator": "is_not_empty",
+                "property": "Blocking",
+                "propertyType": "relation",
+                "type": "property"
+              },
+              {
+                "operator": "enum_is_not",
+                "property": "Status",
+                "propertyType": "select",
+                "type": "property",
+                "value": {
+                  "type": "exact",
+                  "value": "Done"
+                }
+              },
+              {
+                "operator": "enum_is_not",
+                "property": "Status",
+                "propertyType": "select",
+                "type": "property",
+                "value": {
+                  "type": "exact",
+                  "value": "Cancelled"
+                }
+              }
+            ],
+            "operator": "and",
+            "type": "group"
+          },
+          "dataSourceUrl": "{{collection://41ca6b72-a529-810d-ae25-000b72e68901}}",
+          "displayProperties": ["Name", "Blocking", "Status", "Priority", "Due Date", "Project"],
+          "icon": "icons/wall_gray",
+          "name": "Blockers",
+          "sorts": [
+            {
+              "direction": "ascending",
+              "property": "Due Date"
+            }
+          ],
+          "type": "table"
+        }
+      ]
+    },
+    {
+      "url": "https://app.notion.com/p/41ca6b72a52981f0aab1d8ba3b99d4e5",
+      "data_source_url": "collection://41ca6b72-a529-81c2-9627-000b19956366",
+      "inline": true,
+      "title": "View of Notes & References",
+      "sources": [
+        {
+          "icon": "/icons/bookmark_gray.svg",
+          "name": "Notes & References",
+          "schema": {
+            "Area": {
+              "dataSourceUrl": "collection://41ca6b72-a529-814f-9519-000b9d0e1cca",
+              "description": "",
+              "name": "Area",
+              "propertyUrl": "collectionProperty://41ca6b72-a529-814f-9519-000b9d0e1cca/b3M_cQ",
+              "type": "relation"
+            },
+            "Created Time": {
+              "description": "",
+              "name": "Created Time",
+              "type": "created_time"
+            },
+            "Date": {
+              "description": "",
+              "name": "Date",
+              "querySqlColumns": {
+                "columns": [
+                  {
+                    "name": "date:Date:start",
+                    "sqlType": "TEXT"
+                  },
+                  {
+                    "name": "date:Date:end",
+                    "sqlType": "TEXT"
+                  },
+                  {
+                    "name": "date:Date:is_datetime",
+                    "sqlType": "INTEGER"
+                  }
+                ],
+                "usage": "For connections.notion.querySql. Main schema name not queryable."
+              },
+              "type": "date"
+            },
+            "Drive": {
+              "description": "",
+              "name": "Drive",
+              "type": "url"
+            },
+            "Goals": {
+              "dataSourceUrl": "collection://41fa6b72-a529-8186-9a0a-000b39d4c045",
+              "description": "",
+              "name": "Goals",
+              "propertyUrl": "collectionProperty://41fa6b72-a529-8186-9a0a-000b39d4c045/Q31jPw",
+              "type": "relation"
+            },
+            "Last Edited Time": {
+              "description": "",
+              "name": "Last Edited Time",
+              "type": "last_edited_time"
+            },
+            "Name": {
+              "description": "",
+              "name": "Name",
+              "type": "title"
+            },
+            "Pinned": {
+              "description": "",
+              "name": "Pinned",
+              "type": "checkbox"
+            },
+            "Project": {
+              "dataSourceUrl": "collection://41ca6b72-a529-81bb-bc1e-000b95d19d98",
+              "description": "",
+              "name": "Project",
+              "propertyUrl": "collectionProperty://41ca6b72-a529-81bb-bc1e-000b95d19d98/UENiXA",
+              "type": "relation"
+            },
+            "Source": {
+              "description": "",
+              "name": "Source",
+              "type": "url"
+            },
+            "Status": {
+              "description": "",
+              "name": "Status",
+              "options": [
+                {
+                  "color": "yellow",
+                  "description": "",
+                  "name": "In review",
+                  "url": "collectionPropertyOption://41ca6b72-a529-81c2-9627-000b19956366/QV5RfA/MDQ3ZWNlM2QtNDk0My00Njg3LTliZmMtZDQwNGIzYWM0ZmIy"
+                },
+                {
+                  "color": "green",
+                  "description": "",
+                  "name": "Saved",
+                  "url": "collectionPropertyOption://41ca6b72-a529-81c2-9627-000b19956366/QV5RfA/ZjYxOTM3MDMtODE4OC00Mzg3LTliM2UtOGQxNzc2NWZkZWMz"
+                },
+                {
+                  "color": "default",
+                  "description": "",
+                  "name": "Archived",
+                  "url": "collectionPropertyOption://41ca6b72-a529-81c2-9627-000b19956366/QV5RfA/ODYwNDMzYjYtODIyMS00YjBhLThiY2EtMzRmN2E1NThlNTBj"
+                }
+              ],
+              "type": "select"
+            },
+            "Summary": {
+              "description": "",
+              "name": "Summary",
+              "type": "text"
+            },
+            "Tags": {
+              "description": "",
+              "name": "Tags",
+              "options": [],
+              "type": "multi_select"
+            },
+            "Type": {
+              "description": "",
+              "name": "Type",
+              "options": [
+                {
+                  "description": "",
+                  "name": "Idea",
+                  "url": "collectionPropertyOption://41ca6b72-a529-81c2-9627-000b19956366/fk1Ecg/MWE1MGFjZmItYjBhNi00OTYzLTlmMTItYzMwN2FlNjFhMjVi"
+                },
+                {
+                  "description": "",
+                  "name": "Meeting",
+                  "url": "collectionPropertyOption://41ca6b72-a529-81c2-9627-000b19956366/fk1Ecg/ZjM2NjIwOTUtZDNhMS00MTIzLTk2ZmEtZDA5MjM3NzgyYjRl"
+                },
+                {
+                  "description": "",
+                  "name": "Note",
+                  "url": "collectionPropertyOption://41ca6b72-a529-81c2-9627-000b19956366/fk1Ecg/M2QxZjAxMTYtYmRhOC00M2VkLTg0NWQtMzk2MTZjYzc4Mjdh"
+                },
+                {
+                  "description": "",
+                  "name": "Reference",
+                  "url": "collectionPropertyOption://41ca6b72-a529-81c2-9627-000b19956366/fk1Ecg/OTUyMWMzMGQtMTlhMi00YjYxLTlkYWQtYzQ4MzQ3NjM4ZWQ4"
+                },
+                {
+                  "description": "",
+                  "name": "Resource",
+                  "url": "collectionPropertyOption://41ca6b72-a529-81c2-9627-000b19956366/fk1Ecg/YjQ5MTc2YjMtODQ4My00MWY2LTg1ZjMtN2E3ZTA1ZDQxOTc0"
+                }
+              ],
+              "type": "select"
+            }
+          },
+          "url": "collection://41ca6b72-a529-81c2-9627-000b19956366"
+        }
+      ],
+      "views": [
+        {
+          "url": "view://41ca6b72-a529-806f-af1a-000ca51266c0",
+          "advancedFilter": {
+            "filters": [
+              {
+                "operator": "enum_is",
+                "property": "Status",
+                "propertyType": "select",
+                "type": "property",
+                "value": {
+                  "type": "exact",
+                  "value": "Saved"
+                }
+              }
+            ],
+            "operator": "and",
+            "type": "group"
+          },
+          "dataSourceUrl": "{{collection://41ca6b72-a529-81c2-9627-000b19956366}}",
+          "displayProperties": ["Name", "Type", "Pinned", "Project"],
+          "icon": "icons/bookmark_gray",
+          "name": "Saved",
+          "sorts": [
+            {
+              "direction": "descending",
+              "property": "Pinned"
+            },
+            {
+              "direction": "descending",
+              "property": "Last Edited Time"
+            }
+          ],
+          "type": "list"
+        },
+        {
+          "url": "view://41ca6b72-a529-8080-afb6-000cdc9e63ab",
+          "advancedFilter": {
+            "filters": [
+              {
+                "operator": "enum_is",
+                "property": "Status",
+                "propertyType": "select",
+                "type": "property",
+                "value": {
+                  "type": "exact",
+                  "value": "In review"
+                }
+              }
+            ],
+            "operator": "and",
+            "type": "group"
+          },
+          "dataSourceUrl": "{{collection://41ca6b72-a529-81c2-9627-000b19956366}}",
+          "displayProperties": ["Name", "Type", "Project", "Area", "Last Edited Time"],
+          "icon": "icons/search_gray",
+          "name": "On Review",
+          "sorts": [
+            {
+              "direction": "ascending",
+              "property": "Last Edited Time"
+            }
+          ],
+          "type": "list"
+        },
+        {
+          "url": "view://41ca6b72-a529-80ad-a5b6-000c237aed7d",
+          "advancedFilter": {
+            "filters": [
+              {
+                "operator": "enum_is",
+                "property": "Status",
+                "propertyType": "select",
+                "type": "property",
+                "value": {
+                  "type": "exact",
+                  "value": "Archived"
+                }
+              }
+            ],
+            "operator": "and",
+            "type": "group"
+          },
+          "dataSourceUrl": "{{collection://41ca6b72-a529-81c2-9627-000b19956366}}",
+          "displayProperties": ["Name", "Type", "Project", "Area", "Last Edited Time", "Drive"],
+          "icon": "icons/archive_gray",
+          "name": "Archived",
+          "sorts": [
+            {
+              "direction": "descending",
+              "property": "Last Edited Time"
+            }
+          ],
+          "type": "table"
+        }
+      ]
+    }
+  ],
+  "snapshot_kind": "observed_installation_locator_only",
+  "portable_for_new_setup": false
+}

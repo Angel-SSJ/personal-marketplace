@@ -1,0 +1,1820 @@
+{
+  "schema_version": 1,
+  "blueprint_kind": "portable_symbolic_contract",
+  "observed_source_date": "2026-11-24",
+  "contains_source_workspace_ids": false,
+  "phase_a_dependency_order": [
+    {
+      "step": 1,
+      "name": "discover_and_map",
+      "description": "Verify workspace, target page, permissions, capabilities, and paginated existing databases before creating anything."
+    },
+    {
+      "step": 2,
+      "name": "create_databases_and_base_properties",
+      "databases": ["areas", "goals", "projects", "stages", "tasks", "inbox", "notes_references"],
+      "description": "Create missing required databases and independent scalar/select/status/date/url/file/managed properties. Preserve native Status on Goals versus Select on other databases."
+    },
+    {
+      "step": 3,
+      "name": "link_internal_relations",
+      "description": "Configure all required internal bidirectional and unidirectional relations using newly verified target IDs (never source snapshot IDs)."
+    },
+    {
+      "step": 4,
+      "name": "configure_derived_fields",
+      "description": "Configure required formulas only when verified formula expressions are supplied/exposed, then configure rollups targeting those formulas. If any required formula remains unknown, keep Phase A explicitly partial."
+    },
+    {
+      "step": 5,
+      "name": "optional_external_integrations_and_views",
+      "description": "Link optional Google Drive File relation only if a verified external source exists; never create an 8th database. Preserve existing views; additional views are optional."
+    },
+    {
+      "step": 6,
+      "name": "verify_phase_a_gate",
+      "description": "Re-read live schema for all seven databases and confirm every required component before allowing Phase B (user-supplied data insertion)."
+    }
+  ],
+  "phase_b_policy": {
+    "gate": "Blocked until Phase A required structure is fully verified.",
+    "data_rule": "Insert only explicit user-supplied records in safe dependency order (Areas -> Goals -> Projects -> Stages -> Tasks -> Notes & References / Inbox). Never insert sample data or templates unless requested. If the user asked only to create the structure, omit Phase B completely."
+  },
+  "databases": {
+    "goals": {
+      "symbolic_key": "goals",
+      "name": "Goals",
+      "requirement": "required",
+      "definition_status": "known",
+      "provenance": "observed_2026-11-24",
+      "capability_required": "database_create_and_schema_read",
+      "verification_criterion": "Database 'Goals' exists under the authorized target location and all required properties match.",
+      "templates_policy": {
+        "requirement": "optional",
+        "definition_status": "workspace_specific",
+        "observed_template_names": ["New Goal"],
+        "has_observed_default_template": false,
+        "rule": "Use appropriate existing templates when creating records; do not create new templates unless explicitly requested. Source-workspace templates are not copied automatically."
+      },
+      "properties": {
+        "Area": {
+          "name": "Area",
+          "type": "relation",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "relation_property_write",
+          "verification_criterion": "Bidirectional relation 'Area' links to 'areas' and reciprocates with 'areas.Goals'.",
+          "target_database": "areas",
+          "reciprocity": "bidirectional",
+          "reciprocal_property": "Goals"
+        },
+        "Created Time": {
+          "name": "Created Time",
+          "type": "created_time",
+          "managed": true,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Created Time' exists on 'Goals' with type 'created_time' and matching configuration."
+        },
+        "Days Remaining": {
+          "name": "Days Remaining",
+          "type": "formula",
+          "managed": true,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "user_verified_2026-11-25",
+          "capability_required": "formula_property_write",
+          "verification_criterion": "Formula 'Days Remaining' exists on 'Goals' with the verified expression and evaluates cleanly.",
+          "formula_expression": "if(empty(prop(\"Target Date\")), \"\", format(dateBetween(prop(\"Target Date\"), today(), \"days\")))"
+        },
+        "Direct Tasks": {
+          "name": "Direct Tasks",
+          "type": "relation",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "relation_property_write",
+          "verification_criterion": "Bidirectional relation 'Direct Tasks' links to 'tasks' and reciprocates with 'tasks.Goals'.",
+          "target_database": "tasks",
+          "reciprocity": "bidirectional",
+          "reciprocal_property": "Goals"
+        },
+        "Evidence": {
+          "name": "Evidence",
+          "type": "relation",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "relation_property_write",
+          "verification_criterion": "Bidirectional relation 'Evidence' links to 'notes_references' and reciprocates with 'notes_references.Goals'.",
+          "target_database": "notes_references",
+          "reciprocity": "bidirectional",
+          "reciprocal_property": "Goals"
+        },
+        "Last Edited Time": {
+          "name": "Last Edited Time",
+          "type": "last_edited_time",
+          "managed": true,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Last Edited Time' exists on 'Goals' with type 'last_edited_time' and matching configuration."
+        },
+        "Name": {
+          "name": "Name",
+          "type": "title",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Name' exists on 'Goals' with type 'title' and matching configuration."
+        },
+        "Progress": {
+          "name": "Progress",
+          "type": "number",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Progress' exists on 'Goals' with type 'number' and matching configuration.",
+          "number_format": "percent",
+          "show_as": {
+            "color": "green",
+            "maxValue": 1,
+            "showValue": true,
+            "type": "ring"
+          }
+        },
+        "Projects": {
+          "name": "Projects",
+          "type": "relation",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "relation_property_write",
+          "verification_criterion": "Bidirectional relation 'Projects' links to 'projects' and reciprocates with 'projects.Goals'.",
+          "target_database": "projects",
+          "reciprocity": "bidirectional",
+          "reciprocal_property": "Goals"
+        },
+        "Review Date": {
+          "name": "Review Date",
+          "type": "date",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Review Date' exists on 'Goals' with type 'date' and matching configuration."
+        },
+        "Start Date": {
+          "name": "Start Date",
+          "type": "date",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Start Date' exists on 'Goals' with type 'date' and matching configuration."
+        },
+        "Status": {
+          "name": "Status",
+          "type": "status",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "native_status_property_write",
+          "verification_criterion": "Native status property 'Status' exists with default 'Candidate' and all observed groups/options.",
+          "default_option": "Candidate",
+          "groups": {
+            "complete": [
+              {
+                "name": "Achieved",
+                "color": "green"
+              },
+              {
+                "name": "Dropped",
+                "color": "default"
+              }
+            ],
+            "in_progress": [
+              {
+                "name": "Active",
+                "color": "blue"
+              },
+              {
+                "name": "On hold",
+                "color": "yellow"
+              }
+            ],
+            "to_do": [
+              {
+                "name": "Candidate",
+                "color": "default"
+              }
+            ]
+          }
+        },
+        "Success Criteria": {
+          "name": "Success Criteria",
+          "type": "text",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Success Criteria' exists on 'Goals' with type 'text' and matching configuration."
+        },
+        "Target Date": {
+          "name": "Target Date",
+          "type": "date",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Target Date' exists on 'Goals' with type 'date' and matching configuration."
+        }
+      }
+    },
+    "areas": {
+      "symbolic_key": "areas",
+      "name": "Areas",
+      "requirement": "required",
+      "definition_status": "known",
+      "provenance": "observed_2026-11-24",
+      "capability_required": "database_create_and_schema_read",
+      "verification_criterion": "Database 'Areas' exists under the authorized target location and all required properties match.",
+      "templates_policy": {
+        "requirement": "optional",
+        "definition_status": "workspace_specific",
+        "observed_template_names": [],
+        "has_observed_default_template": false,
+        "rule": "Use appropriate existing templates when creating records; do not create new templates unless explicitly requested. Source-workspace templates are not copied automatically."
+      },
+      "properties": {
+        "Archived": {
+          "name": "Archived",
+          "type": "checkbox",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Archived' exists on 'Areas' with type 'checkbox' and matching configuration."
+        },
+        "Drive": {
+          "name": "Drive",
+          "type": "url",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Drive' exists on 'Areas' with type 'url' and matching configuration."
+        },
+        "Goals": {
+          "name": "Goals",
+          "type": "relation",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "relation_property_write",
+          "verification_criterion": "Bidirectional relation 'Goals' links to 'goals' and reciprocates with 'goals.Area'.",
+          "target_database": "goals",
+          "reciprocity": "bidirectional",
+          "reciprocal_property": "Area"
+        },
+        "Name": {
+          "name": "Name",
+          "type": "title",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Name' exists on 'Areas' with type 'title' and matching configuration."
+        },
+        "Notes": {
+          "name": "Notes",
+          "type": "relation",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "relation_property_write",
+          "verification_criterion": "Bidirectional relation 'Notes' links to 'notes_references' and reciprocates with 'notes_references.Area'.",
+          "target_database": "notes_references",
+          "reciprocity": "bidirectional",
+          "reciprocal_property": "Area"
+        },
+        "Projects": {
+          "name": "Projects",
+          "type": "relation",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "relation_property_write",
+          "verification_criterion": "Bidirectional relation 'Projects' links to 'projects' and reciprocates with 'projects.Area'.",
+          "target_database": "projects",
+          "reciprocity": "bidirectional",
+          "reciprocal_property": "Area"
+        },
+        "Standard": {
+          "name": "Standard",
+          "type": "text",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Standard' exists on 'Areas' with type 'text' and matching configuration."
+        },
+        "Tasks": {
+          "name": "Tasks",
+          "type": "relation",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "relation_property_write",
+          "verification_criterion": "Bidirectional relation 'Tasks' links to 'tasks' and reciprocates with 'tasks.Area'.",
+          "target_database": "tasks",
+          "reciprocity": "bidirectional",
+          "reciprocal_property": "Area"
+        }
+      }
+    },
+    "projects": {
+      "symbolic_key": "projects",
+      "name": "Projects",
+      "requirement": "required",
+      "definition_status": "known",
+      "provenance": "observed_2026-11-24",
+      "capability_required": "database_create_and_schema_read",
+      "verification_criterion": "Database 'Projects' exists under the authorized target location and all required properties match.",
+      "templates_policy": {
+        "requirement": "optional",
+        "definition_status": "workspace_specific",
+        "observed_template_names": [],
+        "has_observed_default_template": false,
+        "rule": "Use appropriate existing templates when creating records; do not create new templates unless explicitly requested. Source-workspace templates are not copied automatically."
+      },
+      "properties": {
+        "Area": {
+          "name": "Area",
+          "type": "relation",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "relation_property_write",
+          "verification_criterion": "Bidirectional relation 'Area' links to 'areas' and reciprocates with 'areas.Projects'.",
+          "target_database": "areas",
+          "reciprocity": "bidirectional",
+          "reciprocal_property": "Projects"
+        },
+        "Blocked by": {
+          "name": "Blocked by",
+          "type": "relation",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "relation_property_write",
+          "verification_criterion": "Bidirectional relation 'Blocked by' links to 'projects' and reciprocates with 'projects.Blocking'.",
+          "target_database": "projects",
+          "reciprocity": "bidirectional",
+          "reciprocal_property": "Blocking"
+        },
+        "Blocking": {
+          "name": "Blocking",
+          "type": "relation",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "relation_property_write",
+          "verification_criterion": "Bidirectional relation 'Blocking' links to 'projects' and reciprocates with 'projects.Blocked by'.",
+          "target_database": "projects",
+          "reciprocity": "bidirectional",
+          "reciprocal_property": "Blocked by"
+        },
+        "Calculated Progress": {
+          "name": "Calculated Progress",
+          "type": "formula",
+          "managed": true,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "user_verified_2026-11-25",
+          "capability_required": "formula_property_write",
+          "verification_criterion": "Formula 'Calculated Progress' exists on 'Projects' with the verified expression and evaluates cleanly.",
+          "formula_expression": "if(prop(\"Eligible Tasks\") == 0, \"\", format(round(100 * prop(\"Completed Tasks\") / prop(\"Eligible Tasks\"))) + \"%\")"
+        },
+        "Completed Tasks": {
+          "name": "Completed Tasks",
+          "type": "rollup",
+          "managed": true,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "rollup_property_write",
+          "verification_criterion": "Rollup 'Completed Tasks' aggregates 'tasks.Done Count' via 'Tasks' using 'sum'. Depends on verified target formula.",
+          "aggregation": "sum",
+          "relation_property": "Tasks",
+          "target_database": "tasks",
+          "target_property": "Done Count",
+          "target_property_type": "formula"
+        },
+        "Days Remaining": {
+          "name": "Days Remaining",
+          "type": "formula",
+          "managed": true,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "user_verified_2026-11-25",
+          "capability_required": "formula_property_write",
+          "verification_criterion": "Formula 'Days Remaining' exists on 'Projects' with the verified expression and evaluates cleanly.",
+          "formula_expression": "if(empty(prop(\"End Date\")), \"\", format(dateBetween(prop(\"End Date\"), today(), \"days\")))"
+        },
+        "Deliverable": {
+          "name": "Deliverable",
+          "type": "url",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Deliverable' exists on 'Projects' with type 'url' and matching configuration."
+        },
+        "Drive": {
+          "name": "Drive",
+          "type": "url",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Drive' exists on 'Projects' with type 'url' and matching configuration."
+        },
+        "Eligible Tasks": {
+          "name": "Eligible Tasks",
+          "type": "rollup",
+          "managed": true,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "rollup_property_write",
+          "verification_criterion": "Rollup 'Eligible Tasks' aggregates 'tasks.Eligible Count' via 'Tasks' using 'sum'. Depends on verified target formula.",
+          "aggregation": "sum",
+          "relation_property": "Tasks",
+          "target_database": "tasks",
+          "target_property": "Eligible Count",
+          "target_property_type": "formula"
+        },
+        "End Date": {
+          "name": "End Date",
+          "type": "date",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'End Date' exists on 'Projects' with type 'date' and matching configuration."
+        },
+        "Goals": {
+          "name": "Goals",
+          "type": "relation",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "relation_property_write",
+          "verification_criterion": "Bidirectional relation 'Goals' links to 'goals' and reciprocates with 'goals.Projects'.",
+          "target_database": "goals",
+          "reciprocity": "bidirectional",
+          "reciprocal_property": "Projects"
+        },
+        "Name": {
+          "name": "Name",
+          "type": "title",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Name' exists on 'Projects' with type 'title' and matching configuration."
+        },
+        "Notes": {
+          "name": "Notes",
+          "type": "relation",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "relation_property_write",
+          "verification_criterion": "Bidirectional relation 'Notes' links to 'notes_references' and reciprocates with 'notes_references.Project'.",
+          "target_database": "notes_references",
+          "reciprocity": "bidirectional",
+          "reciprocal_property": "Project"
+        },
+        "Outcome": {
+          "name": "Outcome",
+          "type": "text",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Outcome' exists on 'Projects' with type 'text' and matching configuration."
+        },
+        "Progress": {
+          "name": "Progress",
+          "type": "number",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Progress' exists on 'Projects' with type 'number' and matching configuration.",
+          "description": "Editable progress. Enter a percentage, for example 25%. Calculated Progress reports completion of linked eligible tasks.",
+          "number_format": "percent",
+          "show_as": {
+            "color": "green",
+            "maxValue": 1,
+            "showValue": true,
+            "type": "ring"
+          }
+        },
+        "Stages": {
+          "name": "Stages",
+          "type": "relation",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "relation_property_write",
+          "verification_criterion": "Bidirectional relation 'Stages' links to 'stages' and reciprocates with 'stages.Project'.",
+          "target_database": "stages",
+          "reciprocity": "bidirectional",
+          "reciprocal_property": "Project"
+        },
+        "Start Date": {
+          "name": "Start Date",
+          "type": "date",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Start Date' exists on 'Projects' with type 'date' and matching configuration."
+        },
+        "Status": {
+          "name": "Status",
+          "type": "select",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Status' exists on 'Projects' with type 'select' and matching configuration.",
+          "options": [
+            {
+              "name": "Planned",
+              "color": "default"
+            },
+            {
+              "name": "Active",
+              "color": "blue"
+            },
+            {
+              "name": "On hold",
+              "color": "yellow"
+            },
+            {
+              "name": "Done",
+              "color": "green"
+            },
+            {
+              "name": "Cancelled",
+              "color": "red"
+            }
+          ]
+        },
+        "Tags": {
+          "name": "Tags",
+          "type": "multi_select",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Tags' exists on 'Projects' with type 'multi_select' and matching configuration.",
+          "options": []
+        },
+        "Tasks": {
+          "name": "Tasks",
+          "type": "relation",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "relation_property_write",
+          "verification_criterion": "Bidirectional relation 'Tasks' links to 'tasks' and reciprocates with 'tasks.Project'.",
+          "target_database": "tasks",
+          "reciprocity": "bidirectional",
+          "reciprocal_property": "Project"
+        }
+      }
+    },
+    "stages": {
+      "symbolic_key": "stages",
+      "name": "Stages",
+      "requirement": "required",
+      "definition_status": "known",
+      "provenance": "observed_2026-11-24",
+      "capability_required": "database_create_and_schema_read",
+      "verification_criterion": "Database 'Stages' exists under the authorized target location and all required properties match.",
+      "templates_policy": {
+        "requirement": "optional",
+        "definition_status": "workspace_specific",
+        "observed_template_names": [],
+        "has_observed_default_template": true,
+        "rule": "Use appropriate existing templates when creating records; do not create new templates unless explicitly requested. Source-workspace templates are not copied automatically."
+      },
+      "properties": {
+        "Blocked by": {
+          "name": "Blocked by",
+          "type": "relation",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "relation_property_write",
+          "verification_criterion": "Bidirectional relation 'Blocked by' links to 'stages' and reciprocates with 'stages.Blocking'.",
+          "target_database": "stages",
+          "reciprocity": "bidirectional",
+          "reciprocal_property": "Blocking"
+        },
+        "Blocking": {
+          "name": "Blocking",
+          "type": "relation",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "relation_property_write",
+          "verification_criterion": "Bidirectional relation 'Blocking' links to 'stages' and reciprocates with 'stages.Blocked by'.",
+          "target_database": "stages",
+          "reciprocity": "bidirectional",
+          "reciprocal_property": "Blocked by"
+        },
+        "Calculated Progress": {
+          "name": "Calculated Progress",
+          "type": "formula",
+          "managed": true,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "user_verified_2026-11-25",
+          "capability_required": "formula_property_write",
+          "verification_criterion": "Formula 'Calculated Progress' exists on 'Stages' with the verified expression and evaluates cleanly.",
+          "formula_expression": "if(prop(\"Eligible Tasks\") == 0, \"\", format(round(100 * prop(\"Completed Tasks\") / prop(\"Eligible Tasks\"))) + \"%\")"
+        },
+        "Completed Tasks": {
+          "name": "Completed Tasks",
+          "type": "rollup",
+          "managed": true,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "rollup_property_write",
+          "verification_criterion": "Rollup 'Completed Tasks' aggregates 'tasks.Done Count' via 'Tasks' using 'sum'. Depends on verified target formula.",
+          "aggregation": "sum",
+          "relation_property": "Tasks",
+          "target_database": "tasks",
+          "target_property": "Done Count",
+          "target_property_type": "formula"
+        },
+        "Days Remaining": {
+          "name": "Days Remaining",
+          "type": "formula",
+          "managed": true,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "user_verified_2026-11-25",
+          "capability_required": "formula_property_write",
+          "verification_criterion": "Formula 'Days Remaining' exists on 'Stages' with the verified expression and evaluates cleanly.",
+          "formula_expression": "if(empty(prop(\"End Date\")), \"\", format(dateBetween(prop(\"End Date\"), today(), \"days\")))"
+        },
+        "Deliverable": {
+          "name": "Deliverable",
+          "type": "url",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Deliverable' exists on 'Stages' with type 'url' and matching configuration."
+        },
+        "Eligible Tasks": {
+          "name": "Eligible Tasks",
+          "type": "rollup",
+          "managed": true,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "rollup_property_write",
+          "verification_criterion": "Rollup 'Eligible Tasks' aggregates 'tasks.Eligible Count' via 'Tasks' using 'sum'. Depends on verified target formula.",
+          "aggregation": "sum",
+          "relation_property": "Tasks",
+          "target_database": "tasks",
+          "target_property": "Eligible Count",
+          "target_property_type": "formula"
+        },
+        "End Date": {
+          "name": "End Date",
+          "type": "date",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'End Date' exists on 'Stages' with type 'date' and matching configuration."
+        },
+        "Milestone Criterion": {
+          "name": "Milestone Criterion",
+          "type": "text",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Milestone Criterion' exists on 'Stages' with type 'text' and matching configuration."
+        },
+        "Milestone Date": {
+          "name": "Milestone Date",
+          "type": "date",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Milestone Date' exists on 'Stages' with type 'date' and matching configuration."
+        },
+        "Name": {
+          "name": "Name",
+          "type": "title",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Name' exists on 'Stages' with type 'title' and matching configuration."
+        },
+        "Progress": {
+          "name": "Progress",
+          "type": "number",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Progress' exists on 'Stages' with type 'number' and matching configuration.",
+          "description": "Editable progress. Enter a percentage, for example 25%. Calculated Progress reports completion of linked eligible tasks.",
+          "number_format": "percent",
+          "show_as": {
+            "color": "green",
+            "maxValue": 1,
+            "showValue": true,
+            "type": "ring"
+          }
+        },
+        "Project": {
+          "name": "Project",
+          "type": "relation",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "relation_property_write",
+          "verification_criterion": "Bidirectional relation 'Project' links to 'projects' and reciprocates with 'projects.Stages'.",
+          "target_database": "projects",
+          "reciprocity": "bidirectional",
+          "reciprocal_property": "Stages"
+        },
+        "Start Date": {
+          "name": "Start Date",
+          "type": "date",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Start Date' exists on 'Stages' with type 'date' and matching configuration."
+        },
+        "Status": {
+          "name": "Status",
+          "type": "select",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Status' exists on 'Stages' with type 'select' and matching configuration.",
+          "options": [
+            {
+              "name": "Planned",
+              "color": "default"
+            },
+            {
+              "name": "Active",
+              "color": "blue"
+            },
+            {
+              "name": "On hold",
+              "color": "yellow"
+            },
+            {
+              "name": "Done",
+              "color": "green"
+            },
+            {
+              "name": "Cancelled",
+              "color": "red"
+            }
+          ]
+        },
+        "Tags": {
+          "name": "Tags",
+          "type": "multi_select",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Tags' exists on 'Stages' with type 'multi_select' and matching configuration.",
+          "options": []
+        },
+        "Tasks": {
+          "name": "Tasks",
+          "type": "relation",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "relation_property_write",
+          "verification_criterion": "Bidirectional relation 'Tasks' links to 'tasks' and reciprocates with 'tasks.Stage'.",
+          "target_database": "tasks",
+          "reciprocity": "bidirectional",
+          "reciprocal_property": "Stage"
+        }
+      }
+    },
+    "tasks": {
+      "symbolic_key": "tasks",
+      "name": "Tasks",
+      "requirement": "required",
+      "definition_status": "known",
+      "provenance": "observed_2026-11-24",
+      "capability_required": "database_create_and_schema_read",
+      "verification_criterion": "Database 'Tasks' exists under the authorized target location and all required properties match.",
+      "templates_policy": {
+        "requirement": "optional",
+        "definition_status": "workspace_specific",
+        "observed_template_names": [],
+        "has_observed_default_template": true,
+        "rule": "Use appropriate existing templates when creating records; do not create new templates unless explicitly requested. Source-workspace templates are not copied automatically."
+      },
+      "properties": {
+        "Area": {
+          "name": "Area",
+          "type": "relation",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "relation_property_write",
+          "verification_criterion": "Bidirectional relation 'Area' links to 'areas' and reciprocates with 'areas.Tasks'.",
+          "target_database": "areas",
+          "reciprocity": "bidirectional",
+          "reciprocal_property": "Tasks"
+        },
+        "Available": {
+          "name": "Available",
+          "type": "formula",
+          "managed": true,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "user_verified_2026-11-25",
+          "capability_required": "formula_property_write",
+          "verification_criterion": "Formula 'Available' exists on 'Tasks' with the verified expression and evaluates cleanly.",
+          "formula_expression": "[\"Next Action\", \"In progress\"].includes(prop(\"Status\")) and !(prop(\"Blocked by\").some(![\"Done\", \"Cancelled\"].includes(current.prop(\"Status\")))) and prop(\"Subtasks\").empty() and (empty(prop(\"Start Date\")) or prop(\"Start Date\") <= today())"
+        },
+        "Blocked by": {
+          "name": "Blocked by",
+          "type": "relation",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "relation_property_write",
+          "verification_criterion": "Bidirectional relation 'Blocked by' links to 'tasks' and reciprocates with 'tasks.Blocking'.",
+          "target_database": "tasks",
+          "reciprocity": "bidirectional",
+          "reciprocal_property": "Blocking"
+        },
+        "Blocking": {
+          "name": "Blocking",
+          "type": "relation",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "relation_property_write",
+          "verification_criterion": "Bidirectional relation 'Blocking' links to 'tasks' and reciprocates with 'tasks.Blocked by'.",
+          "target_database": "tasks",
+          "reciprocity": "bidirectional",
+          "reciprocal_property": "Blocked by"
+        },
+        "Context": {
+          "name": "Context",
+          "type": "text",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Context' exists on 'Tasks' with type 'text' and matching configuration."
+        },
+        "Created Time": {
+          "name": "Created Time",
+          "type": "created_time",
+          "managed": true,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Created Time' exists on 'Tasks' with type 'created_time' and matching configuration."
+        },
+        "Description": {
+          "name": "Description",
+          "type": "text",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Description' exists on 'Tasks' with type 'text' and matching configuration."
+        },
+        "Done Count": {
+          "name": "Done Count",
+          "type": "formula",
+          "managed": true,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "user_verified_2026-11-25",
+          "capability_required": "formula_property_write",
+          "verification_criterion": "Formula 'Done Count' exists on 'Tasks' with the verified expression and evaluates cleanly.",
+          "formula_expression": "if(prop(\"Subtasks\").empty() and prop(\"Status\") == \"Done\", 1, 0)"
+        },
+        "Drive": {
+          "name": "Drive",
+          "type": "url",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Drive' exists on 'Tasks' with type 'url' and matching configuration."
+        },
+        "Due Date": {
+          "name": "Due Date",
+          "type": "date",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Due Date' exists on 'Tasks' with type 'date' and matching configuration."
+        },
+        "Eligible Count": {
+          "name": "Eligible Count",
+          "type": "formula",
+          "managed": true,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "user_verified_2026-11-25",
+          "capability_required": "formula_property_write",
+          "verification_criterion": "Formula 'Eligible Count' exists on 'Tasks' with the verified expression and evaluates cleanly.",
+          "formula_expression": "if(prop(\"Subtasks\").empty() and [\"Next Action\", \"In progress\", \"Waiting For\", \"Scheduled\", \"In review\", \"Done\"].includes(prop(\"Status\")), 1, 0)"
+        },
+        "Energy": {
+          "name": "Energy",
+          "type": "select",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Energy' exists on 'Tasks' with type 'select' and matching configuration.",
+          "options": [
+            {
+              "name": "Low",
+              "color": "default"
+            },
+            {
+              "name": "Medium",
+              "color": null
+            },
+            {
+              "name": "High",
+              "color": null
+            }
+          ]
+        },
+        "Expected Result": {
+          "name": "Expected Result",
+          "type": "text",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Expected Result' exists on 'Tasks' with type 'text' and matching configuration."
+        },
+        "Files & Media": {
+          "name": "Files & Media",
+          "type": "file",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Files & Media' exists on 'Tasks' with type 'file' and matching configuration."
+        },
+        "Follow-up Date": {
+          "name": "Follow-up Date",
+          "type": "date",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Follow-up Date' exists on 'Tasks' with type 'date' and matching configuration."
+        },
+        "Goals": {
+          "name": "Goals",
+          "type": "relation",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "relation_property_write",
+          "verification_criterion": "Bidirectional relation 'Goals' links to 'goals' and reciprocates with 'goals.Direct Tasks'.",
+          "target_database": "goals",
+          "reciprocity": "bidirectional",
+          "reciprocal_property": "Direct Tasks"
+        },
+        "Google Drive File": {
+          "name": "Google Drive File",
+          "type": "relation",
+          "managed": false,
+          "requirement": "optional",
+          "definition_status": "external_dependency",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "verified_external_drive_integration",
+          "verification_criterion": "Optional external relation. Preserve if present; on new setup link only to a verified target source. Never create an 8th database by inference; 'Drive' URL remains usable without it.",
+          "target_database": "external_google_drive_file_source",
+          "reciprocity": "external",
+          "reciprocal_property": null
+        },
+        "Is blocked": {
+          "name": "Is blocked",
+          "type": "formula",
+          "managed": true,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "user_verified_2026-11-25",
+          "capability_required": "formula_property_write",
+          "verification_criterion": "Formula 'Is blocked' exists on 'Tasks' with the verified expression and evaluates cleanly.",
+          "formula_expression": "prop(\"Blocked by\").some(![\"Done\", \"Cancelled\"].includes(current.prop(\"Status\")))"
+        },
+        "Is blocking": {
+          "name": "Is blocking",
+          "type": "formula",
+          "managed": true,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "user_verified_2026-11-25",
+          "capability_required": "formula_property_write",
+          "verification_criterion": "Formula 'Is blocking' exists on 'Tasks' with the verified expression and evaluates cleanly.",
+          "formula_expression": "prop(\"Blocking\").some(![\"Done\", \"Cancelled\"].includes(current.prop(\"Status\")))"
+        },
+        "Last Edited Time": {
+          "name": "Last Edited Time",
+          "type": "last_edited_time",
+          "managed": true,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Last Edited Time' exists on 'Tasks' with type 'last_edited_time' and matching configuration."
+        },
+        "Minutes": {
+          "name": "Minutes",
+          "type": "number",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Minutes' exists on 'Tasks' with type 'number' and matching configuration."
+        },
+        "Name": {
+          "name": "Name",
+          "type": "title",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Name' exists on 'Tasks' with type 'title' and matching configuration."
+        },
+        "Notes": {
+          "name": "Notes",
+          "type": "relation",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "relation_property_write",
+          "verification_criterion": "Unidirectional relation 'Notes' links to 'notes_references'.",
+          "target_database": "notes_references",
+          "reciprocity": "unidirectional",
+          "reciprocal_property": null
+        },
+        "Parent Task": {
+          "name": "Parent Task",
+          "type": "relation",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "relation_property_write",
+          "verification_criterion": "Bidirectional relation 'Parent Task' links to 'tasks' and reciprocates with 'tasks.Subtasks'.",
+          "target_database": "tasks",
+          "reciprocity": "bidirectional",
+          "reciprocal_property": "Subtasks"
+        },
+        "Priority": {
+          "name": "Priority",
+          "type": "select",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Priority' exists on 'Tasks' with type 'select' and matching configuration.",
+          "options": [
+            {
+              "name": "p1",
+              "color": "red"
+            },
+            {
+              "name": "p2",
+              "color": "orange"
+            },
+            {
+              "name": "p3",
+              "color": "yellow"
+            },
+            {
+              "name": "p4",
+              "color": "gray"
+            }
+          ]
+        },
+        "Project": {
+          "name": "Project",
+          "type": "relation",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "relation_property_write",
+          "verification_criterion": "Bidirectional relation 'Project' links to 'projects' and reciprocates with 'projects.Tasks'.",
+          "target_database": "projects",
+          "reciprocity": "bidirectional",
+          "reciprocal_property": "Tasks"
+        },
+        "References": {
+          "name": "References",
+          "type": "relation",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "relation_property_write",
+          "verification_criterion": "Unidirectional relation 'References' links to 'notes_references'.",
+          "target_database": "notes_references",
+          "reciprocity": "unidirectional",
+          "reciprocal_property": null
+        },
+        "Stage": {
+          "name": "Stage",
+          "type": "relation",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "relation_property_write",
+          "verification_criterion": "Bidirectional relation 'Stage' links to 'stages' and reciprocates with 'stages.Tasks'.",
+          "target_database": "stages",
+          "reciprocity": "bidirectional",
+          "reciprocal_property": "Tasks"
+        },
+        "Start Date": {
+          "name": "Start Date",
+          "type": "date",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Start Date' exists on 'Tasks' with type 'date' and matching configuration."
+        },
+        "Status": {
+          "name": "Status",
+          "type": "select",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Status' exists on 'Tasks' with type 'select' and matching configuration.",
+          "options": [
+            {
+              "name": "Next Action",
+              "color": "blue"
+            },
+            {
+              "name": "In progress",
+              "color": "blue"
+            },
+            {
+              "name": "Waiting For",
+              "color": "yellow"
+            },
+            {
+              "name": "Someday/Maybe",
+              "color": "default"
+            },
+            {
+              "name": "Scheduled",
+              "color": "purple"
+            },
+            {
+              "name": "In review",
+              "color": "orange"
+            },
+            {
+              "name": "Done",
+              "color": "green"
+            },
+            {
+              "name": "Cancelled",
+              "color": "red"
+            }
+          ]
+        },
+        "Subtasks": {
+          "name": "Subtasks",
+          "type": "relation",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "relation_property_write",
+          "verification_criterion": "Bidirectional relation 'Subtasks' links to 'tasks' and reciprocates with 'tasks.Parent Task'.",
+          "target_database": "tasks",
+          "reciprocity": "bidirectional",
+          "reciprocal_property": "Parent Task"
+        },
+        "Tags": {
+          "name": "Tags",
+          "type": "multi_select",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Tags' exists on 'Tasks' with type 'multi_select' and matching configuration.",
+          "options": []
+        },
+        "Waiting On": {
+          "name": "Waiting On",
+          "type": "text",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Waiting On' exists on 'Tasks' with type 'text' and matching configuration."
+        }
+      }
+    },
+    "inbox": {
+      "symbolic_key": "inbox",
+      "name": "Inbox",
+      "requirement": "required",
+      "definition_status": "known",
+      "provenance": "observed_2026-11-24",
+      "capability_required": "database_create_and_schema_read",
+      "verification_criterion": "Database 'Inbox' exists under the authorized target location and all required properties match.",
+      "templates_policy": {
+        "requirement": "optional",
+        "definition_status": "workspace_specific",
+        "observed_template_names": [],
+        "has_observed_default_template": false,
+        "rule": "Use appropriate existing templates when creating records; do not create new templates unless explicitly requested. Source-workspace templates are not copied automatically."
+      },
+      "properties": {
+        "Area": {
+          "name": "Area",
+          "type": "relation",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "relation_property_write",
+          "verification_criterion": "Unidirectional relation 'Area' links to 'areas'.",
+          "target_database": "areas",
+          "reciprocity": "unidirectional",
+          "reciprocal_property": null
+        },
+        "Created Time": {
+          "name": "Created Time",
+          "type": "created_time",
+          "managed": true,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Created Time' exists on 'Inbox' with type 'created_time' and matching configuration."
+        },
+        "Date": {
+          "name": "Date",
+          "type": "date",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Date' exists on 'Inbox' with type 'date' and matching configuration."
+        },
+        "Decision": {
+          "name": "Decision",
+          "type": "text",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Decision' exists on 'Inbox' with type 'text' and matching configuration."
+        },
+        "Exit Condition": {
+          "name": "Exit Condition",
+          "type": "text",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Exit Condition' exists on 'Inbox' with type 'text' and matching configuration."
+        },
+        "Files & Media": {
+          "name": "Files & Media",
+          "type": "file",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Files & Media' exists on 'Inbox' with type 'file' and matching configuration."
+        },
+        "Hold Reason": {
+          "name": "Hold Reason",
+          "type": "text",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Hold Reason' exists on 'Inbox' with type 'text' and matching configuration."
+        },
+        "Intended Home": {
+          "name": "Intended Home",
+          "type": "text",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Intended Home' exists on 'Inbox' with type 'text' and matching configuration."
+        },
+        "Last Edited Time": {
+          "name": "Last Edited Time",
+          "type": "last_edited_time",
+          "managed": true,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Last Edited Time' exists on 'Inbox' with type 'last_edited_time' and matching configuration."
+        },
+        "Name": {
+          "name": "Name",
+          "type": "title",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Name' exists on 'Inbox' with type 'title' and matching configuration."
+        },
+        "Needs Clarification": {
+          "name": "Needs Clarification",
+          "type": "formula",
+          "managed": true,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "user_verified_2026-11-25",
+          "capability_required": "formula_property_write",
+          "verification_criterion": "Formula 'Needs Clarification' exists on 'Inbox' with the verified expression and evaluates cleanly.",
+          "formula_expression": "empty(prop(\"Status\")) or prop(\"Status\") == \"Inbox\" or (prop(\"Status\") != \"Processed\" and (empty(prop(\"Type\")) or empty(prop(\"Decision\")))) or (prop(\"Status\") == \"On hold\" and (empty(prop(\"Intended Home\")) or empty(prop(\"Hold Reason\")) or empty(prop(\"Exit Condition\"))))"
+        },
+        "Notes": {
+          "name": "Notes",
+          "type": "relation",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "relation_property_write",
+          "verification_criterion": "Unidirectional relation 'Notes' links to 'notes_references'.",
+          "target_database": "notes_references",
+          "reciprocity": "unidirectional",
+          "reciprocal_property": null
+        },
+        "Priority": {
+          "name": "Priority",
+          "type": "select",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Priority' exists on 'Inbox' with type 'select' and matching configuration.",
+          "options": [
+            {
+              "name": "p1",
+              "color": "red"
+            },
+            {
+              "name": "p2",
+              "color": "orange"
+            },
+            {
+              "name": "p3",
+              "color": "yellow"
+            },
+            {
+              "name": "p4",
+              "color": "gray"
+            }
+          ]
+        },
+        "Project": {
+          "name": "Project",
+          "type": "relation",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "relation_property_write",
+          "verification_criterion": "Unidirectional relation 'Project' links to 'projects'.",
+          "target_database": "projects",
+          "reciprocity": "unidirectional",
+          "reciprocal_property": null
+        },
+        "Source": {
+          "name": "Source",
+          "type": "url",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Source' exists on 'Inbox' with type 'url' and matching configuration."
+        },
+        "Status": {
+          "name": "Status",
+          "type": "select",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Status' exists on 'Inbox' with type 'select' and matching configuration.",
+          "options": [
+            {
+              "name": "Inbox",
+              "color": "yellow"
+            },
+            {
+              "name": "On hold",
+              "color": "orange"
+            },
+            {
+              "name": "Processed",
+              "color": "green"
+            }
+          ]
+        },
+        "Tags": {
+          "name": "Tags",
+          "type": "multi_select",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Tags' exists on 'Inbox' with type 'multi_select' and matching configuration.",
+          "options": []
+        },
+        "Tasks": {
+          "name": "Tasks",
+          "type": "relation",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "relation_property_write",
+          "verification_criterion": "Unidirectional relation 'Tasks' links to 'tasks'.",
+          "target_database": "tasks",
+          "reciprocity": "unidirectional",
+          "reciprocal_property": null
+        },
+        "Type": {
+          "name": "Type",
+          "type": "select",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Type' exists on 'Inbox' with type 'select' and matching configuration.",
+          "options": [
+            {
+              "name": "Idea",
+              "color": null
+            },
+            {
+              "name": "File",
+              "color": null
+            },
+            {
+              "name": "Note",
+              "color": null
+            },
+            {
+              "name": "Package",
+              "color": null
+            },
+            {
+              "name": "Other",
+              "color": null
+            }
+          ]
+        }
+      }
+    },
+    "notes_references": {
+      "symbolic_key": "notes_references",
+      "name": "Notes & References",
+      "requirement": "required",
+      "definition_status": "known",
+      "provenance": "observed_2026-11-24",
+      "capability_required": "database_create_and_schema_read",
+      "verification_criterion": "Database 'Notes & References' exists under the authorized target location and all required properties match.",
+      "templates_policy": {
+        "requirement": "optional",
+        "definition_status": "workspace_specific",
+        "observed_template_names": [],
+        "has_observed_default_template": false,
+        "rule": "Use appropriate existing templates when creating records; do not create new templates unless explicitly requested. Source-workspace templates are not copied automatically."
+      },
+      "properties": {
+        "Area": {
+          "name": "Area",
+          "type": "relation",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "relation_property_write",
+          "verification_criterion": "Bidirectional relation 'Area' links to 'areas' and reciprocates with 'areas.Notes'.",
+          "target_database": "areas",
+          "reciprocity": "bidirectional",
+          "reciprocal_property": "Notes"
+        },
+        "Created Time": {
+          "name": "Created Time",
+          "type": "created_time",
+          "managed": true,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Created Time' exists on 'Notes & References' with type 'created_time' and matching configuration."
+        },
+        "Date": {
+          "name": "Date",
+          "type": "date",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Date' exists on 'Notes & References' with type 'date' and matching configuration."
+        },
+        "Drive": {
+          "name": "Drive",
+          "type": "url",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Drive' exists on 'Notes & References' with type 'url' and matching configuration."
+        },
+        "Goals": {
+          "name": "Goals",
+          "type": "relation",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "relation_property_write",
+          "verification_criterion": "Bidirectional relation 'Goals' links to 'goals' and reciprocates with 'goals.Evidence'.",
+          "target_database": "goals",
+          "reciprocity": "bidirectional",
+          "reciprocal_property": "Evidence"
+        },
+        "Last Edited Time": {
+          "name": "Last Edited Time",
+          "type": "last_edited_time",
+          "managed": true,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Last Edited Time' exists on 'Notes & References' with type 'last_edited_time' and matching configuration."
+        },
+        "Name": {
+          "name": "Name",
+          "type": "title",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Name' exists on 'Notes & References' with type 'title' and matching configuration."
+        },
+        "Pinned": {
+          "name": "Pinned",
+          "type": "checkbox",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Pinned' exists on 'Notes & References' with type 'checkbox' and matching configuration."
+        },
+        "Project": {
+          "name": "Project",
+          "type": "relation",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "relation_property_write",
+          "verification_criterion": "Bidirectional relation 'Project' links to 'projects' and reciprocates with 'projects.Notes'.",
+          "target_database": "projects",
+          "reciprocity": "bidirectional",
+          "reciprocal_property": "Notes"
+        },
+        "Source": {
+          "name": "Source",
+          "type": "url",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Source' exists on 'Notes & References' with type 'url' and matching configuration."
+        },
+        "Status": {
+          "name": "Status",
+          "type": "select",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Status' exists on 'Notes & References' with type 'select' and matching configuration.",
+          "options": [
+            {
+              "name": "In review",
+              "color": "yellow"
+            },
+            {
+              "name": "Saved",
+              "color": "green"
+            },
+            {
+              "name": "Archived",
+              "color": "default"
+            }
+          ]
+        },
+        "Summary": {
+          "name": "Summary",
+          "type": "text",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Summary' exists on 'Notes & References' with type 'text' and matching configuration."
+        },
+        "Tags": {
+          "name": "Tags",
+          "type": "multi_select",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Tags' exists on 'Notes & References' with type 'multi_select' and matching configuration.",
+          "options": []
+        },
+        "Type": {
+          "name": "Type",
+          "type": "select",
+          "managed": false,
+          "requirement": "required",
+          "definition_status": "known",
+          "provenance": "observed_2026-11-24",
+          "capability_required": "database_schema_write",
+          "verification_criterion": "Property 'Type' exists on 'Notes & References' with type 'select' and matching configuration.",
+          "options": [
+            {
+              "name": "Idea",
+              "color": null
+            },
+            {
+              "name": "Meeting",
+              "color": null
+            },
+            {
+              "name": "Note",
+              "color": null
+            },
+            {
+              "name": "Reference",
+              "color": null
+            },
+            {
+              "name": "Resource",
+              "color": null
+            }
+          ]
+        }
+      }
+    }
+  }
+}
