@@ -1,0 +1,7 @@
+{
+  "answer": "Simulation: File F is already in 01-projects/launch/assets; do not move it again. Inspect F by stable ID and Note N by ID, then read the intended Notion link and current record state. If the link persisted, reuse it; if missing, retry only that link to F, preserving unrelated changes. Verify the link resolves to F and all accepted outputs are retrievable. Reuse N; do not create another note or roll back the successful move. Keep Inbox On hold until every required routing output and link is verified, then mark Processed and verify the status. Until then, full processing cannot be claimed. The final ordinary filename is budget-q4-launch.xlsx; check for collisions before any rename. For the other component, a known home alone does not justify a hold: check readiness and any concrete dependency. If none exists, file it safely in its known home after identity and collision checks, preserve associations, and verify. If a real blocker exists, record its reason and observable exit using existing evidence. These are proposed operations, not executed results.",
+  "skill": "inbox-workflow",
+  "reasoning_effort": "medium",
+  "sample": 4,
+  "model": "gpt-6.1-terra"
+}

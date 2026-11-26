@@ -1,0 +1,9 @@
+{
+  "case": "M5_files_collisions_formats",
+  "skill": "file-naming",
+  "rules": ["I32", "I33", "I34", "I35", "I37"],
+  "model": "gemini-4-neon",
+  "reasoning_effort": "medium",
+  "result": "PASS",
+  "answer": "1) Save Launch file into Drive URL pointing to 01-projects/other-client/docs (I32): BLOCK. Destination belongs to other-client, not verified owner launch; verify real destination folder ID and permissions under 01-projects/launch/ first.\n\n2) Rename Report.pdf to report-launch.pdf when Report-launch.pdf already exists (I33): BLOCK. Case/Unicode collision; never overwrite, merge, delete, or append -copy/arbitrary suffix. Inspect both files and ask user for disposition.\n\n3) Normalize helper_utils.py to helper-utils.py when main.py imports helper_utils (I34): BLOCK breaking rename and PRESERVE helper_utils.py as a concrete technical exception (Python import identifier).\n\n4) Two files claiming canonical budget-launch.xlsx in docs/ and assets/ (I35): ALERT/BLOCK dual-canonical treatment. Compare contents/provenance and ask user to confirm one canonical home (docs/ for current editable work vs assets/ for raw source) and link or explicitly demote the other.\n\n5) Rename diagram.png to diagram-launch.pdf without format conversion (I37): BLOCK fake extension change. Preserve real .png extension (diagram-launch.png), or run an actual PNG-to-PDF conversion first before naming the converted output diagram-launch.pdf."
+}

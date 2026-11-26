@@ -1,0 +1,9 @@
+{
+  "case": "M4_numeric_managed_concurrency",
+  "skill": "notion-workflow",
+  "rules": ["I26", "I27", "I43", "I46"],
+  "model": "gemini-4-neon",
+  "reasoning_effort": "medium",
+  "result": "PASS",
+  "answer": "1) Project P manual Progress = 25% (I26): Write raw numeric value 0.25 to editable manual Progress (never 25.0). Leave Calculated Progress untouched. Unknown progress remains unknown (unset), never 0 / 0%.\n\n2) Direct writes to Days Remaining, Completed Tasks, and Created Time (I27): Block all three writes (read-only managed fields: formula, rollup, system timestamp). Direct authorized edits only to underlying editable source fields.\n\n3) Concurrent edit to Task T's Description between read and write (I43): Block stale write immediately; re-read current live Description, preserve concurrent edits, and reconcile with user confirmation if conflicting.\n\n4) Timeout retry finding existing Task T9 titled 'Send launch brief' (I46, I39, I01): Block blind duplicate creation and block automatic deletion. Title equality alone neither proves duplicate identity nor authorizes deletion; inspect T9 by stable ID, relations, body, and timestamps to reuse verified T9 or clarify if distinct."
+}

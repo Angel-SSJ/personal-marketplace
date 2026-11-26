@@ -1,0 +1,7 @@
+{
+  "skill": "gtd-workflow",
+  "sample": 1,
+  "model": "gpt-6.1-terra",
+  "reasoning_effort": "medium",
+  "answer": "For the review, preserve the launch target of Dec 10, 2026 and the required publication due Dec 12, 2026. Do not certify the plan as coherent yet. Ask: Is Dec 10 a hard result deadline or a soft target, and must publication happen before launch is achieved? If hard and necessary, the plan cannot be accepted as scheduled; propose advancing publication, renegotiating the target, or correcting its contribution. If soft, resolve the planning conflict before calling the plan feasible. Keep the Dec 15 results review as an explicitly retrospective action. For the task in project A linked to stage S in project B, hold the affected assignment and ask which project and stage actually own the task; correct only after confirmation. The separate accepted, independent action can proceed if context, time and energy permit. This is a partial review, not a full Weekly Review. No dates or records have been changed."
+}

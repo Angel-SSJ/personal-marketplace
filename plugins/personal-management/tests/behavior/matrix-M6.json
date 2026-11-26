@@ -1,0 +1,9 @@
+{
+  "case": "M6_para_archive_and_intake_edges",
+  "skill": "para-workflow",
+  "rules": ["I25", "I32", "I35", "I36"],
+  "model": "gemini-4-neon",
+  "reasoning_effort": "medium",
+  "result": "PASS",
+  "answer": "1) Retire Area legacy-ops with two active committed projects when only 04-archives/01-projects/ is observed (I25, I22, Storage Architecture): Hold retirement/archive move. Do not silently cancel/archive the two active projects (require explicit transfer, independence, or closure decision for each), and do not invent 04-archives/Areas; verify target archive category or obtain explicit creation intent while preserving 04-archives/01-projects/.\n\n2) Edit and overwrite 04-archives/01-projects/old-launch/submissions/final-report-old-launch.pdf (I36): BLOCK. Archive and submissions are frozen boundaries; never edit or overwrite in place. Offer authorized reactivation + working copy in docs/, explicit separate errata preserving the original, or working copy in another active project's docs/.\n\n3) Drive link on Project launch pointing to finance Area folder (I32, I04, I01): BLOCK using finance Area folder as Project launch's storage root. Verify real 01-projects/launch folder ID/permissions and repoint canonical Drive URL only after verification.\n\n4) Two copies of spec-launch.md in docs/ and drafts/ both treated as canonical (I35): ALERT/BLOCK dual-canonical treatment. Compare both files, designate 01-projects/launch/docs/spec-launch.md as single canonical working copy, and demote drafts/ copy to non-canonical/superseded status (no silent deletion)."
+}

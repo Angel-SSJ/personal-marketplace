@@ -1,0 +1,9 @@
+{
+  "case": "M3_lifecycle_and_cascades",
+  "skill": "gtd-workflow",
+  "rules": ["I20", "I21", "I22", "I23", "I25"],
+  "model": "gemini-4-neon",
+  "reasoning_effort": "medium",
+  "result": "PASS",
+  "answer": "1) Goal G (Progress=100%, all child tasks Done, Success Criteria unchecked/unaccepted) — Rule I20: Do NOT mark Goal G as Achieved. Prohibit automatic status cascade; request explicit verification of Success Criteria (or authoritative user completion statement) before transitioning.\n\n2) Project P (100% of linked tasks Done, deliverable unverified) — Rule I21: Do NOT mark Project P Done and do NOT archive its support container. Verify deliverable against exit criteria and inspect residual obligations first.\n\n3) Parent Stage S moved to On hold while child Task T is explicitly independent and unblocked — Rule I22: Raise Alert (A) and prohibit automatic cascade; keep Task T active and unblocked.\n\n4) Task X (Next Action while actively blocked by open Task Y) and Task W (Waiting For with no Waiting On person and no Expected Result) — Rule I23: Block (B) false executability on Task X while preserving dependency history to Y; Block (B) certifying Task W as a valid Waiting For and ask for Waiting On person and Expected Result without inventing them.\n\n5) Area A being archived while owning two active committed projects — Rule I25: Raise Alert (A) and prohibit automatic cascade (no silent cancellation/archiving of active projects). Pause Area archival until each active project is explicitly transferred, kept independent, or renegotiated/closed."
+}

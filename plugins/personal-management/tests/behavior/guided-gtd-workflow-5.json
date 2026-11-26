@@ -1,0 +1,7 @@
+{
+  "answer": "Proposed two-minute review:\n- Keep the accepted launch target December 10, 2026 and required publication due December 12 as recorded. Ask: Is December 10 a hard deadline or a soft target, and must publication be complete for launch? If hard and necessary, the plan cannot be activated as coherent; if soft and necessary, feasibility remains unresolved. Options for decision: arrange earlier publication, renegotiate the target, or correct the contribution relationship if the facts support it. Do not change either date silently.\n- Keep the December 15 results review as a retrospective follow-up; its later date is compatible with launch.\n- Hold the incompatible Stage S assignment: it belongs to project B while the task belongs to project A. Ask which project owns the task and which stage is correct; verify identities before correcting the link.\n- Continue the separate accepted independent action if its context, time and energy fit. Its details are not provided, so do not invent them.\nThis is a partial review, not a coherent-plan certification. Recheck the affected links and dates after the decisions.",
+  "model": "gpt-6.1-terra",
+  "sample": 5,
+  "reasoning_effort": "medium",
+  "skill": "gtd-workflow"
+}

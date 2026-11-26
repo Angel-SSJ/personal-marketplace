@@ -1,0 +1,7 @@
+{
+  "skill": "inbox-workflow",
+  "sample": 3,
+  "model": "gpt-6.1-terra",
+  "reasoning_effort": "medium",
+  "answer": "Simulation: File F's move succeeded to 01-projects/launch/assets; Note N already exists. The linking write timed out, so its outcome is unknown. Inspect F by stable ID, N, and the intended link in current state. If the correct link persisted, verify it; otherwise retry only that missing link and verify the result. Do not repeat the move or create another note. Check the destination for a name collision and affected links, then use budget-q4-launch.xlsx for the ordinary file and verify its identity, name and location.\n\nFor the held component, inspect readiness and any actual dependency. If none exists, file it in its known home and verify, preserving its association with the package. If a genuine blocker exists, record the concrete reason and observable exit using existing evidence; clarify only what is missing. Continue other independent components when safe.\n\nKeep On hold/pending truthful until every accepted output and required link is verified and retrievable. Do not claim full processing or set Processed yet. These are proposed operations; no live execution occurred."
+}

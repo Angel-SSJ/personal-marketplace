@@ -1,0 +1,7 @@
+{
+  "reasoning_effort": "medium",
+  "sample": 4,
+  "answer": "Keep the accepted launch target Dec 10, 2026 and required publication due Dec 12, 2026 as recorded. The plan cannot yet be certified coherent: ask whether Dec 10 is a hard deadline or a soft target, and whether publication is necessary to achieve launch. If necessary and hard, advance publication, renegotiate the deadline, or correct the contribution relationship by agreement; if soft, resolve the planning conflict before claiming feasibility. Do not silently change dates.\n\nKeep the Dec 15 results review as a valid retrospective action. For Stage S, hold the affected assignment and ask whether the task belongs in project B or needs a stage belonging to project A; verify the intended identities before changing the link.\n\nProceed with the separate accepted independent action if context, time and energy permit. Next visible step for the conflict: ask the two date/contribution questions and the ownership question. This is a proposed bounded review; no action or record change has been executed.",
+  "model": "gpt-6.1-terra",
+  "skill": "gtd-workflow"
+}

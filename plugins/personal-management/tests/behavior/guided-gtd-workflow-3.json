@@ -1,0 +1,7 @@
+{
+  "skill": "gtd-workflow",
+  "sample": 3,
+  "model": "gpt-6.1-terra",
+  "reasoning_effort": "medium",
+  "answer": "For the two minutes before review, record these decisions and bring the unresolved questions to the review:\n\n- Keep the accepted launch target December 10, 2026 and required publication due December 12, 2026 as stated. Ask: Is December 10 a hard deadline or a soft target, and must publication happen before launch? If publication is necessary for the December 10 result, propose moving it earlier or renegotiating the target; if its contribution was recorded incorrectly, correct the relationship after confirmation. Do not certify the plan as coherent or feasible yet.\n- Keep the December 15 results review as an explicitly retrospective action; its later date is valid.\n- Hold the incompatible Stage S assignment: S belongs to project B while the task belongs to project A. Ask which project owns the task and which Stage applies; verify the compatible assignment before changing the link.\n- Proceed with the separate accepted action if its context, remaining time and energy allow. Keep it visible otherwise.\n\nThese are proposed steps in the fixture; no records or commitments have been changed."
+}

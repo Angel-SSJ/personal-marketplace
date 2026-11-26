@@ -1,0 +1,7 @@
+{
+  "skill": "inbox-workflow",
+  "sample": 1,
+  "model": "gpt-6.1-terra",
+  "reasoning_effort": "medium",
+  "answer": "Simulation: F's move to 01-projects/launch/assets succeeded; the Notion link outcome is unknown and Inbox remains On hold. Inspect F by stable ID and Note N by ID, including current destination, intended relation and persisted link. If the correct link exists, reuse it and verify retrieval; if absent, retry only that linking write, then reread and verify it. If state or access remains uncertain, leave it pending. Do not repeat the move or create another note.\n\nThe ordinary final filename is budget-q4-launch.xlsx; check for collisions and preserve the extension before any authorized rename. For the other component, a known home without a concrete blocker is not a valid continuing hold. Check identity, readiness and collisions; file it directly if safe, preserving its association. If a real dependency exists, record its reason and observable exit; clarify any decisive unknown. Continue independent components safely.\n\nMark Processed only after every accepted output and required link is verified and retrievable. Full processing cannot yet be claimed; no operations were actually executed."
+}
